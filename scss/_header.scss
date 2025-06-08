@@ -4,14 +4,14 @@
   padding: 18px 31px 0 25px;
   font-size: $font-md;
   font-weight: $font-weight-light;
-  display: none;
-  @include desktop {
-    @include flex-between;
+  @include flex-between;
+  @include tablet {
+    display: none;
   }
   .navbar {
     @include flex-start-center;
     gap: 25px;
-    @include large-desktop {
+    @include desktop {
       gap: 35px;
     }
     ul {
@@ -51,9 +51,9 @@
 .mobile-header {
   background-color: $min-content-background-color;
   padding: 15px 22px;
-  @include flex-between;
-  @include desktop {
-    display: none;
+  display: none;
+  @include tablet {
+    @include flex-between;
   }
   .left {
     @include flex-start-center;
@@ -106,8 +106,8 @@
 }
 
 .mobile-menu.open {
-  @include desktop {
-    display: none;
+  display: none;
+  @include tablet {
+    @include flex-column;
   }
-  @include flex-column;
 }

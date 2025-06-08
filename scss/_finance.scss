@@ -5,13 +5,19 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 .finance {
   .top-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
     gap: 20px;
     padding: 34px 22px 28px 22px;
     border-bottom: 1px solid $section-background-color;
-    @include large-screen {
-      padding: 34px 22px 28px 39px;
-    }
+    // @include desktop {
+    //   padding: 34px 22px 28px 39px;
+    // }
     .item {
       width: 100%;
       display: flex;
@@ -91,16 +97,17 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 
       // First row: 3 items (4 columns each)
       &:nth-child(1) {
-        grid-column: span 6;
-        @include mobile-small {
+        grid-column: span 4;
+        @include laptop {
+          grid-column: span 6;
+        }
+        @include mobile {
           grid-column: span 12;
         }
-        @include large-screen {
-          grid-column: span 4;
-        }
+
         .video-container {
           @include flex-start-center;
-          @include mobile-small {
+          @include mobile {
             flex-direction: column;
             align-items: start;
             margin-top: 0px;
@@ -109,10 +116,10 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           margin-top: 25px;
           .video {
             min-width: 233px;
-            @include mobile {
+            @include laptop {
               min-width: 153px;
             }
-            @include mobile-small {
+            @include mobile {
               min-width: 100%;
             }
             height: 145px;
@@ -143,7 +150,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           .video-info {
             @include flex-column;
             gap: 6px;
-            @include mobile-small {
+            @include mobile {
               min-width: 100%;
             }
             h6 {
@@ -181,18 +188,18 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(2) {
-        grid-column: span 6;
-        @include mobile-small {
-          grid-column: span 12;
+        grid-column: span 4;
+        @include laptop {
+          grid-column: span 6;
         }
-        @include large-screen {
-          grid-column: span 4;
+        @include mobile {
+          grid-column: span 12;
         }
 
         .content {
           @include flex-start-center;
           gap: 22px;
-          @include mobile-small {
+          @include mobile {
             // flex-direction: column;
             // align-items: start;
             gap: 15px;
@@ -263,12 +270,12 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(3) {
-        grid-column: span 6;
-        @include mobile-small {
-          grid-column: span 12;
+        grid-column: span 4;
+        @include laptop {
+          grid-column: span 6;
         }
-        @include large-screen {
-          grid-column: span 4;
+        @include mobile {
+          grid-column: span 12;
         }
         .content {
           @include flex-column;
@@ -357,12 +364,12 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 
       // Second row: 4 items (3 columns each)
       &:nth-child(4) {
-        grid-column: span 6;
-        @include mobile-small {
-          grid-column: span 12;
+        grid-column: span 3;
+        @include laptop {
+          grid-column: span 6;
         }
-        @include large-screen {
-          grid-column: span 3;
+        @include mobile {
+          grid-column: span 12;
         }
         .content {
           display: grid;
@@ -391,12 +398,15 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(5) {
-        grid-column: span 4;
-        @include mobile-small {
-          grid-column: span 12;
+        grid-column: span 3;
+        @include laptop {
+          grid-column: span 4;
         }
-        @include large-screen {
-          grid-column: span 3;
+        @include tablet {
+          grid-column: span 6;
+        }
+        @include mobile {
+          grid-column: span 12;
         }
         .content {
           display: flex;
@@ -488,12 +498,15 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(6) {
-        grid-column: span 4;
-        @include mobile-small {
-          grid-column: span 12;
+        grid-column: span 3;
+        @include laptop {
+          grid-column: span 4;
         }
-        @include large-screen {
-          grid-column: span 3;
+        @include tablet {
+          grid-column: span 6;
+        }
+        @include mobile {
+          grid-column: span 12;
         }
         padding-top: 15px;
         .item-title {
@@ -553,13 +566,14 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(7) {
-        grid-column: span 4;
-        @include mobile-small {
+        grid-column: span 3;
+        @include laptop {
+          grid-column: span 4;
+        }
+        @include tablet {
           grid-column: span 12;
         }
-        @include large-screen {
-          grid-column: span 3;
-        }
+
         padding: 0;
       }
     }
