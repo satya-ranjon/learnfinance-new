@@ -8,6 +8,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 34px 22px 28px 22px;
+    border-bottom: 1px solid $section-background-color;
     @include large-screen {
       padding: 34px 22px 28px 39px;
     }
@@ -53,6 +54,275 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
       }
       &:nth-child(4) {
         background: $bourse;
+      }
+    }
+  }
+  .bottom-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 22px;
+    // @include large-screen {
+    //   padding: 28px 39px;
+    // }
+
+    .item {
+      min-height: 120px;
+      background: $section-background-color;
+      border-radius: $border-md;
+      padding: 21px;
+
+      .item-title {
+        font-size: $font-sm;
+        font-weight: $font-weight-regular;
+        color: #9c99b4;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        @include flex-between;
+        .btn-outline {
+          @include btn-outline;
+          padding: 0px 12px;
+          background: $finance-theme;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+
+      // First row: 3 items (4 columns each)
+      &:nth-child(1) {
+        grid-column: span 4;
+        .video-container {
+          @include flex-start-center;
+          gap: 21px;
+          .video {
+            min-width: 233px;
+            height: 140px;
+            position: relative;
+            background-color: #2e2c3c;
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            .progress {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #6c6c6c;
+              overflow: hidden;
+
+              .progress-bar {
+                height: 100%;
+                background: $finance-theme;
+                width: 55%;
+              }
+            }
+          }
+          .video-info {
+            @include flex-column;
+            gap: 6px;
+            h6 {
+              font-size: $font-xxs;
+              font-weight: $font-weight-light;
+              line-height: 114%;
+              text-transform: uppercase;
+              color: #6e6c88;
+            }
+            h1 {
+              font-size: $font-lg;
+              font-weight: $font-weight-medium;
+              color: $white;
+              line-height: 114%;
+            }
+            .title {
+              background: $finance-theme;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              font-weight: $font-weight-semibold;
+            }
+            .video-time {
+              color: $white;
+            }
+            .btn-outline {
+              @include btn-outline;
+            }
+            .btn-primary {
+              @include btn-base;
+              background: $finance-theme;
+              color: #111111;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        grid-column: span 4;
+
+        .content {
+          @include flex-start-center;
+          gap: 22px;
+          .content-item {
+            @include flex-column;
+            gap: 10px;
+            min-height: 142px;
+            width: 100%;
+            padding: 17px;
+            border-radius: 8px;
+            z-index: 99;
+            border: 1px solid #353347;
+
+            position: relative;
+            img {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              z-index: -1;
+            }
+
+            .btn-primary {
+              @include btn-base;
+              background: $finance-theme;
+              color: #111111;
+              border: none;
+            }
+            h6 {
+              font-size: $font-xxs;
+              font-weight: $font-weight-light;
+              color: #08071a;
+              text-transform: uppercase;
+            }
+            h1 {
+              font-size: $font-lg;
+              font-weight: $font-weight-medium;
+              color: $white;
+              line-height: 114%;
+              max-width: 100px;
+            }
+            h2 {
+              font-size: $font-xxs;
+              font-weight: $font-weight-light;
+              color: #08071a;
+              span {
+                text-transform: uppercase;
+              }
+              .time {
+                font-size: $font-ssm;
+                color: $white;
+                padding-left: 5px;
+                text-transform: capitalize;
+              }
+            }
+            &:nth-child(1) {
+              background: $trading;
+            }
+            &:nth-child(2) {
+              background: $crypto;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        grid-column: span 4;
+        .content {
+          @include flex-column;
+          gap: 14px;
+          .content-item {
+            border: 1px solid #353347;
+            padding: 10px 13px;
+            border-radius: 8px;
+            .title {
+              @include flex-between;
+              .first-part {
+                @include flex-start-center;
+                align-items: end;
+                gap: 5px;
+                h2 {
+                  line-height: 114%;
+                  font-size: 15px;
+                  font-weight: $font-weight-medium;
+                  color: $white;
+                }
+                h3 {
+                  line-height: 114%;
+                  font-size: $font-ssm;
+                  font-weight: $font-weight-light;
+                  background: $finance-theme;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  font-weight: $font-weight-semibold;
+                }
+                h4 {
+                  font-size: 9px;
+                  font-weight: $font-weight-light;
+                  color: #6e6c88;
+                }
+              }
+              .bages {
+                font-size: 8px;
+                color: #4c4767;
+                @include flex-start-center;
+                gap: 4px;
+                border-radius: 20px;
+                padding: 3px;
+                background-color: #00000066;
+                .rounded {
+                  padding: 3px;
+                  background: #00a8f652;
+                  border-radius: 100%;
+                  width: fit-content;
+                  height: fit-content;
+                  .rounded {
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 100%;
+                    background: #00a8f6;
+                  }
+                }
+              }
+            }
+            .description {
+              @include flex-between;
+              margin-top: 6px;
+              p {
+                font-size: $font-xxs;
+                font-weight: $font-weight-light;
+                color: $white;
+                line-height: 12px;
+                letter-spacing: 0%;
+                span {
+                  font-weight: $font-weight-bold;
+                }
+              }
+              .btn-primary {
+                @include btn-base;
+                background: $finance-theme;
+                color: #111111;
+                border: none;
+                padding: 0 6px;
+                min-width: fit-content;
+              }
+            }
+          }
+        }
+      }
+
+      // Second row: 4 items (3 columns each)
+      &:nth-child(4) {
+        grid-column: span 3;
+      }
+      &:nth-child(5) {
+        grid-column: span 3;
+      }
+      &:nth-child(6) {
+        grid-column: span 3;
+      }
+      &:nth-child(7) {
+        grid-column: span 3;
       }
     }
   }

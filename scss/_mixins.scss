@@ -86,3 +86,16 @@
     @content;
   }
 }
+
+@mixin btn-base {
+  font-size: $font-xs;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  @include flex-center;
+  height: 23px;
+  border-radius: 5px;
+}
+@mixin btn-outline {
+  @include btn-base;
+  border: 1px solid #353347;
+}
