@@ -55,4 +55,8 @@
       0px 110px 120px -103px rgba(202, 172, 255, 0.4) inset,
       0px 5px 15px rgba(202, 172, 255, 0.2);
   }
+  &.active {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
 }

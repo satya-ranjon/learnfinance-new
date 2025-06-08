@@ -13,11 +13,11 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
       grid-template-columns: repeat(1, 1fr);
     }
     gap: 20px;
-    padding: 34px 22px 28px 22px;
     border-bottom: 1px solid $section-background-color;
-    // @include desktop {
-    //   padding: 34px 22px 28px 39px;
-    // }
+    padding: 34px 22px 28px 39px;
+    @include tablet {
+      padding: 34px 22px 28px 22px;
+    }
     .item {
       width: 100%;
       display: flex;

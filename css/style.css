@@ -300,6 +300,10 @@ a {
   -webkit-box-shadow: 0px 2px 8px 0px rgba(227, 222, 255, 0.15) inset, 0px 3px 18px 0px rgba(0, 0, 0, 0.4) inset, 0px 110px 120px -103px rgba(202, 172, 255, 0.4) inset, 0px 5px 15px rgba(202, 172, 255, 0.2);
           box-shadow: 0px 2px 8px 0px rgba(227, 222, 255, 0.15) inset, 0px 3px 18px 0px rgba(0, 0, 0, 0.4) inset, 0px 110px 120px -103px rgba(202, 172, 255, 0.4) inset, 0px 5px 15px rgba(202, 172, 255, 0.2);
 }
+.sidebar-item.active {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
 
 .header {
   width: 100%;
@@ -538,8 +542,8 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 34px 22px 28px 22px;
   border-bottom: 1px solid #191824;
+  padding: 34px 22px 28px 39px;
 }
 @media (max-width: 1023px) {
   .finance .top-content {
@@ -549,6 +553,11 @@ a {
 @media (max-width: 767px) {
   .finance .top-content {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 1023px) {
+  .finance .top-content {
+    padding: 34px 22px 28px 22px;
   }
 }
 .finance .top-content .item {
