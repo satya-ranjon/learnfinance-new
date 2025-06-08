@@ -6,3 +6,240 @@
     max-height: 215px;
   }
 }
+
+.ecom {
+  .top-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-bottom: 1px solid $section-background-color;
+    padding: 34px 22px 28px 39px;
+    @include tablet {
+      padding: 34px 22px 28px 22px;
+    }
+    .item {
+      .item-title {
+        @include item-title($ecom-theme);
+      }
+
+      padding: 16px 21px;
+
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 10px;
+        h1 {
+          font-size: $font-xl;
+          font-weight: $font-weight-semibold;
+          color: $white;
+          text-align: start;
+          line-height: 100%;
+        }
+
+        p {
+          font-size: $font-xl;
+          font-weight: $font-weight-light;
+          max-width: 250px;
+          line-height: 110%;
+        }
+      }
+
+      &:nth-child(2) {
+        background-color: $section-background-color;
+        .video-container {
+          @include flex-start-center;
+          @include mobile {
+            flex-direction: column;
+            align-items: start;
+            margin-top: 0px;
+          }
+          gap: 21px;
+          margin-top: 25px;
+          .video {
+            min-width: 233px;
+            @include laptop {
+              min-width: 153px;
+            }
+            @include mobile {
+              min-width: 100%;
+            }
+            height: 145px;
+            position: relative;
+            background-color: #2e2c3c;
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            .progress {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #6c6c6c;
+              overflow: hidden;
+
+              .progress-bar {
+                height: 100%;
+                background: $ecom-theme;
+                width: 55%;
+              }
+            }
+          }
+          .video-info {
+            @include flex-column;
+            gap: 6px;
+            @include mobile {
+              min-width: 100%;
+            }
+            h6 {
+              font-size: $font-xxs;
+              font-weight: $font-weight-light;
+              line-height: 114%;
+              text-transform: uppercase;
+              color: #6e6c88;
+            }
+            h1 {
+              font-size: $font-lg;
+              font-weight: $font-weight-medium;
+              color: $white;
+              line-height: 114%;
+            }
+            .title {
+              background: $ecom-theme;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              font-weight: $font-weight-semibold;
+            }
+            .video-time {
+              color: $white;
+            }
+            .btn-outline {
+              @include btn-outline;
+            }
+            .btn-primary {
+              @include btn-base;
+              background: $ecom-theme;
+              color: #111111;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        background-color: $section-background-color;
+
+        .progress-container {
+          display: flex;
+          gap: 24px;
+          align-items: flex-start;
+          margin-top: 25px;
+
+          @include mobile {
+            flex-direction: column;
+            gap: 20px;
+          }
+
+          .circular-progress {
+            .progress-circle {
+              position: relative;
+              display: inline-block;
+
+              .progress-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+                .percentage {
+                  display: block;
+                  font-size: 28px;
+                  font-weight: $font-weight-bold;
+                  color: $white;
+                  line-height: 1;
+                }
+
+                .label {
+                  display: block;
+                  font-size: $font-xs;
+                  color: #6e6c88;
+                  margin-top: 4px;
+                }
+              }
+            }
+          }
+
+          .modules-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .module-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 12px 16px;
+              background-color: rgba(255, 255, 255, 0.05);
+              border-radius: 8px;
+              border: 1px solid transparent;
+              transition: all 0.3s ease;
+
+              &.completed {
+                border-color: rgba(34, 197, 94, 0.3);
+                background-color: rgba(34, 197, 94, 0.1);
+              }
+
+              &.current {
+                border-color: rgba(74, 222, 128, 0.5);
+                background-color: rgba(74, 222, 128, 0.15);
+              }
+
+              .module-info {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                .module-label {
+                  font-size: $font-xxs;
+                  font-weight: $font-weight-medium;
+                  color: #6e6c88;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
+                }
+
+                .module-title {
+                  font-size: $font-sm;
+                  font-weight: $font-weight-medium;
+                  color: $white;
+                  line-height: 1.2;
+                }
+              }
+
+              .module-status {
+                display: flex;
+                align-items: center;
+
+                .check-icon {
+                  width: 20px;
+                  height: 20px;
+                }
+
+                .progress-percentage {
+                  font-size: $font-sm;
+                  font-weight: $font-weight-semibold;
+                  color: #4ade80;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

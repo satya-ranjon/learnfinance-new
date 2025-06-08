@@ -28,7 +28,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
       overflow: hidden;
       font-weight: $font-weight-regular;
       font-size: $font-xl;
-      color: $white;
+      // color: $white;
       span {
         padding-left: 36px;
       }
@@ -79,20 +79,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
       padding: 21px;
 
       .item-title {
-        font-size: $font-sm;
-        font-weight: $font-weight-regular;
-        color: #9c99b4;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        @include flex-between;
-        .btn-outline {
-          @include btn-outline;
-          padding: 0px 12px;
-          background: $finance-theme;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
+        @include item-title($finance-theme);
       }
 
       // First row: 3 items (4 columns each)

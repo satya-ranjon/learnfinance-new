@@ -607,7 +607,6 @@ a {
   overflow: hidden;
   font-weight: 400;
   font-size: 24px;
-  color: #ffffff;
 }
 .finance .top-content .item span {
   padding-left: 36px;
@@ -1512,6 +1511,356 @@ a {
 
 .mobile-menu .ecom-cart {
   max-height: 215px;
+}
+
+.ecom .top-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-bottom: 1px solid #191824;
+  padding: 34px 22px 28px 39px;
+}
+@media (max-width: 1023px) {
+  .ecom .top-content {
+    padding: 34px 22px 28px 22px;
+  }
+}
+.ecom .top-content .item {
+  padding: 16px 21px;
+}
+.ecom .top-content .item .item-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9c99b4;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ecom .top-content .item .item-title .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+  padding: 0px 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ecom .top-content .item:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+.ecom .top-content .item:nth-child(1) h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: start;
+  line-height: 100%;
+}
+.ecom .top-content .item:nth-child(1) p {
+  font-size: 24px;
+  font-weight: 300;
+  max-width: 250px;
+  line-height: 110%;
+}
+.ecom .top-content .item:nth-child(2) {
+  background-color: #191824;
+}
+.ecom .top-content .item:nth-child(2) .video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+  margin-top: 25px;
+}
+@media (max-width: 767px) {
+  .ecom .top-content .item:nth-child(2) .video-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-top: 0px;
+  }
+}
+.ecom .top-content .item:nth-child(2) .video-container .video {
+  min-width: 233px;
+  height: 145px;
+  position: relative;
+  background-color: #2e2c3c;
+}
+@media (max-width: 1439px) {
+  .ecom .top-content .item:nth-child(2) .video-container .video {
+    min-width: 153px;
+  }
+}
+@media (max-width: 767px) {
+  .ecom .top-content .item:nth-child(2) .video-container .video {
+    min-width: 100%;
+  }
+}
+.ecom .top-content .item:nth-child(2) .video-container .video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.ecom .top-content .item:nth-child(2) .video-container .video .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c6c6c;
+  overflow: hidden;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video .progress .progress-bar {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  width: 55%;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+@media (max-width: 767px) {
+  .ecom .top-content .item:nth-child(2) .video-container .video-info {
+    min-width: 100%;
+  }
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info h6 {
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 114%;
+  text-transform: uppercase;
+  color: #6e6c88;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info .title {
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info .video-time {
+  color: #ffffff;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+}
+.ecom .top-content .item:nth-child(2) .video-container .video-info .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  color: #111111;
+}
+.ecom .top-content .item:nth-child(3) {
+  background-color: #191824;
+}
+.ecom .top-content .item:nth-child(3) .progress-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 25px;
+}
+@media (max-width: 767px) {
+  .ecom .top-content .item:nth-child(3) .progress-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+.ecom .top-content .item:nth-child(3) .progress-container .circular-progress .progress-circle {
+  position: relative;
+  display: inline-block;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .circular-progress .progress-circle .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .circular-progress .progress-circle .progress-text .percentage {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .circular-progress .progress-circle .progress-text .label {
+  display: block;
+  font-size: 10px;
+  color: #6e6c88;
+  margin-top: 4px;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item.completed {
+  border-color: rgba(34, 197, 94, 0.3);
+  background-color: rgba(34, 197, 94, 0.1);
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item.current {
+  border-color: rgba(74, 222, 128, 0.5);
+  background-color: rgba(74, 222, 128, 0.15);
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item .module-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item .module-info .module-label {
+  font-size: 9px;
+  font-weight: 500;
+  color: #6e6c88;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item .module-info .module-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item .module-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item .module-status .check-icon {
+  width: 20px;
+  height: 20px;
+}
+.ecom .top-content .item:nth-child(3) .progress-container .modules-list .module-item .module-status .progress-percentage {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4ade80;
 }
 
 body {
