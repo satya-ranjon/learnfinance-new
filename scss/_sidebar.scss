@@ -56,7 +56,14 @@
       0px 5px 15px rgba(202, 172, 255, 0.2);
   }
   &.active {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    // position: absolute;
+    .active-finance {
+      @include active(#00a8f6, rgba(0, 168, 246, 0.6));
+    }
+
+    .active-ecom {
+      @include active(#94eb58, rgba(0, 246, 62, 0.6));
+    }
   }
 }

@@ -1,0 +1,8 @@
+.ecom-cart {
+  @include cart($digital-theme);
+}
+.mobile-menu {
+  .ecom-cart {
+    max-height: 215px;
+  }
+}

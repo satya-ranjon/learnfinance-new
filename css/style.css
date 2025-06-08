@@ -301,8 +301,39 @@ a {
           box-shadow: 0px 2px 8px 0px rgba(227, 222, 255, 0.15) inset, 0px 3px 18px 0px rgba(0, 0, 0, 0.4) inset, 0px 110px 120px -103px rgba(202, 172, 255, 0.4) inset, 0px 5px 15px rgba(202, 172, 255, 0.2);
 }
 .sidebar-item.active {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+}
+.sidebar-item.active .active-finance {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  opacity: 0.8;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  background: #00a8f6;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px 8px rgba(0, 168, 246, 0.6);
+          box-shadow: 0 0 20px 8px rgba(0, 168, 246, 0.6);
+}
+.sidebar-item.active .active-ecom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20px;
+  height: 10px;
+  opacity: 0.8;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  background: #94eb58;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px 8px rgba(0, 246, 62, 0.6);
+          box-shadow: 0 0 20px 8px rgba(0, 246, 62, 0.6);
 }
 
 .header {
@@ -1424,8 +1455,67 @@ a {
   max-height: 215px;
 }
 
+.ecom-cart {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: -webkit-gradient(linear, right top, left top, from(#f60c3b), to(#ff8e39));
+  background: linear-gradient(270deg, #f60c3b 0%, #ff8e39 100%);
+}
+.ecom-cart .cart-content {
+  padding: 21px;
+  background-size: cover;
+  background-image: url("../assets/cart-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.ecom-cart .cart-content .logo {
+  padding: 5px 13px;
+  background: #11101c;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+}
+.ecom-cart .cart-content h1 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #11101c;
+}
+.ecom-cart .cart-content h3 {
+  font-size: 64px;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 1px #ffffff;
+}
+.ecom-cart .cart-content p {
+  font-size: 22px;
+  max-width: 225px;
+  color: #11101c;
+  font-weight: 300;
+}
+
+.mobile-menu .ecom-cart {
+  max-height: 215px;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sa ns-serif;
   color: #c4bfef;
   background-color: #070610;
   height: 100vh;
