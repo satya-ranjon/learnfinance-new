@@ -74,6 +74,7 @@
   height: 100vh;
   background-color: $section-background-color;
   padding: 20px;
+  z-index: 999;
   .close-icon {
     width: 100%;
     display: flex;

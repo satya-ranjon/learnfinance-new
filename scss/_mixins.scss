@@ -99,3 +99,52 @@
   @include btn-base;
   border: 1px solid #353347;
 }
+@mixin cart($bg) {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: $bg;
+  .cart-content {
+    padding: 21px;
+    background-size: cover;
+    background-image: url("../assets/cart-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    @include flex-column;
+    gap: 5px;
+    .logo {
+      padding: 5px 13px;
+      background: #11101c;
+      width: fit-content;
+      border-radius: 20px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: $font-weight-regular;
+      color: #11101c;
+    }
+    h3 {
+      font-size: 64px;
+      font-weight: $font-weight-bold;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-text-stroke: 1px #ffffff;
+    }
+    p {
+      font-size: 22px;
+      max-width: 225px;
+      color: #11101c;
+      font-weight: $font-weight-light;
+    }
+  }
+}

@@ -65,5 +65,6 @@ body {
   height: 90vh;
   margin-top: 20px;
   border-top-left-radius: $border-xl;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }

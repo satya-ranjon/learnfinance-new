@@ -465,6 +465,7 @@ a {
   height: 100vh;
   background-color: #191824;
   padding: 20px;
+  z-index: 999;
   gap: 24px;
   display: none;
 }
@@ -1246,6 +1247,7 @@ a {
 }
 .finance .bottom-content .item:nth-child(6) {
   grid-column: span 4;
+  padding-top: 15px;
 }
 @media (max-width: 480px) {
   .finance .bottom-content .item:nth-child(6) {
@@ -1256,9 +1258,78 @@ a {
   .finance .bottom-content .item:nth-child(6) {
     grid-column: span 3;
   }
+}
+.finance .bottom-content .item:nth-child(6) .item-title h1 {
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+}
+.finance .bottom-content .item:nth-child(6) .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.finance .bottom-content .item:nth-child(6) .content .content-item {
+  padding: 22px 5px;
+  border: 1px solid #353347;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.finance .bottom-content .item:nth-child(6) .content .content-item h1 {
+  color: #9c99b4;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+.finance .bottom-content .item:nth-child(6) .content .content-item p {
+  font-size: 9px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 114%;
+  text-align: center;
+}
+.finance .bottom-content .item:nth-child(6) .content-footer {
+  font-size: 10px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  line-height: 114%;
+  border: 1px solid #353347;
+  min-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+  border-radius: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5px 0px;
+}
+.finance .bottom-content .item:nth-child(6) .content-footer span {
+  color: #58eb89;
+  margin: 0 2px;
 }
 .finance .bottom-content .item:nth-child(7) {
   grid-column: span 4;
+  padding: 0;
 }
 @media (max-width: 480px) {
   .finance .bottom-content .item:nth-child(7) {
@@ -1269,6 +1340,64 @@ a {
   .finance .bottom-content .item:nth-child(7) {
     grid-column: span 3;
   }
+}
+
+.finance-cart {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(243.58deg, #98ef59 0%, #046c38 100%);
+}
+.finance-cart .cart-content {
+  padding: 21px;
+  background-size: cover;
+  background-image: url("../assets/cart-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.finance-cart .cart-content .logo {
+  padding: 5px 13px;
+  background: #11101c;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+}
+.finance-cart .cart-content h1 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #11101c;
+}
+.finance-cart .cart-content h3 {
+  font-size: 64px;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 1px #ffffff;
+}
+.finance-cart .cart-content p {
+  font-size: 22px;
+  max-width: 225px;
+  color: #11101c;
+  font-weight: 300;
+}
+
+.mobile-menu .finance-cart {
+  max-height: 215px;
 }
 
 body {
@@ -1356,5 +1485,6 @@ body .content {
   height: 90vh;
   margin-top: 20px;
   border-top-left-radius: 25px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

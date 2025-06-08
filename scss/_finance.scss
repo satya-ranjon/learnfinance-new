@@ -495,6 +495,62 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         @include large-screen {
           grid-column: span 3;
         }
+        padding-top: 15px;
+        .item-title {
+          h1 {
+            background: $finance-theme;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: $font-weight-regular;
+            font-size: 28px;
+            line-height: 100%;
+          }
+        }
+        .content {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+          .content-item {
+            padding: 22px 5px;
+            border: 1px solid #353347;
+            border-radius: 8px;
+            @include flex-column;
+            gap: 10px;
+
+            h1 {
+              color: #9c99b4;
+              font-size: 25px;
+              font-weight: $font-weight-regular;
+              text-align: center;
+            }
+            p {
+              font-size: $font-xxs;
+              font-weight: $font-weight-light;
+              color: $white;
+              line-height: 114%;
+              text-align: center;
+            }
+          }
+        }
+        .content-footer {
+          font-size: $font-xs;
+          font-weight: $font-weight-light;
+          color: $white;
+          text-align: center;
+          line-height: 114%;
+          border: 1px solid #353347;
+          min-height: 22px;
+          @include flex-center;
+          margin-top: 12px;
+          border-radius: 8px;
+          flex-wrap: wrap;
+          padding: 5px 0px;
+          span {
+            color: #58eb89;
+            margin: 0 2px;
+          }
+        }
       }
       &:nth-child(7) {
         grid-column: span 4;
@@ -504,7 +560,17 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         @include large-screen {
           grid-column: span 3;
         }
+        padding: 0;
       }
     }
+  }
+}
+
+.finance-cart {
+  @include cart(linear-gradient(243.58deg, #98ef59 0%, #046c38 100%));
+}
+.mobile-menu {
+  .finance-cart {
+    max-height: 215px;
   }
 }
