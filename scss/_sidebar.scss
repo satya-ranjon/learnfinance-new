@@ -1,0 +1,58 @@
+.sidebar {
+  height: 100vh;
+  min-width: 110px;
+  max-width: 110px;
+  display: none;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  .logo {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    margin-top: 45px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: $border-lg;
+  border: 1px solid #ffffff33;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0px 1px 5px 0px rgba(227, 222, 255, 0.103) inset,
+    0px 2px 14.6px 0px rgba(0, 0, 0, 0.3019607843) inset,
+    0px 98px 100px -103px rgba(202, 172, 255, 0.3019607843) inset;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0px 2px 8px 0px rgba(227, 222, 255, 0.15) inset,
+      0px 3px 18px 0px rgba(0, 0, 0, 0.4) inset,
+      0px 110px 120px -103px rgba(202, 172, 255, 0.4) inset,
+      0px 5px 15px rgba(202, 172, 255, 0.2);
+  }
+}

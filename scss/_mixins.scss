@@ -1,0 +1,88 @@
+// Flexbox mixin function
+@mixin flex($justify: start, $align: center, $direction: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+// Specific flex-start-center mixin (your requested configuration)
+@mixin flex-start-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+// Additional common flexbox mixins for convenience
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Responsive Mixins
+@mixin mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet + 1px}) and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop + 1px}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$medium-desktop + 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: #{$large + 1px}) {
+    @content;
+  }
+}
+@mixin extra-large-screen {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "utils";
+@import "sidebar";
+@import "header";
+// pages
+
+// @import "finance";
+// @import "learnEcom";
+
+body {
+  font-family: $font-family;
+  color: $font-color;
+  background-color: $background-color;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  @include flex(start, start);
+  .content {
+    width: 100%;
+    width: 100%;
+  }
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #191824;
+  @include flex-center;
+  position: relative;
+  cursor: pointer;
+  span {
+    width: 14px;
+    height: 14px;
+    @include flex-center;
+    background: $notification-bg;
+    border-radius: 100%;
+    font-size: $font-xs;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $white;
+  }
+}
+
+.copy-right {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: $font-md;
+  color: #9c99b4;
+}
