@@ -91,13 +91,31 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 
       // First row: 3 items (4 columns each)
       &:nth-child(1) {
-        grid-column: span 4;
+        grid-column: span 6;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 4;
+        }
         .video-container {
           @include flex-start-center;
+          @include mobile-small {
+            flex-direction: column;
+            align-items: start;
+            margin-top: 0px;
+          }
           gap: 21px;
+          margin-top: 25px;
           .video {
             min-width: 233px;
-            height: 140px;
+            @include mobile {
+              min-width: 153px;
+            }
+            @include mobile-small {
+              min-width: 100%;
+            }
+            height: 145px;
             position: relative;
             background-color: #2e2c3c;
             img {
@@ -125,6 +143,9 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           .video-info {
             @include flex-column;
             gap: 6px;
+            @include mobile-small {
+              min-width: 100%;
+            }
             h6 {
               font-size: $font-xxs;
               font-weight: $font-weight-light;
@@ -160,11 +181,27 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(2) {
-        grid-column: span 4;
+        grid-column: span 6;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 4;
+        }
 
         .content {
           @include flex-start-center;
           gap: 22px;
+          @include mobile-small {
+            // flex-direction: column;
+            // align-items: start;
+            gap: 15px;
+          }
+          @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: start;
+          }
+
           .content-item {
             @include flex-column;
             gap: 10px;
@@ -226,7 +263,13 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
       }
       &:nth-child(3) {
-        grid-column: span 4;
+        grid-column: span 6;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 4;
+        }
         .content {
           @include flex-column;
           gap: 14px;
@@ -240,6 +283,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
                 @include flex-start-center;
                 align-items: end;
                 gap: 5px;
+                flex-wrap: wrap;
                 h2 {
                   line-height: 114%;
                   font-size: 15px;
@@ -313,16 +357,153 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 
       // Second row: 4 items (3 columns each)
       &:nth-child(4) {
-        grid-column: span 3;
+        grid-column: span 6;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 3;
+        }
+        .content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 17px;
+
+          .content-item {
+            padding: 17px;
+            border: 1px solid #353347;
+            border-radius: 8px;
+            @include flex-center;
+            gap: 10px;
+            h1 {
+              background: $finance-theme;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              font-size: 28px;
+            }
+            p {
+              font-size: 11px;
+              font-weight: $font-weight-light;
+              color: $white;
+            }
+          }
+        }
       }
       &:nth-child(5) {
-        grid-column: span 3;
+        grid-column: span 4;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 3;
+        }
+        .content {
+          display: flex;
+          align-items: flex-end;
+          gap: 15px;
+          min-height: 139px;
+          height: 100%;
+
+          .y-axis {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-bottom: 35px;
+
+            span {
+              font-size: $font-xxs;
+              font-weight: $font-weight-light;
+              color: #9c99b4;
+              line-height: 1;
+            }
+          }
+
+          .chart-bars {
+            display: flex;
+            align-items: start;
+            gap: 8px;
+            height: 100%;
+            flex: 1;
+
+            .bar-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              height: 90%;
+              flex: 1;
+
+              .bar-background {
+                height: 100%;
+                width: 9px;
+                background-color: #353347;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+
+                .bar {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  background: $finance-theme;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
+
+                  &:hover {
+                    transform: scaleY(1.05);
+                    box-shadow: 0 0 15px rgba(14, 210, 157, 0.4);
+                  }
+                }
+              }
+
+              .day-label {
+                margin-top: 8px;
+                font-size: $font-xs;
+                font-weight: $font-weight-regular;
+                color: #9c99b4;
+                text-align: center;
+              }
+
+              // Hover tooltip effect
+              &:hover {
+                .bar-background .bar::after {
+                  content: attr(data-hours) "h - " attr(data-day);
+                  position: absolute;
+                  top: -35px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background: rgba(0, 0, 0, 0.8);
+                  color: white;
+                  padding: 4px 8px;
+                  border-radius: 4px;
+                  font-size: 10px;
+                  white-space: nowrap;
+                  z-index: 10;
+                }
+              }
+            }
+          }
+        }
       }
       &:nth-child(6) {
-        grid-column: span 3;
+        grid-column: span 4;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 3;
+        }
       }
       &:nth-child(7) {
-        grid-column: span 3;
+        grid-column: span 4;
+        @include mobile-small {
+          grid-column: span 12;
+        }
+        @include large-screen {
+          grid-column: span 3;
+        }
       }
     }
   }
