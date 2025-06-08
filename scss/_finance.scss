@@ -1,0 +1,59 @@
+$trading: linear-gradient(258.12deg, #191824 20.19%, #044c87 100%);
+$crypto: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
+$bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
+
+.finance {
+  .top-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 34px 22px 28px 22px;
+    @include large-screen {
+      padding: 34px 22px 28px 39px;
+    }
+    .item {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      min-height: 147px;
+      border-radius: $border-md;
+      overflow: hidden;
+      font-weight: $font-weight-regular;
+      font-size: $font-xl;
+      color: $white;
+      span {
+        padding-left: 36px;
+      }
+      &:nth-child(1) {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 10px;
+        h1 {
+          font-size: $font-xl;
+          font-weight: $font-weight-semibold;
+          color: $white;
+          text-align: start;
+          line-height: 100%;
+        }
+
+        p {
+          font-size: $font-xl;
+          font-weight: $font-weight-light;
+          max-width: 250px;
+          line-height: 110%;
+        }
+      }
+      &:nth-child(2) {
+        background: $trading;
+      }
+      &:nth-child(3) {
+        background: $crypto;
+      }
+      &:nth-child(4) {
+        background: $bourse;
+      }
+    }
+  }
+}

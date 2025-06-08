@@ -4,6 +4,7 @@
 @import "utils";
 @import "sidebar";
 @import "header";
+@import "finance";
 // pages
 
 // @import "finance";
@@ -56,4 +57,12 @@ body {
   padding: 10px;
   font-size: $font-md;
   color: #9c99b4;
+}
+
+.main-content {
+  background-color: $min-content-background-color;
+  width: 100%;
+  height: 90vh;
+  margin-top: 20px;
+  border-top-left-radius: $border-xl;
 }
