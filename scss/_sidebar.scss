@@ -65,5 +65,8 @@
     .active-ecom {
       @include active(#94eb58, rgba(0, 246, 62, 0.6));
     }
+    .active-digital {
+      @include active(#f60c3bc4, rgba(246, 168, 0, 0.6));
+    }
   }
 }
