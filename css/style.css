@@ -1793,6 +1793,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   gap: 35px;
 }
 @media (max-width: 1439px) {
@@ -1833,7 +1836,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: 110px;
+  max-height: 119px;
   overflow-y: auto;
   padding-right: 10px;
 }
@@ -1873,7 +1876,6 @@ a {
   background-clip: text;
 }
 .ecom .top-content .item:nth-child(3) .content .progress-box {
-  padding-top: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1921,6 +1923,144 @@ a {
   font-weight: 300;
   line-height: 115%;
 }
+.ecom .middle-content {
+  padding: 24px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #191824;
+  gap: 34px;
+  margin: 28px 24px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .ecom .middle-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.ecom .middle-content .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  min-width: 152px;
+  max-width: 152px;
+}
+@media (max-width: 767px) {
+  .ecom .middle-content .content-box {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+.ecom .middle-content .content-box h1 {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #9c99b4;
+}
+.ecom .middle-content .content-box h2 {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #6e6c88;
+}
+.ecom .middle-content .content-box h3 {
+  font-size: 24px;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 120%;
+}
+.ecom .middle-content .content-box h4 {
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.ecom .middle-content .content-box h4 span {
+  color: #6e6c88;
+}
+.ecom .middle-content .content-box .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+  width: 100%;
+  margin-top: 10px;
+}
+.ecom .middle-content .video-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 14px;
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+}
+.ecom .middle-content .video-box .after {
+  position: sticky;
+  top: 0;
+  right: 0;
+  min-width: 199px;
+  min-height: 176px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(25, 24, 36, 0)), to(#191824));
+  background: linear-gradient(90deg, rgba(25, 24, 36, 0) 0%, #191824 100%);
+}
+@media (max-width: 767px) {
+  .ecom .middle-content .video-box .after {
+    min-width: 99px;
+  }
+}
+.ecom .middle-content .video-box .video-item {
+  min-width: 233px;
+  height: 152px;
+  background-color: #2e2c3c;
+  border-bottom: 2px solid #6c6c6c;
+  position: relative;
+}
+.ecom .middle-content .video-box .video-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
 
 body {
   font-family: "Poppins", sa ns-serif;
@@ -1948,8 +2088,9 @@ body {
       flex-wrap: nowrap;
 }
 body .content {
+  height: 100%;
   width: 100%;
-  width: 100%;
+  overflow: hidden;
 }
 
 .avatar {
@@ -2013,6 +2154,7 @@ body .content {
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */

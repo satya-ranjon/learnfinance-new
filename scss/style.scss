@@ -22,8 +22,9 @@ body {
   width: 100%;
   @include flex(start, start);
   .content {
+    height: 100%;
     width: 100%;
-    width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -72,6 +73,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */

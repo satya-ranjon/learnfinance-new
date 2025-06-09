@@ -154,6 +154,7 @@
       &:nth-child(3) {
         background-color: $section-background-color;
         grid-column: span 4;
+
         @include laptop {
           grid-column: span 5;
         }
@@ -162,6 +163,7 @@
         }
         .content {
           @include flex-start-center;
+          height: fit-content;
           gap: 35px;
           @include laptop {
             gap: 15px;
@@ -184,7 +186,7 @@
             .box {
               gap: 10px;
               @include flex-column;
-              max-height: 110px;
+              max-height: 119px;
               overflow-y: auto;
               padding-right: 10px;
               .item {
@@ -217,7 +219,7 @@
           }
 
           .progress-box {
-            padding-top: 20px;
+            // padding-top: 20px;
             width: fit-content;
             .progress-container {
               position: relative;
@@ -252,6 +254,104 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  .middle-content {
+    padding: 24px 22px;
+    @include flex-start-center;
+    background-color: $section-background-color;
+    gap: 34px;
+    margin: 28px 24px;
+    // width: 100%;
+    overflow: hidden;
+    @include mobile {
+      flex-direction: column;
+    }
+    .content-box {
+      @include flex-column;
+      gap: 5px;
+      min-width: 152px;
+      max-width: 152px;
+      @include mobile {
+        min-width: 100%;
+        max-width: 100%;
+      }
+      h1 {
+        font-size: 13px;
+        font-weight: $font-weight-regular;
+        text-transform: uppercase;
+        color: #9c99b4;
+      }
+      h2 {
+        font-size: 12px;
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+        color: #6e6c88;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: $font-weight-medium;
+        background: $ecom-theme;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 120%;
+      }
+      h4 {
+        font-size: 12px;
+        font-weight: $font-weight-light;
+        color: $white;
+        text-transform: uppercase;
+        span {
+          color: #6e6c88;
+        }
+      }
+
+      .btn-outline {
+        @include btn-outline;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+    .video-box {
+      @include flex-start-center;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 14px;
+      width: 100%;
+      position: relative;
+      overflow-y: hidden;
+      .after {
+        position: sticky;
+        top: 0;
+        right: 0;
+        min-width: 199px;
+        @include mobile {
+          min-width: 99px;
+        }
+        min-height: 176px;
+        background: linear-gradient(
+          90deg,
+          rgba(25, 24, 36, 0) 0%,
+          #191824 100%
+        );
+      }
+      //   width: 100em - 20em;
+      .video-item {
+        min-width: 233px;
+        height: 152px;
+        background-color: $video-background-color;
+        border-bottom: 2px solid #6c6c6c;
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
         }
       }
     }
