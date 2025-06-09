@@ -10,11 +10,11 @@
 .ecom {
   .top-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     border-bottom: 1px solid $section-background-color;
     padding: 34px 22px 28px 39px;
-    @include tablet {
+    @include laptop {
       padding: 34px 22px 28px 22px;
     }
     .item {
@@ -25,11 +25,25 @@
       padding: 16px 21px;
 
       &:nth-child(1) {
+        grid-column: span 4;
+        @include laptop {
+          grid-column: span 3;
+        }
+        @include tablet {
+          grid-column: span 6;
+        }
+        @include mobile {
+          grid-column: span 12;
+        }
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
         gap: 10px;
+
+        @include laptop {
+          padding: 16px 0px;
+        }
         h1 {
           font-size: $font-xl;
           font-weight: $font-weight-semibold;
@@ -48,6 +62,13 @@
 
       &:nth-child(2) {
         background-color: $section-background-color;
+        grid-column: span 4;
+        @include tablet {
+          grid-column: span 6;
+        }
+        @include mobile {
+          grid-column: span 12;
+        }
         .video-container {
           @include flex-start-center;
           @include mobile {
@@ -60,7 +81,7 @@
           .video {
             min-width: 233px;
             @include laptop {
-              min-width: 153px;
+              min-width: 90px;
             }
             @include mobile {
               min-width: 100%;
@@ -132,108 +153,101 @@
       }
       &:nth-child(3) {
         background-color: $section-background-color;
-
-        .progress-container {
-          display: flex;
-          gap: 24px;
-          align-items: flex-start;
-          margin-top: 25px;
-
+        grid-column: span 4;
+        @include laptop {
+          grid-column: span 5;
+        }
+        @include tablet {
+          grid-column: span 12;
+        }
+        .content {
+          @include flex-start-center;
+          gap: 35px;
+          @include laptop {
+            gap: 15px;
+          }
+          @include tablet {
+            gap: 35px;
+          }
           @include mobile {
-            flex-direction: column;
-            gap: 20px;
+            gap: 15px;
           }
 
-          .circular-progress {
-            .progress-circle {
-              position: relative;
-              display: inline-block;
-
-              .progress-text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-
-                .percentage {
-                  display: block;
-                  font-size: 28px;
-                  font-weight: $font-weight-bold;
-                  color: $white;
-                  line-height: 1;
+          @media (max-width: 380px) {
+            flex-direction: column;
+          }
+          .content-item {
+            border: 1px solid $box-border;
+            border-radius: $border-sm;
+            padding: 14px 12px;
+            width: 100%;
+            .box {
+              gap: 10px;
+              @include flex-column;
+              max-height: 110px;
+              overflow-y: auto;
+              padding-right: 10px;
+              .item {
+                gap: 2px;
+                padding: 0px;
+                h1 {
+                  font-size: 8px;
+                  font-weight: $font-weight-regular;
+                  color: #9c99b4;
+                  text-transform: uppercase;
+                  line-height: 100%;
                 }
-
-                .label {
-                  display: block;
-                  font-size: $font-xs;
-                  color: #6e6c88;
-                  margin-top: 4px;
+                .description {
+                  @include flex-between;
+                  width: 100%;
+                  font-size: 11px;
+                  font-weight: $font-weight-regular;
+                  h2 {
+                    color: $white;
+                  }
+                  h3 {
+                    background: $ecom-theme;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                  }
                 }
               }
             }
           }
 
-          .modules-list {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+          .progress-box {
+            padding-top: 20px;
+            width: fit-content;
+            .progress-container {
+              position: relative;
+              width: fit-content;
 
-            .module-item {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              padding: 12px 16px;
-              background-color: rgba(255, 255, 255, 0.05);
-              border-radius: 8px;
-              border: 1px solid transparent;
-              transition: all 0.3s ease;
-
-              &.completed {
-                border-color: rgba(34, 197, 94, 0.3);
-                background-color: rgba(34, 197, 94, 0.1);
-              }
-
-              &.current {
-                border-color: rgba(74, 222, 128, 0.5);
-                background-color: rgba(74, 222, 128, 0.15);
-              }
-
-              .module-info {
+              .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 4px;
-
-                .module-label {
-                  font-size: $font-xxs;
-                  font-weight: $font-weight-medium;
-                  color: #6e6c88;
-                  text-transform: uppercase;
-                  letter-spacing: 0.5px;
-                }
-
-                .module-title {
-                  font-size: $font-sm;
-                  font-weight: $font-weight-medium;
-                  color: $white;
-                  line-height: 1.2;
-                }
-              }
-
-              .module-status {
-                display: flex;
                 align-items: center;
+                justify-content: center;
+                gap: 5px;
 
-                .check-icon {
-                  width: 20px;
-                  height: 20px;
+                h1 {
+                  font-weight: $font-weight-regular;
+                  background: $ecom-theme;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  font-size: 28px;
+                  margin-top: 20px;
                 }
-
-                .progress-percentage {
-                  font-size: $font-sm;
-                  font-weight: $font-weight-semibold;
-                  color: #4ade80;
+                p {
+                  font-size: $font-xs;
+                  font-weight: $font-weight-light;
+                  line-height: 115%;
                 }
               }
             }
