@@ -162,3 +162,845 @@
     background-clip: text;
   }
 }
+
+// Cart content styling mixin
+@mixin cart-content-styling($theme-color) {
+  padding: 21px;
+  gap: 5px;
+  @include desktop {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 22px;
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 64px;
+    @include desktop {
+      font-size: 58px;
+    }
+  }
+
+  p {
+    font-size: 22px;
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+}
+
+// Top content grid mixin
+@mixin top-content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  border-bottom: 1px solid $section-background-color;
+  padding: 34px 22px 28px 39px;
+  @include laptop {
+    padding: 34px 22px 28px 22px;
+  }
+}
+
+// First grid item mixin
+@mixin first-grid-item {
+  grid-column: span 4;
+  @include laptop {
+    grid-column: span 3;
+  }
+  @include tablet {
+    grid-column: span 6;
+  }
+  @include mobile {
+    grid-column: span 12;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 21px;
+
+  @include laptop {
+    padding: 16px 0px;
+  }
+
+  h1 {
+    font-size: $font-xl;
+    font-weight: $font-weight-semibold;
+    color: $white;
+    text-align: start;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: $font-xl;
+    font-weight: $font-weight-light;
+    max-width: 250px;
+    line-height: 110%;
+  }
+}
+
+// Second grid item mixin
+@mixin second-grid-item {
+  background-color: $section-background-color;
+  grid-column: span 4;
+  padding: 16px 21px;
+  @include tablet {
+    grid-column: span 6;
+  }
+  @include mobile {
+    grid-column: span 12;
+  }
+}
+
+// Third grid item mixin
+@mixin third-grid-item {
+  background-color: $section-background-color;
+  grid-column: span 4;
+  padding: 16px 21px;
+
+  @include laptop {
+    grid-column: span 5;
+  }
+  @include tablet {
+    grid-column: span 12;
+  }
+}
+
+// Middle content section mixin
+@mixin middle-content-section {
+  padding: 24px 22px;
+  @include flex-start-center;
+  background-color: $section-background-color;
+  gap: 34px;
+  margin: 28px 24px;
+  border-radius: $border-md;
+  overflow: hidden;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+// Content box mixin
+@mixin content-box-styling {
+  @include flex-column;
+  gap: 5px;
+  min-width: 152px;
+  max-width: 152px;
+  @include mobile {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 13px;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+    color: #9c99b4;
+  }
+
+  h2 {
+    font-size: 12px;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+    color: #6e6c88;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: $font-weight-medium;
+    line-height: 120%;
+  }
+
+  h4 {
+    font-size: 12px;
+    font-weight: $font-weight-light;
+    color: $white;
+    text-transform: uppercase;
+    span {
+      color: #6e6c88;
+    }
+  }
+
+  .btn-outline {
+    @include btn-outline;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+// Video box mixin
+@mixin video-box-styling {
+  @include flex-start-center;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+
+  .after {
+    @media (max-width: 320px) {
+      display: none;
+    }
+    position: sticky;
+    top: 0;
+    right: 0;
+    min-width: 199px;
+    @include mobile {
+      min-width: 99px;
+    }
+    min-height: 176px;
+    background: linear-gradient(90deg, rgba(25, 24, 36, 0) 0%, #191824 100%);
+  }
+
+  .video-item {
+    min-width: 233px;
+    height: 152px;
+    background-color: $video-background-color;
+    border-bottom: 2px solid #6c6c6c;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+}
+
+// Footer content grid mixin
+@mixin footer-content-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include laptop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  gap: 20px;
+  margin: 28px 24px;
+}
+
+// Footer item base mixin
+@mixin footer-item-base {
+  background-color: $section-background-color;
+  padding: 20px 21px;
+  border-radius: $border-md;
+
+  .title {
+    h1 {
+      font-size: 28px;
+      font-weight: $font-weight-regular;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Gradient text mixin
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Video container base mixin
+@mixin video-container-base($theme-color) {
+  @include flex-start-center;
+  @include mobile {
+    flex-direction: column;
+    align-items: start;
+    margin-top: 0px;
+  }
+  gap: 21px;
+  margin-top: 25px;
+
+  .video {
+    min-width: 233px;
+    @include laptop {
+      min-width: 90px;
+    }
+    @include tablet {
+      min-width: 183px;
+    }
+    @include mobile {
+      min-width: 100%;
+    }
+    height: 145px;
+    position: relative;
+    background-color: #2e2c3c;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #6c6c6c;
+      overflow: hidden;
+
+      .progress-bar {
+        height: 100%;
+        background: $theme-color;
+        width: 55%;
+      }
+    }
+  }
+
+  .video-info {
+    @include flex-column;
+    gap: 6px;
+    @include mobile {
+      min-width: 100%;
+    }
+
+    h6 {
+      font-size: $font-xxs;
+      font-weight: $font-weight-light;
+      line-height: 114%;
+      text-transform: uppercase;
+      color: #6e6c88;
+    }
+
+    h1 {
+      font-size: $font-lg;
+      font-weight: $font-weight-medium;
+      color: $white;
+      line-height: 114%;
+    }
+
+    .title {
+      @include gradient-text($theme-color);
+      font-weight: $font-weight-semibold;
+    }
+
+    .video-time {
+      color: $white;
+    }
+
+    .btn-outline {
+      @include btn-outline;
+    }
+
+    .btn-primary {
+      @include btn-base;
+      background: $theme-color;
+      color: #111111;
+    }
+  }
+}
+
+// Finance specific mixins
+@mixin finance-top-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  gap: 20px;
+  border-bottom: 1px solid $section-background-color;
+  padding: 34px 22px 28px 39px;
+  @include tablet {
+    padding: 34px 22px 28px 22px;
+  }
+}
+
+@mixin finance-item-base {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-height: 147px;
+  border-radius: $border-md;
+  overflow: hidden;
+  font-weight: $font-weight-regular;
+  font-size: $font-xl;
+
+  span {
+    padding-left: 36px;
+  }
+}
+
+@mixin finance-first-item {
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+
+  h1 {
+    font-size: $font-xl;
+    font-weight: $font-weight-semibold;
+    color: $white;
+    text-align: start;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: $font-xl;
+    font-weight: $font-weight-light;
+    max-width: 250px;
+    line-height: 110%;
+  }
+}
+
+@mixin finance-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 22px;
+}
+
+@mixin finance-bottom-item {
+  min-height: 120px;
+  background: $section-background-color;
+  border-radius: $border-md;
+  padding: 21px;
+
+  .item-title {
+    @include item-title($finance-theme);
+  }
+}
+
+// Article styling mixin
+@mixin article-styling {
+  .article {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      max-height: 189px;
+      @media (max-width: 320px) {
+        max-height: 100%;
+      }
+      @include desktop {
+        min-height: 155px;
+      }
+    }
+
+    .text {
+      @extend .article-text-overlay;
+
+      p {
+        font-size: 13px;
+        font-weight: $font-weight-regular;
+        color: $white;
+        line-height: 120%;
+        @include desktop {
+          font-size: 11px;
+        }
+        @media (max-width: 320px) {
+          font-size: 13px;
+        }
+      }
+
+      .lire {
+        @extend .btn-read-more;
+      }
+    }
+  }
+}
+
+// Checklist item mixin
+@mixin checklist-item-styling {
+  @include flex-start-center;
+  gap: 14px;
+  font-size: $font-md;
+  font-weight: $font-weight-light;
+  color: $white;
+  cursor: pointer;
+
+  .checked {
+    width: 18px;
+    height: 18px;
+    border: 1px solid $box-border;
+    border-radius: 2px;
+    @include flex-center;
+  }
+
+  img {
+    width: 9px;
+    height: 7px;
+    display: none;
+  }
+
+  &.checked {
+    img {
+      display: block;
+    }
+  }
+}
+
+// Tool item mixin
+@mixin tool-item-styling($theme-color) {
+  @include flex-start-center;
+  justify-content: space-between;
+  @extend .border-box;
+  padding: 18px 13px;
+  gap: 6px;
+
+  h2 {
+    font-size: 15px;
+    @include desktop {
+      font-size: 10px;
+    }
+    font-weight: $font-weight-regular;
+    color: $white;
+  }
+
+  .download {
+    background: $theme-color;
+    @include flex-column;
+    gap: 1px;
+    min-width: 23px;
+    min-height: 23px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+// Finance content item mixins
+@mixin finance-content-item-base {
+  @include flex-column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .btn-primary {
+    @include btn-base;
+    background: $finance-theme;
+    color: #111111;
+    border: none;
+  }
+
+  h6 {
+    font-size: $font-xxs;
+    font-weight: $font-weight-light;
+    color: #08071a;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: $font-lg;
+    font-weight: $font-weight-medium;
+    color: $white;
+    line-height: 114%;
+    max-width: 100px;
+  }
+
+  h2 {
+    font-size: $font-xxs;
+    font-weight: $font-weight-light;
+    color: #08071a;
+
+    span {
+      text-transform: uppercase;
+    }
+
+    .time {
+      font-size: $font-ssm;
+      color: $white;
+      padding-left: 5px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@mixin finance-trading-item {
+  @include finance-content-item-base;
+  background: $trading;
+}
+
+@mixin finance-crypto-item {
+  @include finance-content-item-base;
+  background: $crypto;
+}
+
+@mixin finance-list-item {
+  border: 1px solid #353347;
+  padding: 10px 13px;
+  border-radius: 8px;
+
+  .title {
+    @include flex-between;
+
+    .first-part {
+      @include flex-start-center;
+      align-items: end;
+      gap: 5px;
+      flex-wrap: wrap;
+
+      h2 {
+        line-height: 114%;
+        font-size: 15px;
+        font-weight: $font-weight-medium;
+        color: $white;
+      }
+
+      h3 {
+        line-height: 114%;
+        font-size: $font-ssm;
+        font-weight: $font-weight-light;
+        @include gradient-text($finance-theme);
+        font-weight: $font-weight-semibold;
+      }
+
+      h4 {
+        font-size: 9px;
+        font-weight: $font-weight-light;
+        color: #6e6c88;
+      }
+    }
+
+    .bages {
+      font-size: 8px;
+      color: #4c4767;
+      @include flex-start-center;
+      gap: 4px;
+      border-radius: 20px;
+      padding: 3px;
+      background-color: #00000066;
+
+      .rounded {
+        padding: 3px;
+        background: #00a8f652;
+        border-radius: 100%;
+        width: fit-content;
+        height: fit-content;
+
+        .rounded {
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+          background: #00a8f6;
+        }
+      }
+    }
+  }
+
+  .description {
+    @include flex-between;
+    margin-top: 6px;
+
+    p {
+      font-size: $font-xxs;
+      font-weight: $font-weight-light;
+      color: $white;
+      line-height: 12px;
+      letter-spacing: 0%;
+
+      span {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .btn-primary {
+      @include btn-base;
+      background: $finance-theme;
+      color: #111111;
+      border: none;
+      padding: 0 6px;
+      min-width: fit-content;
+    }
+  }
+}
+
+@mixin finance-chart-bars {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  height: 100%;
+  flex: 1;
+
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    flex: 1;
+
+    .bar-background {
+      height: 100%;
+      width: 9px;
+      background-color: #353347;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+
+      .bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $finance-theme;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scaleY(1.05);
+          box-shadow: 0 0 15px rgba(14, 210, 157, 0.4);
+        }
+      }
+    }
+
+    .day-label {
+      margin-top: 8px;
+      font-size: $font-xs;
+      font-weight: $font-weight-regular;
+      color: #9c99b4;
+      text-align: center;
+    }
+
+    // Hover tooltip effect
+    &:hover {
+      .bar-background .bar::after {
+        content: attr(data-hours) "h - " attr(data-day);
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        white-space: nowrap;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+@mixin finance-stats-grid {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+
+  .content-item {
+    padding: 22px 5px;
+    border: 1px solid #353347;
+    border-radius: 8px;
+    @include flex-column;
+    gap: 10px;
+
+    h1 {
+      color: #9c99b4;
+      font-size: 25px;
+      font-weight: $font-weight-regular;
+      text-align: center;
+    }
+
+    p {
+      font-size: $font-xxs;
+      font-weight: $font-weight-light;
+      color: $white;
+      line-height: 114%;
+      text-align: center;
+    }
+  }
+}
+
+@mixin finance-stats-footer {
+  font-size: $font-xs;
+  font-weight: $font-weight-light;
+  color: $white;
+  text-align: center;
+  line-height: 114%;
+  border: 1px solid #353347;
+  min-height: 22px;
+  @include flex-center;
+  margin-top: 12px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  padding: 5px 0px;
+
+  span {
+    color: #58eb89;
+    margin: 0 2px;
+  }
+}
+
+@mixin finance-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+
+  .content-item {
+    padding: 17px;
+    border: 1px solid #353347;
+    border-radius: 8px;
+    @include flex-center;
+    gap: 10px;
+
+    h1 {
+      @include gradient-text($finance-theme);
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 11px;
+      font-weight: $font-weight-light;
+      color: $white;
+    }
+  }
+}
+
+@mixin finance-chart-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  min-height: 139px;
+  height: 100%;
+
+  .y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 35px;
+
+    span {
+      font-size: $font-xxs;
+      font-weight: $font-weight-light;
+      color: #9c99b4;
+      line-height: 1;
+    }
+  }
+
+  .chart-bars {
+    @include finance-chart-bars;
+  }
+}

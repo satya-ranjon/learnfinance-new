@@ -1,3 +1,4 @@
+// Finance specific gradient variables
 $trading: linear-gradient(258.12deg, #191824 20.19%, #044c87 100%);
 $crypto: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
 $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
@@ -6,54 +7,15 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
   .content {
     height: fit-content;
   }
-  .top-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include mobile {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    gap: 20px;
-    border-bottom: 1px solid $section-background-color;
-    padding: 34px 22px 28px 39px;
-    @include tablet {
-      padding: 34px 22px 28px 22px;
-    }
-    .item {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      min-height: 147px;
-      border-radius: $border-md;
-      overflow: hidden;
-      font-weight: $font-weight-regular;
-      font-size: $font-xl;
-      // color: $white;
-      span {
-        padding-left: 36px;
-      }
-      &:nth-child(1) {
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        gap: 10px;
-        h1 {
-          font-size: $font-xl;
-          font-weight: $font-weight-semibold;
-          color: $white;
-          text-align: start;
-          line-height: 100%;
-        }
 
-        p {
-          font-size: $font-xl;
-          font-weight: $font-weight-light;
-          max-width: 250px;
-          line-height: 110%;
-        }
+  .top-content {
+    @include finance-top-grid;
+
+    .item {
+      @include finance-item-base;
+
+      &:nth-child(1) {
+        @include finance-first-item;
       }
       &:nth-child(2) {
         background: $trading;
@@ -67,25 +29,12 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
     }
   }
   .bottom-content {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-    padding: 22px;
-    // @include large-screen {
-    //   padding: 28px 39px;
-    // }
+    @include finance-bottom-grid;
 
     .item {
-      min-height: 120px;
-      background: $section-background-color;
-      border-radius: $border-md;
-      padding: 21px;
+      @include finance-bottom-item;
 
-      .item-title {
-        @include item-title($finance-theme);
-      }
-
-      // First row: 3 items (4 columns each)
+      // First row: Video content item
       &:nth-child(1) {
         grid-column: span 4;
         @include laptop {
@@ -96,87 +45,14 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         }
 
         .video-container {
-          @include flex-start-center;
-          @include mobile {
-            flex-direction: column;
-            align-items: start;
-            margin-top: 0px;
-          }
-          gap: 21px;
-          margin-top: 25px;
+          @include video-container-base($finance-theme);
           .video {
-            min-width: 233px;
-            @include laptop {
-              min-width: 153px;
-            }
-            @include mobile {
-              min-width: 100%;
-            }
-            height: 145px;
-            position: relative;
-            background-color: #2e2c3c;
-            img {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-            .progress {
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: #6c6c6c;
-              overflow: hidden;
-
-              .progress-bar {
-                height: 100%;
-                background: $finance-theme;
-                width: 55%;
-              }
-            }
-          }
-          .video-info {
-            @include flex-column;
-            gap: 6px;
-            @include mobile {
-              min-width: 100%;
-            }
-            h6 {
-              font-size: $font-xxs;
-              font-weight: $font-weight-light;
-              line-height: 114%;
-              text-transform: uppercase;
-              color: #6e6c88;
-            }
-            h1 {
-              font-size: $font-lg;
-              font-weight: $font-weight-medium;
-              color: $white;
-              line-height: 114%;
-            }
-            .title {
-              background: $finance-theme;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              background-clip: text;
-              font-weight: $font-weight-semibold;
-            }
-            .video-time {
-              color: $white;
-            }
-            .btn-outline {
-              @include btn-outline;
-            }
-            .btn-primary {
-              @include btn-base;
-              background: $finance-theme;
-              color: #111111;
-            }
+            width: 100%;
           }
         }
       }
+
+      // Second row: Trading/Crypto content items
       &:nth-child(2) {
         grid-column: span 4;
         @include laptop {
@@ -190,8 +66,6 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           @include flex-start-center;
           gap: 22px;
           @include mobile {
-            // flex-direction: column;
-            // align-items: start;
             gap: 15px;
           }
           @media (max-width: 375px) {
@@ -200,65 +74,17 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           }
 
           .content-item {
-            @include flex-column;
-            gap: 10px;
-            min-height: 142px;
-            width: 100%;
-            padding: 17px;
-            border-radius: 8px;
-            z-index: 99;
-            border: 1px solid #353347;
-
-            position: relative;
-            img {
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              z-index: -1;
-            }
-
-            .btn-primary {
-              @include btn-base;
-              background: $finance-theme;
-              color: #111111;
-              border: none;
-            }
-            h6 {
-              font-size: $font-xxs;
-              font-weight: $font-weight-light;
-              color: #08071a;
-              text-transform: uppercase;
-            }
-            h1 {
-              font-size: $font-lg;
-              font-weight: $font-weight-medium;
-              color: $white;
-              line-height: 114%;
-              max-width: 100px;
-            }
-            h2 {
-              font-size: $font-xxs;
-              font-weight: $font-weight-light;
-              color: #08071a;
-              span {
-                text-transform: uppercase;
-              }
-              .time {
-                font-size: $font-ssm;
-                color: $white;
-                padding-left: 5px;
-                text-transform: capitalize;
-              }
-            }
             &:nth-child(1) {
-              background: $trading;
+              @include finance-trading-item;
             }
             &:nth-child(2) {
-              background: $crypto;
+              @include finance-crypto-item;
             }
           }
         }
       }
+
+      // Third row: List items
       &:nth-child(3) {
         grid-column: span 4;
         @include laptop {
@@ -267,92 +93,18 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         @include mobile {
           grid-column: span 12;
         }
+
         .content {
           @include flex-column;
           gap: 14px;
+
           .content-item {
-            border: 1px solid #353347;
-            padding: 10px 13px;
-            border-radius: 8px;
-            .title {
-              @include flex-between;
-              .first-part {
-                @include flex-start-center;
-                align-items: end;
-                gap: 5px;
-                flex-wrap: wrap;
-                h2 {
-                  line-height: 114%;
-                  font-size: 15px;
-                  font-weight: $font-weight-medium;
-                  color: $white;
-                }
-                h3 {
-                  line-height: 114%;
-                  font-size: $font-ssm;
-                  font-weight: $font-weight-light;
-                  background: $finance-theme;
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  background-clip: text;
-                  font-weight: $font-weight-semibold;
-                }
-                h4 {
-                  font-size: 9px;
-                  font-weight: $font-weight-light;
-                  color: #6e6c88;
-                }
-              }
-              .bages {
-                font-size: 8px;
-                color: #4c4767;
-                @include flex-start-center;
-                gap: 4px;
-                border-radius: 20px;
-                padding: 3px;
-                background-color: #00000066;
-                .rounded {
-                  padding: 3px;
-                  background: #00a8f652;
-                  border-radius: 100%;
-                  width: fit-content;
-                  height: fit-content;
-                  .rounded {
-                    width: 4px;
-                    height: 4px;
-                    border-radius: 100%;
-                    background: #00a8f6;
-                  }
-                }
-              }
-            }
-            .description {
-              @include flex-between;
-              margin-top: 6px;
-              p {
-                font-size: $font-xxs;
-                font-weight: $font-weight-light;
-                color: $white;
-                line-height: 12px;
-                letter-spacing: 0%;
-                span {
-                  font-weight: $font-weight-bold;
-                }
-              }
-              .btn-primary {
-                @include btn-base;
-                background: $finance-theme;
-                color: #111111;
-                border: none;
-                padding: 0 6px;
-                min-width: fit-content;
-              }
-            }
+            @include finance-list-item;
           }
         }
       }
 
-      // Second row: 4 items (3 columns each)
+      // Fourth row: Metrics grid
       &:nth-child(4) {
         grid-column: span 3;
         @include laptop {
@@ -361,32 +113,13 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         @include mobile {
           grid-column: span 12;
         }
-        .content {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 17px;
 
-          .content-item {
-            padding: 17px;
-            border: 1px solid #353347;
-            border-radius: 8px;
-            @include flex-center;
-            gap: 10px;
-            h1 {
-              background: $finance-theme;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              background-clip: text;
-              font-size: 28px;
-            }
-            p {
-              font-size: 11px;
-              font-weight: $font-weight-light;
-              color: $white;
-            }
-          }
+        .content {
+          @include finance-metrics-grid;
         }
       }
+
+      // Fifth row: Chart container
       &:nth-child(5) {
         grid-column: span 3;
         @include laptop {
@@ -398,95 +131,13 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         @include mobile {
           grid-column: span 12;
         }
+
         .content {
-          display: flex;
-          align-items: flex-end;
-          gap: 15px;
-          min-height: 139px;
-          height: 100%;
-
-          .y-axis {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding-bottom: 35px;
-
-            span {
-              font-size: $font-xxs;
-              font-weight: $font-weight-light;
-              color: #9c99b4;
-              line-height: 1;
-            }
-          }
-
-          .chart-bars {
-            display: flex;
-            align-items: start;
-            gap: 8px;
-            height: 100%;
-            flex: 1;
-
-            .bar-container {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              height: 90%;
-              flex: 1;
-
-              .bar-background {
-                height: 100%;
-                width: 9px;
-                background-color: #353347;
-                border-radius: 6px;
-                position: relative;
-                overflow: hidden;
-
-                .bar {
-                  position: absolute;
-                  bottom: 0;
-                  left: 0;
-                  width: 100%;
-                  background: $finance-theme;
-                  border-radius: 6px;
-                  transition: all 0.3s ease;
-
-                  &:hover {
-                    transform: scaleY(1.05);
-                    box-shadow: 0 0 15px rgba(14, 210, 157, 0.4);
-                  }
-                }
-              }
-
-              .day-label {
-                margin-top: 8px;
-                font-size: $font-xs;
-                font-weight: $font-weight-regular;
-                color: #9c99b4;
-                text-align: center;
-              }
-
-              // Hover tooltip effect
-              &:hover {
-                .bar-background .bar::after {
-                  content: attr(data-hours) "h - " attr(data-day);
-                  position: absolute;
-                  top: -35px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  background: rgba(0, 0, 0, 0.8);
-                  color: white;
-                  padding: 4px 8px;
-                  border-radius: 4px;
-                  font-size: 10px;
-                  white-space: nowrap;
-                  z-index: 10;
-                }
-              }
-            }
-          }
+          @include finance-chart-container;
         }
       }
+
+      // Sixth row: Statistics
       &:nth-child(6) {
         grid-column: span 3;
         @include laptop {
@@ -499,63 +150,26 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           grid-column: span 12;
         }
         padding-top: 15px;
+
         .item-title {
           h1 {
-            background: $finance-theme;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            @include gradient-text($finance-theme);
             font-weight: $font-weight-regular;
             font-size: 28px;
             line-height: 100%;
           }
         }
-        .content {
-          height: fit-content;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 8px;
-          .content-item {
-            padding: 22px 5px;
-            border: 1px solid #353347;
-            border-radius: 8px;
-            @include flex-column;
-            gap: 10px;
 
-            h1 {
-              color: #9c99b4;
-              font-size: 25px;
-              font-weight: $font-weight-regular;
-              text-align: center;
-            }
-            p {
-              font-size: $font-xxs;
-              font-weight: $font-weight-light;
-              color: $white;
-              line-height: 114%;
-              text-align: center;
-            }
-          }
+        .content {
+          @include finance-stats-grid;
         }
+
         .content-footer {
-          font-size: $font-xs;
-          font-weight: $font-weight-light;
-          color: $white;
-          text-align: center;
-          line-height: 114%;
-          border: 1px solid #353347;
-          min-height: 22px;
-          @include flex-center;
-          margin-top: 12px;
-          border-radius: 8px;
-          flex-wrap: wrap;
-          padding: 5px 0px;
-          span {
-            color: #58eb89;
-            margin: 0 2px;
-          }
+          @include finance-stats-footer;
         }
       }
+
+      // Seventh row: Empty placeholder
       &:nth-child(7) {
         grid-column: span 3;
         @include laptop {
@@ -564,7 +178,6 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
         @include tablet {
           grid-column: span 12;
         }
-
         padding: 0;
       }
     }
@@ -574,6 +187,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 .finance-cart {
   @include cart(linear-gradient(243.58deg, #98ef59 0%, #046c38 100%));
 }
+
 .mobile-menu {
   .finance-cart {
     max-height: 215px;

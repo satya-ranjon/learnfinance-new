@@ -35,3 +35,105 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+// Theme utility classes
+.ecom-bg {
+  background: $ecom-theme;
+}
+.ecom-text {
+  @include gradient-text($ecom-theme);
+}
+
+.digital-bg {
+  background: $digital-theme;
+}
+.digital-text {
+  @include gradient-text($digital-theme);
+}
+
+// Common grid classes
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include laptop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-12-col {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+// Common spacing classes
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-35 {
+  gap: 35px;
+}
+
+// Common layout classes
+.section-padding {
+  padding: 20px 21px;
+}
+
+.border-box {
+  border: 1px solid $box-border;
+  border-radius: $border-sm;
+}
+
+// Video styling classes
+.video-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c6c6c;
+  overflow: hidden;
+
+  .progress-bar {
+    height: 100%;
+    width: 55%;
+  }
+}
+
+.video-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Article text overlay
+.article-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 9px;
+  @media (max-width: 320px) {
+    padding: 12px;
+  }
+}
+
+// Button styling classes
+.btn-read-more {
+  width: 31px;
+  height: 14px;
+  @include flex-center;
+  font-weight: $font-weight-regular;
+  font-size: 8px;
+  color: #191824;
+  border-radius: 4px;
+  margin-top: 5px;
+}
