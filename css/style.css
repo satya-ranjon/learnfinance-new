@@ -569,6 +569,11 @@ a {
   }
 }
 
+.finance .content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .finance .top-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1324,6 +1329,9 @@ a {
   line-height: 100%;
 }
 .finance .bottom-content .item:nth-child(6) .content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
@@ -1937,6 +1945,7 @@ a {
   background-color: #191824;
   gap: 34px;
   margin: 28px 24px;
+  border-radius: 10px;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -2027,7 +2036,7 @@ a {
           align-items: center;
   overflow-x: auto;
   gap: 20px;
-  padding-bottom: 14px;
+  padding-bottom: 5px;
   width: 100%;
   position: relative;
   overflow-y: hidden;
@@ -2060,6 +2069,115 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   cursor: pointer;
+}
+.ecom .footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 28px 24px;
+}
+.ecom .footer-content .footer-item {
+  background-color: #191824;
+  padding: 20px 21px;
+  border-radius: 10px;
+}
+.ecom .footer-content .footer-item .title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9c99b4;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ecom .footer-content .footer-item .title .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+  padding: 0px 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ecom .footer-content .footer-item .title h1 {
+  font-size: 28px;
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+.ecom .footer-content .footer-item:nth-child(1) .checklists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 11px;
+}
+.ecom .footer-content .footer-item:nth-child(1) .checklists .checklist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  cursor: pointer;
+}
+.ecom .footer-content .footer-item:nth-child(1) .checklists .checklist-item .checked {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #353347;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ecom .footer-content .footer-item:nth-child(1) .checklists .checklist-item img {
+  width: 9px;
+  height: 7px;
+  display: none;
+}
+.ecom .footer-content .footer-item:nth-child(1) .checklists .checklist-item.checked img {
+  display: block;
 }
 
 body {

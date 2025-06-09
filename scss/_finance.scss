@@ -3,6 +3,9 @@ $crypto: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
 $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 
 .finance {
+  .content {
+    height: fit-content;
+  }
   .top-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -508,6 +511,7 @@ $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
           }
         }
         .content {
+          height: fit-content;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 8px;

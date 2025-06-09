@@ -8,3 +8,14 @@ openMobileMenu.addEventListener("click", () => {
 closeMobileMenu.addEventListener("click", () => {
   mobileMenu.classList.remove("open");
 });
+
+// Checklist functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const checklistItems = document.querySelectorAll(".checklist-item");
+
+  checklistItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      this.classList.toggle("checked");
+    });
+  });
+});
