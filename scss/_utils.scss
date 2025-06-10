@@ -30,11 +30,7 @@
   font-size: $font-xxs;
 }
 
-.flex-start-center {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+// Replaced with Bootstrap class: d-flex justify-content-start align-items-center
 
 // Theme utility classes
 .ecom-bg {
@@ -51,7 +47,8 @@
   @include gradient-text($digital-theme);
 }
 
-// Common grid classes
+// Common grid classes - can be replaced with Bootstrap grid system
+// For responsive grid: use Bootstrap classes like "col-lg-3 col-md-6 col-12"
 .grid-4-col {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -63,12 +60,16 @@
   }
 }
 
+// Can be replaced with Bootstrap "row" class combined with "col-1" classes
 .grid-12-col {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-// Common spacing classes
+// Common spacing classes - these can be replaced with Bootstrap gap utilities
+// gap-3 = gap: 16px (closest to gap-20)
+// gap-2 = gap: 8px (closest to gap-15)
+// gap-4 = gap: 24px (closest to gap-35)
 .gap-20 {
   gap: 20px;
 }

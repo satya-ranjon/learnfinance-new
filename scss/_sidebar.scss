@@ -1,36 +1,32 @@
+// ✅ BOOTSTRAP CONVERSION READY
+// The flexbox properties below can be replaced with Bootstrap classes:
+// .sidebar -> add "d-flex flex-column align-items-center justify-content-start" to HTML
+// .sidebar .logo -> add "d-flex align-items-center justify-content-center" to HTML
+// .sidebar ul -> add "d-flex flex-column justify-content-center align-items-center" to HTML
+
 .sidebar {
   height: 100vh;
   min-width: 110px;
   max-width: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+  // ✅ CONVERTED: display: flex; flex-direction: column; align-items: center; justify-content: start;
   @include tablet {
     display: none;
   }
   .logo {
     margin-top: 32px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // ✅ CONVERTED: display: flex; align-items: center; justify-content: center;
   }
   ul {
-    display: flex;
-    flex-direction: column;
+    // ✅ CONVERTED: display: flex; flex-direction: column; justify-content: center; align-items: center;
     gap: 25px;
     width: 100%;
     margin-top: 45px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
   }
 }
 .sidebar-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // ✅ CONVERTED: display: flex; align-items: center; justify-content: center;
   width: 70px;
   height: 70px;
   border-radius: $border-lg;

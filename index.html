@@ -28,28 +28,47 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="dark-theme">
-    <div class="sidebar">
-      <div class="logo">
+    <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes to replace SCSS + responsive display -->
+    <div
+      class="sidebar d-flex flex-column align-items-center justify-content-start d-none d-lg-flex"
+    >
+      <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes -->
+      <div class="logo d-flex align-items-center justify-content-center">
         <img src="./assets/logo-left.png" alt="logo" />
       </div>
-      <ul>
-        <li class="sidebar-item">
+      <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes and gap utility -->
+      <ul
+        class="d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes -->
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
           <a href="/index.html">
             <img src="./assets/home.png" alt="home" />
           </a>
         </li>
-        <li class="sidebar-item active">
+        <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes -->
+        <li
+          class="sidebar-item active d-flex align-items-center justify-content-center"
+        >
           <a href="/index.html">
             <img src="./assets/Layer_1.png" alt="Layer_1" />
             <div class="active-finance"></div>
           </a>
         </li>
-        <li class="sidebar-item">
+        <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes -->
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
           <a href="/ecom.html">
             <img src="./assets/Layer_2.png" alt="Layer_2" />
           </a>
         </li>
-        <li class="sidebar-item">
+        <!-- ✅ BOOTSTRAP CONVERSION: Added flexbox classes -->
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
           <a href="/digital.html">
             <img src="./assets/Layer_3.png" alt="Layer_3" />
           </a>
@@ -57,10 +76,14 @@
       </ul>
     </div>
     <div class="content">
-      <div class="header">
-        <div class="navbar">
+      <div
+        class="header d-flex justify-content-between align-items-center d-none d-lg-flex"
+      >
+        <div
+          class="navbar d-flex justify-content-start align-items-center gap-4"
+        >
           <img src="./assets/logo.png" alt="logo" />
-          <ul>
+          <ul class="d-flex justify-content-start align-items-center gap-3">
             <li><a href="#">University</a></li>
             <li><a href="#">TV</a></li>
             <li><a href="#">Area</a></li>
@@ -68,12 +91,18 @@
             <li><a href="#">PredictAI</a></li>
           </ul>
         </div>
-        <div class="header-right">
-          <div class="search-box">
+        <div
+          class="header-right d-flex justify-content-start align-items-center gap-4"
+        >
+          <div
+            class="search-box d-flex justify-content-between align-items-center"
+          >
             <input type="text" placeholder="Recherche" />
             <img src="./assets/icon/search.png" alt="search" />
           </div>
-          <div class="avatars">
+          <div
+            class="avatars d-flex justify-content-start align-items-center gap-3"
+          >
             <div class="avatar">
               <img src="./assets/icon/notification.png" alt="notification" />
               <span>5</span>
@@ -84,8 +113,10 @@
           </div>
         </div>
       </div>
-      <div class="mobile-header">
-        <div class="left">
+      <div
+        class="mobile-header d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <div class="left d-flex justify-content-start align-items-center gap-4">
           <img src="./assets/logo-left.png" alt="logo" />
           <img src="./assets/logo.png" alt="logo" />
         </div>
@@ -112,23 +143,27 @@
           </svg>
         </div>
       </div>
-      <div class="mobile-menu">
+      <div class="mobile-menu d-lg-none">
         <div class="close-icon" id="mobile-menu-close">
           <img src="./assets/icon/cross.png" alt="cross" />
         </div>
-        <ul>
+        <ul class="d-flex flex-column gap-4">
           <li><a href="#">University</a></li>
           <li><a href="#">Mon compte</a></li>
           <li><a href="#">Notifications</a></li>
           <li><a href="#">Se déconnecter</a></li>
         </ul>
 
-        <div class="search-box">
+        <div
+          class="search-box d-flex justify-content-between align-items-center"
+        >
           <input type="text" placeholder="Recherche" />
           <img src="./assets/icon/search.png" alt="search" />
         </div>
 
-        <ul class="sidebar-items">
+        <ul
+          class="sidebar-items d-flex justify-content-start align-items-center gap-4 flex-wrap"
+        >
           <li class="sidebar-item">
             <a href="/index.html">
               <img src="./assets/home.png" alt="home" />
