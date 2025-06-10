@@ -76,7 +76,13 @@
   }
 
   gap: 24px;
-  display: none;
+  display: none; // Hidden by default
+  // ✅ CONVERTED: When .open class is added, show as flex column
+  &.open {
+    display: flex;
+    flex-direction: column;
+  }
+
   ul {
     // ✅ CONVERTED: @include flex-column; gap: 24px;
     // → Bootstrap classes: "d-flex flex-column gap-4"
@@ -89,14 +95,5 @@
   .copy-right {
     text-align: start;
     padding-left: 30px;
-  }
-}
-
-.mobile-menu.open {
-  display: none;
-  @include tablet {
-    // ✅ CONVERTED: @include flex-column;
-    // → Bootstrap classes: "d-flex flex-column"
-    display: flex;
   }
 }
