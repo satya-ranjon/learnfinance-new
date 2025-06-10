@@ -7,41 +7,35 @@
   flex-wrap: $wrap;
 }
 
-// ✅ CAN BE REPLACED: Bootstrap class "d-flex justify-content-start align-items-center"
 @mixin flex-start-center {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-// ✅ CAN BE REPLACED: Bootstrap class "d-flex justify-content-center align-items-center"
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// ✅ CAN BE REPLACED: Bootstrap class "d-flex justify-content-between align-items-center"
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-// ✅ CAN BE REPLACED: Bootstrap class "d-flex justify-content-around align-items-center"
 @mixin flex-around {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-// ✅ CAN BE REPLACED: Bootstrap class "d-flex flex-column"
 @mixin flex-column {
   display: flex;
   flex-direction: column;
 }
 
-// ✅ CAN BE REPLACED: Bootstrap class "d-flex flex-column justify-content-center align-items-center"
 @mixin flex-column-center {
   display: flex;
   flex-direction: column;
