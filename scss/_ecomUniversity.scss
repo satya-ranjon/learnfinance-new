@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 .ecomUniversity {
+  @include mobile {
+    background-color: $background-color;
+  }
   .top-content {
     @include top-content-grid;
-
+    @include mobile {
+      padding-bottom: 0px;
+      border-bottom: none;
+    }
     .item {
+      border-radius: $border-md;
       .item-title {
         @include item-title($ecom-theme);
       }
@@ -185,6 +192,8 @@
     @include middle-content-section;
     @include mobile {
       gap: 10px;
+      margin-top: 20px;
+      margin-bottom: 0px;
     }
 
     .content-box {
@@ -204,7 +213,6 @@
       }
       h3 {
         @include gradient-text(white);
-        min-width: 160px;
       }
       .btn-primary {
         @include btn-base;

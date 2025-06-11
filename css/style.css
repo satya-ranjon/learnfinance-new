@@ -1593,6 +1593,9 @@ a {
     padding: 34px 22px 28px 22px;
   }
 }
+.ecom .top-content .item {
+  border-radius: 10px;
+}
 .ecom .top-content .item .item-title {
   font-size: 13px;
   font-weight: 400;
@@ -2014,15 +2017,6 @@ a {
   gap: 34px;
   margin: 28px 24px;
   border-radius: 10px;
-  overflow: hidden;
-}
-@media (max-width: 767px) {
-  .ecom .middle-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 .ecom .middle-content .content-box {
   display: -webkit-box;
@@ -2035,12 +2029,6 @@ a {
   gap: 5px;
   min-width: 152px;
   max-width: 152px;
-}
-@media (max-width: 767px) {
-  .ecom .middle-content .content-box {
-    min-width: 100%;
-    max-width: 100%;
-  }
 }
 .ecom .middle-content .content-box h1 {
   font-size: 13px;
@@ -2058,6 +2046,11 @@ a {
   font-size: 24px;
   font-weight: 500;
   line-height: 120%;
+}
+@media (max-width: 767px) {
+  .ecom .middle-content .content-box h3 {
+    font-size: 22px;
+  }
 }
 .ecom .middle-content .content-box h4 {
   font-size: 12px;
@@ -2120,7 +2113,7 @@ a {
   background: -webkit-gradient(linear, left top, right top, from(rgba(25, 24, 36, 0)), to(#191824));
   background: linear-gradient(90deg, rgba(25, 24, 36, 0) 0%, #191824 100%);
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .ecom .middle-content .video-box .after {
     display: none;
   }
@@ -2536,6 +2529,9 @@ a {
   .digital .top-content {
     padding: 34px 22px 28px 22px;
   }
+}
+.digital .top-content .item {
+  border-radius: 10px;
 }
 .digital .top-content .item .item-title {
   font-size: 13px;
@@ -2958,15 +2954,6 @@ a {
   gap: 34px;
   margin: 28px 24px;
   border-radius: 10px;
-  overflow: hidden;
-}
-@media (max-width: 767px) {
-  .digital .middle-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 .digital .middle-content .content-box {
   display: -webkit-box;
@@ -2979,12 +2966,6 @@ a {
   gap: 5px;
   min-width: 152px;
   max-width: 152px;
-}
-@media (max-width: 767px) {
-  .digital .middle-content .content-box {
-    min-width: 100%;
-    max-width: 100%;
-  }
 }
 .digital .middle-content .content-box h1 {
   font-size: 13px;
@@ -3002,6 +2983,11 @@ a {
   font-size: 24px;
   font-weight: 500;
   line-height: 120%;
+}
+@media (max-width: 767px) {
+  .digital .middle-content .content-box h3 {
+    font-size: 22px;
+  }
 }
 .digital .middle-content .content-box h4 {
   font-size: 12px;
@@ -3064,7 +3050,7 @@ a {
   background: -webkit-gradient(linear, left top, right top, from(rgba(25, 24, 36, 0)), to(#191824));
   background: linear-gradient(90deg, rgba(25, 24, 36, 0) 0%, #191824 100%);
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .digital .middle-content .video-box .after {
     display: none;
   }
@@ -3376,6 +3362,11 @@ a {
   margin-top: 5px;
 }
 
+@media (max-width: 767px) {
+  .ecomUniversity {
+    background-color: #070610;
+  }
+}
 .ecomUniversity .top-content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -3387,6 +3378,15 @@ a {
   .ecomUniversity .top-content {
     padding: 34px 22px 28px 22px;
   }
+}
+@media (max-width: 767px) {
+  .ecomUniversity .top-content {
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+}
+.ecomUniversity .top-content .item {
+  border-radius: 10px;
 }
 .ecomUniversity .top-content .item .item-title {
   font-size: 13px;
@@ -3772,19 +3772,12 @@ a {
   gap: 34px;
   margin: 28px 24px;
   border-radius: 10px;
-  overflow: hidden;
-}
-@media (max-width: 767px) {
-  .ecomUniversity .middle-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 @media (max-width: 767px) {
   .ecomUniversity .middle-content {
     gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 }
 .ecomUniversity .middle-content .content-box {
@@ -3799,12 +3792,6 @@ a {
   min-width: 152px;
   max-width: 152px;
   max-width: 157.5px;
-}
-@media (max-width: 767px) {
-  .ecomUniversity .middle-content .content-box {
-    min-width: 100%;
-    max-width: 100%;
-  }
 }
 .ecomUniversity .middle-content .content-box h1 {
   font-size: 13px;
@@ -3822,6 +3809,11 @@ a {
   font-size: 24px;
   font-weight: 500;
   line-height: 120%;
+}
+@media (max-width: 767px) {
+  .ecomUniversity .middle-content .content-box h3 {
+    font-size: 22px;
+  }
 }
 .ecomUniversity .middle-content .content-box h4 {
   font-size: 12px;
@@ -3876,7 +3868,6 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  min-width: 160px;
 }
 .ecomUniversity .middle-content .content-box .btn-primary {
   font-size: 10px;
@@ -3940,7 +3931,7 @@ a {
   background: -webkit-gradient(linear, left top, right top, from(rgba(25, 24, 36, 0)), to(#191824));
   background: linear-gradient(90deg, rgba(25, 24, 36, 0) 0%, #191824 100%);
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .ecomUniversity .middle-content .video-box .after {
     display: none;
   }

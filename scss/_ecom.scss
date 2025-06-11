@@ -17,6 +17,7 @@
     @include top-content-grid;
 
     .item {
+      border-radius: $border-md;
       .item-title {
         @include item-title($ecom-theme);
       }

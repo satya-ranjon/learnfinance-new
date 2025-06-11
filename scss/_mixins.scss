@@ -277,10 +277,6 @@
   gap: 34px;
   margin: 28px 24px;
   border-radius: $border-md;
-  overflow: hidden;
-  @include mobile {
-    flex-direction: column;
-  }
 }
 
 // Content box mixin
@@ -289,10 +285,6 @@
   gap: 5px;
   min-width: 152px;
   max-width: 152px;
-  @include mobile {
-    min-width: 100%;
-    max-width: 100%;
-  }
 
   h1 {
     font-size: 13px;
@@ -312,6 +304,9 @@
     font-size: 24px;
     font-weight: $font-weight-medium;
     line-height: 120%;
+    @include mobile {
+      font-size: 22px;
+    }
   }
 
   h4 {
@@ -342,7 +337,7 @@
   overflow-y: hidden;
 
   .after {
-    @media (max-width: 320px) {
+    @include mobile {
       display: none;
     }
     position: sticky;
