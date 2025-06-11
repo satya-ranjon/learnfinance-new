@@ -1,0 +1,71 @@
+.ecomVideoPlayer {
+  padding: 32px;
+  .back {
+    font-size: $font-ssm;
+    font-family: "Roboto";
+    font-weight: $font-weight-light;
+    color: #9c99b4;
+  }
+  .video-title {
+    @include gradient-text($ecom-theme);
+    font-size: 28px;
+    font-weight: $font-weight-medium;
+    margin-top: 8px;
+  }
+  .video-container {
+    width: 840px;
+    height: 472px;
+    background-color: $video-background-color;
+    border-radius: $border-md;
+  }
+  .videos-list-container {
+    background: $section-background-color;
+    width: 100%;
+    height: 100%;
+    max-width: 414px;
+  }
+  .videos-list-name {
+    font-size: 13px;
+    font-weight: $font-weight-regular;
+    color: #9c99b4;
+  }
+  .video-lists {
+    .video-list {
+      .video-list-title {
+        cursor: pointer;
+        svg {
+          transition: transform 0.3s ease;
+        }
+        h1 {
+          font-size: $font-ssm;
+          font-weight: $font-weight-medium;
+          @include gradient-text($ecom-theme);
+        }
+        span {
+          font-size: 13px;
+          font-weight: $font-weight-regular;
+          color: #9c99b4 !important;
+        }
+      }
+      .module-videos {
+        font-weight: $font-weight-regular;
+        font-size: $font-ssm;
+        color: #9c99b4;
+        transition: all 0.3s ease;
+        .active {
+          color: $white;
+          background-color: #11101c;
+          border-radius: 5px;
+        }
+        .module-item {
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: $white;
+            background-color: #11101c;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
