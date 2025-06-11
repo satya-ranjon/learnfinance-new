@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Digital - Learning Platform</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark-theme">
+    <div
+      class="sidebar d-flex flex-column align-items-center justify-content-start d-none d-lg-flex"
+    >
+      <div class="logo d-flex align-items-center justify-content-center">
+        <img src="./assets/logo-left.png" alt="logo" />
+      </div>
+      <ul
+        class="d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html"> <img src="./assets/home.png" alt="home" /> </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/Layer_1.png" alt="Layer_1" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item active d-flex align-items-center justify-content-center"
+        >
+          <a href="/ecom.html">
+            <img src="./assets/Layer_2.png" alt="Layer_2" />
+            <div class="active-ecom"></div>
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/digital.html">
+            <img src="./assets/Layer_3.png" alt="Layer_3" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/bm.png" alt="Layer_3" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/ai.png" alt="Layer_3" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div
+        class="header d-flex justify-content-between align-items-center d-none d-lg-flex"
+      >
+        <div
+          class="navbar d-flex justify-content-start align-items-center gap-4"
+        >
+          <img src="./assets/ecom/ecom_logo.png" alt="logo" />
+          <ul class="d-flex justify-content-start align-items-center gap-3">
+            <li><a href="#">University</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Area</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">PredictAI</a></li>
+          </ul>
+        </div>
+        <div
+          class="header-right d-flex justify-content-start align-items-center gap-4"
+        >
+          <div
+            class="search-box d-flex justify-content-between align-items-center"
+          >
+            <input type="text" placeholder="Recherche" />
+            <img src="./assets/icon/search.png" alt="search" />
+          </div>
+          <div
+            class="avatars d-flex justify-content-start align-items-center gap-3"
+          >
+            <div class="avatar">
+              <img src="./assets/icon/notification.png" alt="notification" />
+              <span>5</span>
+            </div>
+            <div class="avatar">
+              <img src="./assets/icon/user.png" alt="user" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mobile-header d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <div class="left d-flex justify-content-start align-items-center gap-4">
+          <img src="./assets/logo-left.png" alt="logo" />
+          <img src="./assets/ecom/ecom_logo.png" alt="logo" />
+        </div>
+        <div class="avatar" id="mobile-menu-open">
+          <svg
+            width="18"
+            height="13"
+            viewBox="0 0 18 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.25 7.25012H0.75C0.335999 7.25012 0 6.91412 0 6.50012C0 6.08612 0.335999 5.75012 0.75 5.75012H17.25C17.664 5.75012 18 6.08612 18 6.50012C18 6.91412 17.664 7.25012 17.25 7.25012Z"
+              fill="#C4BFEF"
+            />
+            <path
+              d="M17.25 1.5H0.75C0.335999 1.5 0 1.164 0 0.75C0 0.335999 0.335999 0 0.75 0H17.25C17.664 0 18 0.335999 18 0.75C18 1.164 17.664 1.5 17.25 1.5Z"
+              fill="#C4BFEF"
+            />
+            <path
+              d="M17.25 13H0.75C0.335999 13 0 12.664 0 12.25C0 11.836 0.335999 11.5 0.75 11.5H17.25C17.664 11.5 18 11.836 18 12.25C18 12.664 17.664 13 17.25 13Z"
+              fill="#C4BFEF"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="mobile-menu d-lg-none">
+        <div class="close-icon" id="mobile-menu-close">
+          <img src="./assets/icon/cross.png" alt="cross" />
+        </div>
+        <ul class="d-flex flex-column gap-4">
+          <li><a href="#">University</a></li>
+          <li><a href="#">Mon compte</a></li>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="#">Se déconnecter</a></li>
+        </ul>
+
+        <div
+          class="search-box d-flex justify-content-between align-items-center"
+        >
+          <input type="text" placeholder="Recherche" />
+          <img src="./assets/icon/search.png" alt="search" />
+        </div>
+        <ul
+          class="sidebar-items d-flex justify-content-start align-items-center gap-4 flex-wrap"
+        >
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/home.png" alt="home" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/Layer_1.png" alt="Layer_1" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item active d-flex align-items-center justify-content-center"
+          >
+            <a href="/ecom.html">
+              <img src="./assets/Layer_2.png" alt="Layer_2" />
+              <div class="active-ecom"></div>
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/digital.html">
+              <img src="./assets/Layer_3.png" alt="Layer_3" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/bm.png" alt="Layer_3" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/ai.png" alt="Layer_3" />
+            </a>
+          </li>
+        </ul>
+        <div class="ecom-cart">
+          <div class="cart-content">
+            <div class="logo">
+              <img src="./assets/ecom/ecom-cart-logo.png" alt="" />
+            </div>
+            <h1>Béneficiez de</h1>
+            <h3>-20%</h3>
+            <p>sur notre formation E-commerce !</p>
+          </div>
+        </div>
+        <div class="copy-right">© Futures 2025</div>
+      </div>
+      <div class="main-content">
+        <div class="ecomUniversity">
+          <div class="top-content">
+            <div class="item">
+              <h4 class="title">Tes premiers pas en E-commerce</h4>
+              <div class="name">
+                <span>Par</span>
+                <h5>Mathieu</h5>
+                <img class="user-avatar" src="./assets/man.png" alt="man" />
+              </div>
+              <div class="bar"></div>
+              <div class="status">
+                <span class="num">7</span>
+                <span class="name"> modules - </span>
+                <span class="num">55</span>
+                <span class="name"> vidéos - </span>
+                <span class="num">7h34</span>
+              </div>
+              <div class="status">
+                <span class="name">Niveau : </span>
+                <span class="num">Débutant</span>
+              </div>
+
+              <button class="btn-primary">Reprendre</button>
+            </div>
+            <div class="item">
+              <div class="item-title">Ce que tu vas apprendre</div>
+              <div class="lists">
+                <div class="list-item">
+                  <svg
+                    width="17"
+                    height="12"
+                    viewBox="0 0 17 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6.5L5.65517 11L16 1"
+                      stroke="url(#paint0_linear_132_3205)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_132_3205"
+                        x1="1"
+                        y1="6"
+                        x2="16"
+                        y2="6"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#25893F" />
+                        <stop offset="1" stop-color="#94EB58" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <span>Adopter le bon mindset d’entrepreneur</span>
+                </div>
+                <div class="list-item">
+                  <svg
+                    width="17"
+                    height="12"
+                    viewBox="0 0 17 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6.5L5.65517 11L16 1"
+                      stroke="url(#paint0_linear_132_3205)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_132_3205"
+                        x1="1"
+                        y1="6"
+                        x2="16"
+                        y2="6"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#25893F" />
+                        <stop offset="1" stop-color="#94EB58" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <span>Choisir et positionner son produit</span>
+                </div>
+                <div class="list-item">
+                  <svg
+                    width="17"
+                    height="12"
+                    viewBox="0 0 17 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6.5L5.65517 11L16 1"
+                      stroke="url(#paint0_linear_132_3205)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_132_3205"
+                        x1="1"
+                        y1="6"
+                        x2="16"
+                        y2="6"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#25893F" />
+                        <stop offset="1" stop-color="#94EB58" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <span>Créer et optimiser sa boutique en ligne</span>
+                </div>
+                <div class="list-item">
+                  <svg
+                    width="17"
+                    height="12"
+                    viewBox="0 0 17 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6.5L5.65517 11L16 1"
+                      stroke="url(#paint0_linear_132_3205)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_132_3205"
+                        x1="1"
+                        y1="6"
+                        x2="16"
+                        y2="6"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#25893F" />
+                        <stop offset="1" stop-color="#94EB58" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <span>Attirer du trafic qualifié</span>
+                </div>
+                <div class="list-item">
+                  <svg
+                    width="17"
+                    height="12"
+                    viewBox="0 0 17 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6.5L5.65517 11L16 1"
+                      stroke="url(#paint0_linear_132_3205)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_132_3205"
+                        x1="1"
+                        y1="6"
+                        x2="16"
+                        y2="6"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#25893F" />
+                        <stop offset="1" stop-color="#94EB58" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <span>Convertir et fidéliser les clients</span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-title">Votre progression</div>
+              <div class="content">
+                <div class="progress-box">
+                  <div class="progress-container">
+                    <svg
+                      width="149"
+                      height="124"
+                      viewBox="0 0 149 124"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M127.493 120C138.008 107.71 144.36 91.7421 144.36 74.2881C144.36 35.4691 112.939 4 74.18 4C35.4207 4 4 35.4691 4 74.2881C4 91.7421 10.352 107.71 20.8671 120"
+                        stroke="#090912"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M20.8219 120C10.335 107.71 4 91.7421 4 74.2881C4 35.4691 35.3365 4 73.992 4C91.0563 4 106.694 10.1326 118.84 20.3228"
+                        stroke="url(#paint0_linear_48_1143)"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_48_1143"
+                          x1="4"
+                          y1="62"
+                          x2="118.84"
+                          y2="62"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#25893F" />
+                          <stop offset="1" stop-color="#94EB58" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div class="content">
+                      <h1>62%</h1>
+                      <p>du parcours</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="box">
+                    <div class="item">
+                      <h1>Module 1</h1>
+                      <div class="description">
+                        <h2>Mindset & bases...</h2>
+                        <img src="./assets/icon/checked.png" alt="checked" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 1</h1>
+                      <div class="description">
+                        <h2>Trouver le produit..</h2>
+                        <img src="./assets/icon/checked.png" alt="checked" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 2</h1>
+                      <div class="description">
+                        <h2>Créer ta boutique..</h2>
+                        <h3>32%</h3>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 3</h1>
+                      <div class="description">
+                        <h2>Moyens de paiem...</h2>
+                        <h4>0%</h4>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 1</h1>
+                      <div class="description">
+                        <h2>Mindset & bases...</h2>
+                        <img src="./assets/icon/checked.png" alt="checked" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 1</h1>
+                      <div class="description">
+                        <h2>Trouver le produit..</h2>
+                        <img src="./assets/icon/checked.png" alt="checked" />
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 2</h1>
+                      <div class="description">
+                        <h2>Créer ta boutique..</h2>
+                        <h3>32%</h3>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <h1>Module 3</h1>
+                      <div class="description">
+                        <h2>Moyens de paiem...</h2>
+                        <h4>0%</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="middle-content">
+            <div class="content-box">
+              <h2>Module 4</h2>
+              <div class="status">
+                <span>Complete</span>
+                <img src="./assets/icon/checked.png" alt="checked" />
+              </div>
+              <h3>Mindset & bases de l’e-commerce</h3>
+              <h4>5 <span>vidéos</span> - 1h14</h4>
+              <button class="btn-primary">Commencer</button>
+            </div>
+            <div class="video-box">
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="after"></div>
+            </div>
+          </div>
+          <div class="middle-content">
+            <div class="content-box">
+              <h2>Module 4</h2>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+              <h3>Trouver le produit gagnant</h3>
+              <h4>5 <span>vidéos</span> - 1h14</h4>
+              <button class="btn-primary">Commencer</button>
+            </div>
+            <div class="video-box">
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="after"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -3373,6 +3374,596 @@ a {
   color: #191824;
   border-radius: 4px;
   margin-top: 5px;
+}
+
+.ecomUniversity .top-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  border-bottom: 1px solid #191824;
+  padding: 34px 22px 28px 39px;
+}
+@media (max-width: 1439px) {
+  .ecomUniversity .top-content {
+    padding: 34px 22px 28px 22px;
+  }
+}
+.ecomUniversity .top-content .item .item-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9c99b4;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ecomUniversity .top-content .item .item-title .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+  padding: 0px 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ecomUniversity .top-content .item:nth-child(1) {
+  grid-column: span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 16px 21px;
+}
+@media (max-width: 1439px) {
+  .ecomUniversity .top-content .item:nth-child(1) {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 1023px) {
+  .ecomUniversity .top-content .item:nth-child(1) {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 767px) {
+  .ecomUniversity .top-content .item:nth-child(1) {
+    grid-column: span 12;
+  }
+}
+@media (max-width: 1439px) {
+  .ecomUniversity .top-content .item:nth-child(1) {
+    padding: 16px 0px;
+  }
+}
+.ecomUniversity .top-content .item:nth-child(1) h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: start;
+  line-height: 100%;
+}
+.ecomUniversity .top-content .item:nth-child(1) p {
+  font-size: 24px;
+  font-weight: 300;
+  max-width: 250px;
+  line-height: 110%;
+}
+.ecomUniversity .top-content .item:nth-child(1) .title {
+  font-size: 24px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  max-width: 268px;
+  line-height: 114%;
+}
+.ecomUniversity .top-content .item:nth-child(1) .name {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.ecomUniversity .top-content .item:nth-child(1) .name span {
+  font-weight: 300;
+  color: #9c99b4;
+}
+.ecomUniversity .top-content .item:nth-child(1) .name .user-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+.ecomUniversity .top-content .item:nth-child(1) .bar {
+  width: 27px;
+  border: 1px solid #58eb89;
+}
+.ecomUniversity .top-content .item:nth-child(1) .status {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  font-family: "Roboto";
+}
+.ecomUniversity .top-content .item:nth-child(1) .status .name {
+  font-weight: 300;
+  color: #9c99b4;
+}
+.ecomUniversity .top-content .item:nth-child(1) .status .num {
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 4px;
+}
+.ecomUniversity .top-content .item:nth-child(1) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  color: #111111;
+  padding: 0px 26px;
+  min-width: 152px;
+}
+.ecomUniversity .top-content .item:nth-child(2) {
+  background-color: #191824;
+  grid-column: span 4;
+  padding: 16px 21px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffff;
+}
+@media (max-width: 1023px) {
+  .ecomUniversity .top-content .item:nth-child(2) {
+    grid-column: span 6;
+  }
+}
+@media (max-width: 767px) {
+  .ecomUniversity .top-content .item:nth-child(2) {
+    grid-column: span 12;
+  }
+}
+.ecomUniversity .top-content .item:nth-child(2) .lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  font-family: "Roboto";
+}
+.ecomUniversity .top-content .item:nth-child(2) .lists .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.ecomUniversity .top-content .item:nth-child(3) {
+  background-color: #191824;
+  grid-column: span 4;
+  padding: 16px 21px;
+}
+@media (max-width: 1439px) {
+  .ecomUniversity .top-content .item:nth-child(3) {
+    grid-column: span 5;
+  }
+}
+@media (max-width: 1023px) {
+  .ecomUniversity .top-content .item:nth-child(3) {
+    grid-column: span 12;
+  }
+}
+.ecomUniversity .top-content .item:nth-child(3) .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 35px;
+}
+@media (max-width: 1439px) {
+  .ecomUniversity .top-content .item:nth-child(3) .content {
+    gap: 15px;
+  }
+}
+@media (max-width: 1023px) {
+  .ecomUniversity .top-content .item:nth-child(3) .content {
+    gap: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .ecomUniversity .top-content .item:nth-child(3) .content {
+    gap: 15px;
+  }
+}
+@media (max-width: 380px) {
+  .ecomUniversity .top-content .item:nth-child(3) .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item {
+  border: 1px solid #353347;
+  border-radius: 8px;
+  padding: 14px 12px;
+  width: 100%;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item .box {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 119px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item .box .item {
+  gap: 2px;
+  padding: 0px;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item .box .item h1 {
+  font-size: 8px;
+  font-weight: 400;
+  color: #9c99b4;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item .box .item .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 400;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item .box .item .description h2 {
+  color: #ffffff;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .content-item .box .item .description h3 {
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .progress-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .progress-box .progress-container {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .progress-box .progress-container .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .progress-box .progress-container .content h1 {
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 28px;
+  margin-top: 20px;
+}
+.ecomUniversity .top-content .item:nth-child(3) .content .progress-box .progress-container .content p {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 115%;
+}
+.ecomUniversity .middle-content {
+  padding: 24px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #191824;
+  gap: 34px;
+  margin: 28px 24px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .ecomUniversity .middle-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .ecomUniversity .middle-content {
+    gap: 10px;
+  }
+}
+.ecomUniversity .middle-content .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  min-width: 152px;
+  max-width: 152px;
+  max-width: 157.5px;
+}
+@media (max-width: 767px) {
+  .ecomUniversity .middle-content .content-box {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+.ecomUniversity .middle-content .content-box h1 {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #9c99b4;
+}
+.ecomUniversity .middle-content .content-box h2 {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #6e6c88;
+}
+.ecomUniversity .middle-content .content-box h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+}
+.ecomUniversity .middle-content .content-box h4 {
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.ecomUniversity .middle-content .content-box h4 span {
+  color: #6e6c88;
+}
+.ecomUniversity .middle-content .content-box .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+  width: 100%;
+  margin-top: 10px;
+}
+.ecomUniversity .middle-content .content-box .status {
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+.ecomUniversity .middle-content .content-box h4 {
+  margin-top: 10px;
+}
+.ecomUniversity .middle-content .content-box h3 {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-width: 160px;
+}
+.ecomUniversity .middle-content .content-box .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  color: #111111;
+  padding: 0px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ecomUniversity .middle-content .content-box .progress-bar {
+  height: 4px;
+  width: 100%;
+  background-color: #070610;
+  border-radius: 53px;
+  margin-top: 5px;
+}
+.ecomUniversity .middle-content .content-box .progress-bar .progress-fill {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  border-radius: 53px;
+}
+.ecomUniversity .middle-content .video-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+}
+.ecomUniversity .middle-content .video-box .after {
+  position: sticky;
+  top: 0;
+  right: 0;
+  min-width: 199px;
+  min-height: 176px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(25, 24, 36, 0)), to(#191824));
+  background: linear-gradient(90deg, rgba(25, 24, 36, 0) 0%, #191824 100%);
+}
+@media (max-width: 320px) {
+  .ecomUniversity .middle-content .video-box .after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .ecomUniversity .middle-content .video-box .after {
+    min-width: 99px;
+  }
+}
+.ecomUniversity .middle-content .video-box .video-item {
+  min-width: 233px;
+  height: 152px;
+  background-color: #2e2c3c;
+  border-bottom: 2px solid #6c6c6c;
+  position: relative;
+}
+.ecomUniversity .middle-content .video-box .video-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 body {
