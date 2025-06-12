@@ -4485,6 +4485,11 @@ a {
   /* Override styles for slider dots */
   /* Fix for multiple active dots issue */
 }
+@media (max-width: 767px) {
+  .login .logo {
+    width: 200px;
+  }
+}
 .login .login-form {
   width: 50%;
   background-image: url("../assets/login/bg-login.png");

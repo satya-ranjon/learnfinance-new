@@ -1,6 +1,11 @@
 .login {
   height: 100vh;
   width: 100%;
+  .logo {
+    @include mobile {
+      width: 200px;
+    }
+  }
   .login-form {
     width: 50%;
     @include desktop {
