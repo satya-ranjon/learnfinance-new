@@ -4,6 +4,9 @@ $crypto: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
 $bourse: linear-gradient(258.12deg, #191824 20.19%, #0191a1 100%);
 
 .finance {
+  @include mobile {
+    background-color: $background-color;
+  }
   .content {
     height: fit-content;
   }

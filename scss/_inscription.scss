@@ -96,6 +96,7 @@
       height: 20px;
       border-radius: 20px;
     }
+
     .form-control {
       background-color: #11101c;
       border: 1px solid #353347;
@@ -105,6 +106,7 @@
       font-family: "Roboto", sans-serif;
       border-radius: 5px !important;
       overflow: hidden;
+
       &:focus {
         border-color: #58eb89;
         box-shadow: none;
@@ -126,42 +128,41 @@
         grid-template-columns: repeat(1, 1fr);
       }
     }
-    // Custom checkbox styling
-    .custom-checkbox {
-      position: relative;
-      display: flex;
-      align-items: center;
+  }
+}
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
 
-      .form-check-input {
-        width: 15px;
-        height: 15px;
-        margin-top: 0;
-        background-color: transparent;
-        border: 1px solid $box-border;
-        cursor: pointer;
-        appearance: none;
-        position: relative;
-        border-radius: 3px;
-        padding: 5px;
+  .form-check-input {
+    width: 15px;
+    height: 15px;
+    margin-top: 0;
+    background-color: transparent;
+    border: 1px solid $box-border;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+    border-radius: 3px;
+    padding: 5px;
 
-        &:checked {
-          background-color: #353347;
-          border-color: $box-border;
-          background-image: url("../assets/icon/checkbackground.png");
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        &:focus {
-          box-shadow: none;
-          border-color: $box-border;
-        }
-      }
-
-      .form-check-label {
-        margin-left: 5px;
-        cursor: pointer;
-      }
+    &:checked {
+      background-color: #353347;
+      border-color: $box-border;
+      background-image: url("../assets/icon/checkbackground.png");
+      background-position: center;
+      background-repeat: no-repeat;
     }
+
+    &:focus {
+      box-shadow: none;
+      border-color: $box-border;
+    }
+  }
+
+  .form-check-label {
+    margin-left: 5px;
+    cursor: pointer;
   }
 }

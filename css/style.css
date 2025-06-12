@@ -520,6 +520,11 @@ a {
   padding-left: 30px;
 }
 
+@media (max-width: 767px) {
+  .finance {
+    background-color: #070610;
+  }
+}
 .finance .content {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1581,6 +1586,11 @@ a {
   max-height: 215px;
 }
 
+@media (max-width: 767px) {
+  .ecom {
+    background-color: #070610;
+  }
+}
 .ecom .top-content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -1591,6 +1601,12 @@ a {
 @media (max-width: 1439px) {
   .ecom .top-content {
     padding: 34px 22px 28px 22px;
+  }
+}
+@media (max-width: 767px) {
+  .ecom .top-content {
+    border-bottom: none;
+    padding-bottom: 0px;
   }
 }
 .ecom .top-content .item {
@@ -2518,6 +2534,11 @@ a {
   max-height: 215px;
 }
 
+@media (max-width: 767px) {
+  .digital {
+    background-color: #070610;
+  }
+}
 .digital .top-content {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -2528,6 +2549,12 @@ a {
 @media (max-width: 1439px) {
   .digital .top-content {
     padding: 34px 22px 28px 22px;
+  }
+}
+@media (max-width: 767px) {
+  .digital .top-content {
+    border-bottom: none;
+    padding-bottom: 0px;
   }
 }
 .digital .top-content .item {
@@ -4406,7 +4433,8 @@ a {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.inscription .content .custom-checkbox {
+
+.custom-checkbox {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4415,7 +4443,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-.inscription .content .custom-checkbox .form-check-input {
+.custom-checkbox .form-check-input {
   width: 15px;
   height: 15px;
   margin-top: 0;
@@ -4429,21 +4457,224 @@ a {
   border-radius: 3px;
   padding: 5px;
 }
-.inscription .content .custom-checkbox .form-check-input:checked {
+.custom-checkbox .form-check-input:checked {
   background-color: #353347;
   border-color: #353347;
   background-image: url("../assets/icon/checkbackground.png");
   background-position: center;
   background-repeat: no-repeat;
 }
-.inscription .content .custom-checkbox .form-check-input:focus {
+.custom-checkbox .form-check-input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: #353347;
 }
-.inscription .content .custom-checkbox .form-check-label {
+.custom-checkbox .form-check-label {
   margin-left: 5px;
   cursor: pointer;
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  /* Override styles for slider dots */
+  /* Fix for multiple active dots issue */
+}
+.login .login-form {
+  width: 50%;
+  background-image: url("../assets/login/bg-login.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1440px) {
+  .login .login-form {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .login .login-form {
+    padding: 10px;
+  }
+}
+.login .login-form .form-box {
+  width: 321px;
+}
+.login .login-form .form-box .button {
+  background-color: #58eb89;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #191824;
+}
+.login .login-form .form-box h1 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.login .login-form .form-box .form-control {
+  background-color: #11101c;
+  border: 1px solid #353347;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px !important;
+  overflow: hidden;
+}
+.login .login-form .form-box .form-control:focus {
+  border-color: #58eb89;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.login .login-form .form-box .form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.login .login-form .form-box .form-control::-moz-placeholder {
+  color: #ffffff;
+}
+.login .login-form .form-box .form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+.login .login-form .form-box .form-control::-ms-input-placeholder {
+  color: #ffffff;
+}
+.login .login-form .form-box .form-control::placeholder {
+  color: #ffffff;
+}
+.login .login-form .form-box .link {
+  font-size: 10px;
+  font-weight: 300;
+  color: #007de2;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+}
+.login .login-form .form-box .custom-checkbox .form-check-label {
+  font-size: 13px;
+  font-weight: 300;
+  color: #9c99b4;
+  font-family: "Roboto", sans-serif;
+}
+.login .slider-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 1440px) {
+  .login .slider-box {
+    min-width: 882px;
+  }
+}
+@media (max-width: 1439px) {
+  .login .slider-box {
+    min-width: 540px;
+  }
+}
+@media (max-width: 1023px) {
+  .login .slider-box {
+    min-width: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .login .slider-box {
+    display: none;
+  }
+}
+.login .slider-box .slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.login .slider-box .slider_item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* Add visibility property for better transitions */
+  -webkit-transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+.login .slider-box .slider_item h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.login .slider-box .slider_item.active {
+  opacity: 1;
+  visibility: visible; /* Show active slide */
+  z-index: 1;
+}
+.login .slider-box .slider-1 {
+  background-image: url("../assets/login/slider-1.png");
+}
+.login .slider-box .slider-2 {
+  background-image: url("../assets/login/slider-2.png");
+}
+.login .slider-box .slider-dots-container {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+}
+.login .slider-box .slider-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.login .slider-box .slider-dots .dot {
+  width: 35px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.login .slider-box .slider-dots .dot.active {
+  background-color: #58eb89;
+  -webkit-box-shadow: 0 0 5px #58eb89;
+          box-shadow: 0 0 5px #58eb89;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.login .slider-box .slider-dots .dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.login .slider-dots .dot {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.login .slider-dots .dot.active {
+  background-color: #58eb89 !important;
+  -webkit-box-shadow: 0 0 5px #58eb89 !important;
+          box-shadow: 0 0 5px #58eb89 !important;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.login .slider-dots .dot:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.login .slider-dots .dot.active ~ .dot.active {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-transform: none;
+          transform: none;
 }
 
 body {

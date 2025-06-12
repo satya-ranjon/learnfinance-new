@@ -1,0 +1,175 @@
+.login {
+  height: 100vh;
+  width: 100%;
+  .login-form {
+    width: 50%;
+    @include desktop {
+      width: 100%;
+    }
+    @include mobile {
+      padding: 10px;
+    }
+
+    background-image: url("../assets/login/bg-login.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    .form-box {
+      .button {
+        background-color: #58eb89;
+        width: 100%;
+        height: 40px;
+        border-radius: 50px;
+        font-weight: $font-weight-medium;
+        font-size: 16px;
+        color: $section-background-color;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: $font-weight-regular;
+      }
+      width: 321px;
+      .form-control {
+        background-color: #11101c;
+        border: 1px solid #353347;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: $font-weight-light;
+        font-family: "Roboto", sans-serif;
+        border-radius: 5px !important;
+        overflow: hidden;
+        &:focus {
+          border-color: #58eb89;
+          box-shadow: none;
+        }
+        &::placeholder {
+          color: #ffffff;
+        }
+      }
+      .link {
+        font-size: 10px;
+        font-weight: $font-weight-light;
+        color: #007de2;
+        font-family: "Roboto", sans-serif;
+        text-decoration: underline;
+      }
+      .custom-checkbox {
+        .form-check-label {
+          font-size: 13px;
+          font-weight: $font-weight-light;
+          color: #9c99b4;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+    }
+  }
+  .slider-box {
+    width: 100%;
+    @include desktop {
+      min-width: 882px;
+    }
+    @include laptop {
+      min-width: 540px;
+    }
+    @include tablet {
+      min-width: 80px;
+    }
+    @include mobile {
+      display: none;
+    }
+    height: 100%;
+    position: relative;
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+    .slider_item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden; /* Add visibility property for better transitions */
+      transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+      h1 {
+        font-size: 48px;
+        font-weight: $font-weight-regular;
+        color: #ffffff;
+      }
+      &.active {
+        opacity: 1;
+        visibility: visible; /* Show active slide */
+        z-index: 1;
+      }
+    }
+
+    .slider-1 {
+      background-image: url("../assets/login/slider-1.png");
+    }
+    .slider-2 {
+      background-image: url("../assets/login/slider-2.png");
+    }
+
+    .slider-dots-container {
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 10px;
+      .dot {
+        width: 35px;
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &.active {
+          background-color: #58eb89;
+          box-shadow: 0 0 5px #58eb89;
+          transform: scale(1.05);
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+  /* Override styles for slider dots */
+  .slider-dots .dot {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .slider-dots .dot.active {
+    background-color: #58eb89 !important;
+    box-shadow: 0 0 5px #58eb89 !important;
+    transform: scale(1.05);
+  }
+
+  .slider-dots .dot:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Fix for multiple active dots issue */
+  .slider-dots .dot.active ~ .dot.active {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: none !important;
+    transform: none;
+  }
+}
