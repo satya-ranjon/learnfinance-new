@@ -4230,6 +4230,222 @@ a {
   }
 }
 
+.inscription {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/inscription-bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 20px;
+  overflow-y: auto;
+}
+@media (max-width: 1023px) {
+  .inscription {
+    padding: 20px;
+    height: 100%;
+    padding-bottom: 90;
+  }
+}
+.inscription .button {
+  background-color: #58eb89;
+  min-width: 273px;
+  height: 40px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #191824;
+}
+.inscription .logo {
+  margin-top: 75px;
+  margin-bottom: 40px;
+}
+.inscription .content {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: #191824;
+  border-radius: 10px;
+  padding: 24px 130px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 24px;
+}
+@media (max-width: 1023px) {
+  .inscription .content {
+    max-width: 100%;
+    padding: 24px 90px;
+  }
+}
+@media (max-width: 767px) {
+  .inscription .content {
+    max-width: 100%;
+    padding: 24px 56px;
+  }
+}
+@media (max-width: 375px) {
+  .inscription .content {
+    padding: 24px;
+  }
+}
+.inscription .content h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .inscription .content .cart-container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+@media (max-width: 375px) {
+  .inscription .content .cart-container {
+    width: 100%;
+  }
+}
+.inscription .content .ecom-cart-book {
+  background: linear-gradient(119.86deg, #070610 46.57%, #315c12 100%);
+  border-radius: 5px;
+}
+.inscription .content .ecom-cart-book .price {
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@media (max-width: 375px) {
+  .inscription .content .ecom-cart-book {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .inscription .content .ecom-cart-book {
+    width: 100%;
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+}
+.inscription .content .digital-cart-book {
+  background: linear-gradient(119.86deg, #070610 46.57%, #6d3a15 100%);
+  border-radius: 5px;
+}
+.inscription .content .digital-cart-book .price {
+  background: -webkit-gradient(linear, right top, left top, from(#f60c3b), to(#ff8e39));
+  background: linear-gradient(270deg, #f60c3b 0%, #ff8e39 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@media (max-width: 375px) {
+  .inscription .content .digital-cart-book {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .inscription .content .digital-cart-book {
+    width: 100%;
+    padding: 10px !important;
+    gap: 10px !important;
+  }
+}
+.inscription .content .price {
+  font-size: 40px;
+  font-weight: 700;
+}
+.inscription .content .cart-logo {
+  background-color: #191824;
+  width: 111px;
+  height: 20px;
+  border-radius: 20px;
+}
+.inscription .content .form-control {
+  background-color: #11101c;
+  border: 1px solid #353347;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px !important;
+  overflow: hidden;
+}
+.inscription .content .form-control:focus {
+  border-color: #58eb89;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.inscription .content .form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.inscription .content .form-control::-moz-placeholder {
+  color: #ffffff;
+}
+.inscription .content .form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+.inscription .content .form-control::-ms-input-placeholder {
+  color: #ffffff;
+}
+.inscription .content .form-control::placeholder {
+  color: #ffffff;
+}
+.inscription .content label {
+  font-size: 11px;
+  font-weight: 300;
+  color: #9c99b4;
+  font-family: "Roboto", sans-serif;
+}
+.inscription .content .input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 767px) {
+  .inscription .content .input-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.inscription .content .custom-checkbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.inscription .content .custom-checkbox .form-check-input {
+  width: 15px;
+  height: 15px;
+  margin-top: 0;
+  background-color: transparent;
+  border: 1px solid #353347;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  border-radius: 3px;
+  padding: 5px;
+}
+.inscription .content .custom-checkbox .form-check-input:checked {
+  background-color: #353347;
+  border-color: #353347;
+  background-image: url("../assets/icon/checkbackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.inscription .content .custom-checkbox .form-check-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #353347;
+}
+.inscription .content .custom-checkbox .form-check-label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
 body {
   font-family: "Poppins", sa ns-serif;
   color: #c4bfef;

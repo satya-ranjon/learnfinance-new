@@ -1,0 +1,167 @@
+.inscription {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/inscription-bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 20px;
+  overflow-y: auto;
+  @include tablet {
+    padding: 20px;
+    height: 100%;
+    padding-bottom: 90;
+  }
+  .button {
+    background-color: #58eb89;
+    min-width: 273px;
+    height: 40px;
+    border-radius: 50px;
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+    color: $section-background-color;
+  }
+  .logo {
+    margin-top: 75px;
+    margin-bottom: 40px;
+  }
+  .content {
+    max-width: 850px;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 100%;
+      padding: 24px 90px;
+    }
+    @include mobile {
+      max-width: 100%;
+      padding: 24px 56px;
+    }
+    @media (max-width: 375px) {
+      padding: 24px;
+    }
+    background-color: $section-background-color;
+    border-radius: $border-md;
+    padding: 24px 130px;
+    height: fit-content;
+    gap: 24px;
+    h1 {
+      font-size: 20px;
+      font-weight: $font-weight-regular;
+    }
+    .cart-container {
+      @include mobile {
+        flex-direction: column !important;
+      }
+      @media (max-width: 375px) {
+        width: 100%;
+      }
+    }
+    .ecom-cart-book {
+      background: linear-gradient(119.86deg, #070610 46.57%, #315c12 100%);
+      .price {
+        @include gradient-text($ecom-theme);
+      }
+      border-radius: 5px;
+      @media (max-width: 375px) {
+        width: 100%;
+      }
+      @media (max-width: 320px) {
+        width: 100%;
+        padding: 10px !important;
+        gap: 10px !important;
+      }
+    }
+    .digital-cart-book {
+      background: linear-gradient(119.86deg, #070610 46.57%, #6d3a15 100%);
+      .price {
+        @include gradient-text($digital-theme);
+      }
+      border-radius: 5px;
+      @media (max-width: 375px) {
+        width: 100%;
+      }
+      @media (max-width: 320px) {
+        width: 100%;
+        padding: 10px !important;
+        gap: 10px !important;
+      }
+    }
+    .price {
+      font-size: 40px;
+      font-weight: $font-weight-bold;
+    }
+    .cart-logo {
+      background-color: #191824;
+      width: 111px;
+      height: 20px;
+      border-radius: 20px;
+    }
+    .form-control {
+      background-color: #11101c;
+      border: 1px solid #353347;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: $font-weight-light;
+      font-family: "Roboto", sans-serif;
+      border-radius: 5px !important;
+      overflow: hidden;
+      &:focus {
+        border-color: #58eb89;
+        box-shadow: none;
+      }
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
+    label {
+      font-size: 11px;
+      font-weight: $font-weight-light;
+      color: #9c99b4;
+      font-family: "Roboto", sans-serif;
+    }
+    .input-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    // Custom checkbox styling
+    .custom-checkbox {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .form-check-input {
+        width: 15px;
+        height: 15px;
+        margin-top: 0;
+        background-color: transparent;
+        border: 1px solid $box-border;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        border-radius: 3px;
+        padding: 5px;
+
+        &:checked {
+          background-color: #353347;
+          border-color: $box-border;
+          background-image: url("../assets/icon/checkbackground.png");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        &:focus {
+          box-shadow: none;
+          border-color: $box-border;
+        }
+      }
+
+      .form-check-label {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
