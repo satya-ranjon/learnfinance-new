@@ -1,20 +1,121 @@
 .ecomVideoPlayer {
+  @include mobile {
+    background-color: $background-color;
+    padding-top: 10px;
+  }
   padding: 32px;
+  .content-box {
+    @include laptop {
+      flex-direction: column;
+    }
+  }
   .back {
     font-size: $font-ssm;
     font-family: "Roboto";
     font-weight: $font-weight-light;
     color: #9c99b4;
+    @include mobile {
+      font-size: 8px;
+      flex-wrap: wrap;
+    }
   }
   .video-title {
     @include gradient-text($ecom-theme);
     font-size: 28px;
     font-weight: $font-weight-medium;
     margin-top: 8px;
+    @include mobile {
+      max-width: 256px;
+    }
+  }
+  .first-box {
+    width: 100%;
+
+    .next-prev-btns {
+      @include mobile {
+        justify-content: space-between !important;
+        width: 100%;
+      }
+    }
+    .mobile-vido-discription {
+      font-family: "Roboto";
+      font-size: 15px;
+      font-weight: $font-weight-regular;
+      color: #9c99b4;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #191824;
+      display: none;
+      @include mobile {
+        display: block;
+      }
+      .name {
+        margin-bottom: 5px;
+        font-size: 15px;
+        font-weight: $font-weight-regular;
+        color: $white;
+        display: flex !important;
+        span {
+          font-weight: $font-weight-light;
+          color: #9c99b4;
+        }
+        .user-avatar {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .name {
+      font-size: 15px;
+      font-weight: $font-weight-regular;
+      color: $white;
+      display: flex !important;
+      @include mobile {
+        display: none !important;
+      }
+      span {
+        font-weight: $font-weight-light;
+        color: #9c99b4;
+      }
+      .user-avatar {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+      }
+    }
+    .btn-outline {
+      @include btn-outline;
+    }
+    .btn-primary {
+      @include btn-base;
+      background: $ecom-theme;
+      color: #111111;
+    }
   }
   .video-container {
-    width: 840px;
-    height: 472px;
+    width: 100%;
+    height: 600px;
+    @include desktop {
+      width: 840px;
+      height: 472px;
+    }
+    @include laptop {
+      width: 100%;
+      height: 600px;
+    }
+    @include tablet {
+      height: 400px;
+    }
+    @include mobile {
+      height: 200px;
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
     background-color: $video-background-color;
     border-radius: $border-md;
   }
@@ -23,6 +124,10 @@
     width: 100%;
     height: 100%;
     max-width: 414px;
+    border-radius: $border-md;
+    @include laptop {
+      max-width: 100%;
+    }
   }
   .videos-list-name {
     font-size: 13px;
@@ -30,6 +135,15 @@
     color: #9c99b4;
   }
   .video-lists {
+    max-height: 600px;
+    @include desktop {
+      max-height: 450px;
+    }
+    @include laptop {
+      max-height: fit-content;
+    }
+    overflow-y: auto;
+    gap: 20px;
     .video-list {
       .video-list-title {
         cursor: pointer;
@@ -59,6 +173,7 @@
         }
         .module-item {
           transition: all 0.3s ease-in-out;
+          padding: 13px 12px;
           &:hover {
             color: $white;
             background-color: #11101c;
@@ -66,6 +181,19 @@
           }
         }
       }
+    }
+  }
+
+  .desktop-vido-discription {
+    font-size: 15px;
+    font-weight: $font-weight-regular;
+    color: #9c99b4;
+    padding-top: 22px;
+    margin-top: 22px;
+    border-top: 1px solid #191824;
+    display: block;
+    @include mobile {
+      display: none;
     }
   }
 }
