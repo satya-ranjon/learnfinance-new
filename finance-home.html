@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Digital - Learning Platform</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark-theme">
+    <div
+      class="sidebar d-flex flex-column align-items-center justify-content-start d-none d-lg-flex"
+    >
+      <div class="logo d-flex align-items-center justify-content-center">
+        <img src="./assets/logo-left.png" alt="logo" />
+      </div>
+      <ul
+        class="d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html"> <img src="./assets/home.png" alt="home" /> </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/Layer_1.png" alt="Layer_1" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/ecom.html">
+            <img src="./assets/Layer_2.png" alt="Layer_2" />
+            <div class="active-digital"></div>
+          </a>
+        </li>
+        <li
+          class="sidebar-item active d-flex align-items-center justify-content-center"
+        >
+          <a href="/digital.html">
+            <img src="./assets/Layer_3.png" alt="Layer_3" />
+            <div class="active-digital"></div>
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/bm.png" alt="Layer_3" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/ai.png" alt="Layer_3" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div
+        class="header d-flex justify-content-between align-items-center d-none d-lg-flex"
+      >
+        <div
+          class="navbar d-flex justify-content-start align-items-center gap-4 w-100"
+        >
+          <img src="./assets/logo.png" alt="logo" />
+          <ul class="d-flex justify-content-start align-items-center gap-3">
+            <li><a class="active" href="#">University</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Area</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">PredictAI</a></li>
+          </ul>
+        </div>
+        <div
+          class="header-right d-flex justify-content-end align-items-center gap-4"
+        >
+          <div
+            class="search-box d-flex justify-content-between align-items-center"
+          >
+            <input type="text" placeholder="Recherche" />
+            <img src="./assets/icon/search.png" alt="search" />
+          </div>
+          <div
+            class="avatars d-flex justify-content-start align-items-center gap-3"
+          >
+            <div class="avatar">
+              <img src="./assets/icon/notification.png" alt="notification" />
+              <span>5</span>
+            </div>
+            <div class="avatar">
+              <img src="./assets/icon/user.png" alt="user" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mobile-header d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <div class="left d-flex justify-content-start align-items-center gap-4">
+          <img src="./assets/logo-left.png" alt="logo" />
+          <img src="./assets/logo.png" alt="logo" />
+        </div>
+        <div class="avatar" id="mobile-menu-open">
+          <svg
+            width="18"
+            height="13"
+            viewBox="0 0 18 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.25 7.25012H0.75C0.335999 7.25012 0 6.91412 0 6.50012C0 6.08612 0.335999 5.75012 0.75 5.75012H17.25C17.664 5.75012 18 6.08612 18 6.50012C18 6.91412 17.664 7.25012 17.25 7.25012Z"
+              fill="#C4BFEF"
+            />
+            <path
+              d="M17.25 1.5H0.75C0.335999 1.5 0 1.164 0 0.75C0 0.335999 0.335999 0 0.75 0H17.25C17.664 0 18 0.335999 18 0.75C18 1.164 17.664 1.5 17.25 1.5Z"
+              fill="#C4BFEF"
+            />
+            <path
+              d="M17.25 13H0.75C0.335999 13 0 12.664 0 12.25C0 11.836 0.335999 11.5 0.75 11.5H17.25C17.664 11.5 18 11.836 18 12.25C18 12.664 17.664 13 17.25 13Z"
+              fill="#C4BFEF"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="mobile-menu d-lg-none">
+        <div class="close-icon" id="mobile-menu-close">
+          <img src="./assets/icon/cross.png" alt="cross" />
+        </div>
+        <ul class="d-flex flex-column gap-4">
+          <li><a href="#">University</a></li>
+          <li><a href="#">Mon compte</a></li>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="#">Se déconnecter</a></li>
+        </ul>
+
+        <div
+          class="search-box d-flex justify-content-between align-items-center"
+        >
+          <input type="text" placeholder="Recherche" />
+          <img src="./assets/icon/search.png" alt="search" />
+        </div>
+        <ul
+          class="sidebar-items d-flex justify-content-start align-items-center gap-4 flex-wrap"
+        >
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/home.png" alt="home" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/Layer_1.png" alt="Layer_1" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/ecom.html">
+              <img src="./assets/Layer_2.png" alt="Layer_2" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/digital.html">
+              <img src="./assets/Layer_3.png" alt="Layer_3" />
+            </a>
+          </li>
+        </ul>
+        <div class="finance-cart">
+          <div class="cart-content">
+            <div class="logo">
+              <img src="./assets/home/finase.png" alt="" />
+            </div>
+            <h1>Béneficiez de</h1>
+            <h3>-20%</h3>
+            <p>sur notre formation E-commerce !</p>
+          </div>
+        </div>
+        <div class="copy-right">© Futures 2025</div>
+      </div>
+
+      <div class="main-content finance">
+        <div class="finance-home">
+          <!-- small screen tab button -->
+          <div
+            class="d-flex justify-content-start gap-1 align-items-start mobile-tab-btn"
+          >
+            <div
+              class="d-flex tab justify-content-center align-items-center trading-tab active"
+            >
+              <svg
+                width="17"
+                height="19"
+                viewBox="0 0 17 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.93852 8.00366H2.38234V6.8999C2.38234 6.81288 2.34777 6.72942 2.28624 6.66788C2.2247 6.60635 2.14124 6.57178 2.05422 6.57178C1.96719 6.57178 1.88373 6.60635 1.8222 6.66788C1.76066 6.72942 1.72609 6.81288 1.72609 6.8999V8.00366H1.16992C0.99603 8.00417 0.829406 8.07347 0.706446 8.19643C0.583485 8.31939 0.514181 8.48602 0.513672 8.65991V16.5973C0.513649 16.6834 0.530608 16.7688 0.563579 16.8484C0.596551 16.928 0.644889 17.0004 0.705832 17.0613C0.766775 17.1223 0.839129 17.1706 0.918759 17.2036C0.998389 17.2366 1.08374 17.2535 1.16992 17.2535H1.72609V18.3593C1.72737 18.4455 1.76251 18.5277 1.82391 18.5882C1.8853 18.6487 1.96804 18.6826 2.05423 18.6826C2.14042 18.6826 2.22315 18.6487 2.28454 18.5882C2.34594 18.5277 2.38107 18.4454 2.38234 18.3593V17.2535H2.93852C3.0247 17.2535 3.11005 17.2366 3.18968 17.2036C3.26931 17.1706 3.34167 17.1223 3.40261 17.0613C3.46355 17.0004 3.51189 16.928 3.54486 16.8484C3.57783 16.7688 3.59479 16.6834 3.59477 16.5973V8.65991C3.59426 8.48602 3.52496 8.31939 3.402 8.19643C3.27903 8.07347 3.11241 8.00416 2.93852 8.00366Z"
+                />
+                <path
+                  d="M7.23406 3.93493H6.68008V2.83105C6.68008 2.74403 6.64551 2.66057 6.58397 2.59904C6.52244 2.5375 6.43898 2.50293 6.35195 2.50293C6.26493 2.50293 6.18147 2.5375 6.11993 2.59904C6.0584 2.66057 6.02383 2.74403 6.02383 2.83105V3.93493H5.46875C5.29486 3.93544 5.12823 4.00474 5.00527 4.12771C4.88231 4.25067 4.81301 4.41729 4.8125 4.59118V12.5285C4.81248 12.6147 4.82943 12.7001 4.8624 12.7797C4.89537 12.8593 4.94371 12.9317 5.00466 12.9926C5.0656 13.0536 5.13795 13.1019 5.21759 13.1349C5.29722 13.1678 5.38256 13.1848 5.46875 13.1848H6.02382V14.2904C6.0251 14.3766 6.06024 14.4588 6.12164 14.5193C6.18303 14.5798 6.26577 14.6137 6.35196 14.6137C6.43815 14.6137 6.52088 14.5798 6.58227 14.5193C6.64367 14.4588 6.6788 14.3766 6.68007 14.2904V13.1848H7.23406C7.32033 13.1851 7.4058 13.1683 7.48555 13.1354C7.56531 13.1026 7.63777 13.0542 7.69877 12.9932C7.75977 12.9322 7.80809 12.8598 7.84097 12.78C7.87384 12.7003 7.89061 12.6148 7.89031 12.5285V4.59118C7.89034 4.505 7.87338 4.41965 7.84041 4.34002C7.80743 4.26039 7.7591 4.18804 7.69815 4.12709C7.63721 4.06615 7.56486 4.01781 7.48523 3.98484C7.4056 3.95187 7.32025 3.93491 7.23406 3.93493Z"
+                />
+                <path
+                  d="M11.5319 6.22212H10.9768V5.11719C10.9768 5.03016 10.9423 4.9467 10.8807 4.88517C10.8192 4.82363 10.7357 4.78906 10.6487 4.78906C10.5617 4.78906 10.4782 4.82363 10.4167 4.88517C10.3552 4.9467 10.3206 5.03016 10.3206 5.11719V6.22212H9.7666C9.68041 6.2221 9.59507 6.23906 9.51544 6.27203C9.4358 6.305 9.36345 6.35334 9.30251 6.41428C9.24156 6.47522 9.19323 6.54758 9.16026 6.62721C9.12728 6.70684 9.11033 6.79219 9.11035 6.87837V14.8157C9.11033 14.9019 9.12729 14.9872 9.16026 15.0669C9.19323 15.1465 9.24157 15.2189 9.30251 15.2798C9.36345 15.3407 9.43581 15.3891 9.51544 15.4221C9.59507 15.455 9.68042 15.472 9.7666 15.472H10.3206V16.5766C10.3219 16.6627 10.357 16.745 10.4184 16.8055C10.4798 16.8659 10.5625 16.8999 10.6487 16.8998C10.7349 16.8998 10.8176 16.8659 10.879 16.8054C10.9404 16.7449 10.9756 16.6627 10.9768 16.5765V15.472H11.5319C11.7058 15.4715 11.8724 15.4022 11.9954 15.2792C12.1184 15.1562 12.1877 14.9896 12.1882 14.8157V6.87837C12.1877 6.70448 12.1184 6.53785 11.9954 6.41489C11.8724 6.29193 11.7058 6.22263 11.5319 6.22212Z"
+                />
+                <path
+                  d="M15.8301 1.74641H15.2739V0.640625C15.2739 0.553601 15.2394 0.470141 15.1778 0.408606C15.1163 0.34707 15.0328 0.3125 14.9458 0.3125C14.8588 0.3125 14.7753 0.34707 14.7138 0.408606C14.6523 0.470141 14.6177 0.553601 14.6177 0.640625V1.74641H14.0615C13.9753 1.74638 13.89 1.76334 13.8104 1.79631C13.7307 1.82928 13.6584 1.87762 13.5974 1.93856C13.5365 1.99951 13.4881 2.07186 13.4552 2.15149C13.4222 2.23112 13.4052 2.31647 13.4053 2.40266V10.34C13.4058 10.5139 13.4751 10.6805 13.598 10.8035C13.721 10.9264 13.8876 10.9957 14.0615 10.9963H14.6177V12.1C14.619 12.1862 14.6541 12.2684 14.7155 12.3289C14.7769 12.3894 14.8596 12.4233 14.9458 12.4233C15.032 12.4233 15.1147 12.3894 15.1761 12.3289C15.2375 12.2684 15.2727 12.1862 15.2739 12.1V10.9963H15.8301C16.004 10.9957 16.1706 10.9264 16.2936 10.8035C16.4165 10.6805 16.4859 10.5139 16.4864 10.34V2.40266C16.4864 2.31647 16.4694 2.23112 16.4365 2.15149C16.4035 2.07186 16.3551 1.99951 16.2942 1.93857C16.2333 1.87762 16.1609 1.82929 16.0813 1.79631C16.0016 1.76334 15.9163 1.74638 15.8301 1.74641Z"
+                />
+              </svg>
+
+              <h1>Trading</h1>
+            </div>
+            <div
+              class="d-flex tab justify-content-center align-items-center crypto-tab"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.5006 5.375C15.5006 7.82 13.7006 9.8375 11.3606 10.19V10.145C11.1281 7.235 8.76556 4.8725 5.83305 4.64H5.81055C6.16305 2.3 8.18056 0.5 10.6256 0.5C13.3181 0.5 15.5006 2.6825 15.5006 5.375Z"
+                />
+                <path
+                  d="M10.235 10.235C10.0475 7.8575 8.1425 5.9525 5.765 5.765C5.6375 5.7575 5.5025 5.75 5.375 5.75C2.6825 5.75 0.5 7.9325 0.5 10.625C0.5 13.3175 2.6825 15.5 5.375 15.5C8.0675 15.5 10.25 13.3175 10.25 10.625C10.25 10.4975 10.2425 10.3625 10.235 10.235ZM6.035 11.285L5.375 12.5L4.715 11.285L3.5 10.625L4.715 9.965L5.375 8.75L6.035 9.965L7.25 10.625L6.035 11.285Z"
+                />
+              </svg>
+
+              <h1>Crypto</h1>
+            </div>
+            <div
+              class="d-flex tab justify-content-center align-items-center bourse-tab"
+            >
+              <svg
+                width="13"
+                height="17"
+                viewBox="0 0 13 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.22226 0.185938L5.03476 3.90469C4.96878 3.98183 4.92628 4.07626 4.91229 4.1768C4.89831 4.27735 4.91342 4.37979 4.95584 4.47201C4.99826 4.56423 5.06622 4.64237 5.15166 4.69718C5.23711 4.75198 5.33647 4.78116 5.43798 4.78125L7.03173 4.78125L7.03173 10.625C7.03173 10.7659 7.0877 10.901 7.18733 11.0007C7.28696 11.1003 7.42208 11.1562 7.56298 11.1562L9.68798 11.1562C9.82888 11.1562 9.964 11.1003 10.0636 11.0007C10.1633 10.901 10.2192 10.7659 10.2192 10.625L10.2192 4.78125L11.813 4.78125C11.9145 4.78115 12.0139 4.75198 12.0993 4.69717C12.1847 4.64237 12.2527 4.56423 12.2951 4.47201C12.3375 4.37979 12.3527 4.27735 12.3387 4.1768C12.3247 4.07626 12.2822 3.98183 12.2162 3.90469L9.0287 0.185938C8.97883 0.127799 8.91697 0.0811318 8.84737 0.0491379C8.77777 0.017144 8.70208 0.000579668 8.62548 0.000579671C8.54888 0.000579675 8.47319 0.017144 8.40359 0.0491379C8.33399 0.0811318 8.27213 0.127799 8.22226 0.185938Z"
+                />
+                <path
+                  d="M5.43798 5.84384L3.31298 5.84384C3.17208 5.84384 3.03696 5.89981 2.93733 5.99944C2.8377 6.09907 2.78173 6.23419 2.78173 6.37509L2.78173 12.2188L1.18798 12.2188C1.08647 12.2189 0.987111 12.2481 0.901665 12.3029C0.816219 12.3577 0.748263 12.4359 0.705841 12.5281C0.663419 12.6203 0.648307 12.7227 0.662294 12.8233C0.67628 12.9238 0.71878 13.0183 0.784762 13.0954L3.97226 16.8142C4.02214 16.8723 4.08399 16.919 4.15359 16.951C4.22319 16.9829 4.29888 16.9995 4.37548 16.9995C4.45208 16.9995 4.52777 16.9829 4.59737 16.951C4.66697 16.919 4.72883 16.8723 4.7787 16.8142L7.9662 13.0954C8.03218 13.0183 8.07468 12.9238 8.08867 12.8233C8.10265 12.7227 8.08754 12.6203 8.04512 12.5281C8.0027 12.4359 7.93474 12.3577 7.8493 12.3029C7.76385 12.2481 7.66449 12.2189 7.56298 12.2188L5.96923 12.2188L5.96923 6.37509C5.96923 6.23419 5.91326 6.09907 5.81363 5.99944C5.714 5.89981 5.57888 5.84384 5.43798 5.84384Z"
+                />
+              </svg>
+
+              <h1>Bourse</h1>
+            </div>
+          </div>
+
+          <!-- Trading Tab -->
+          <div class="w-100 trading active tab-active">
+            <div
+              class="d-flex justify-content-center align-items-start tab-btn"
+            >
+              <div
+                class="d-flex tab justify-content-center align-items-center trading-tab"
+              >
+                <img
+                  src="./assets/finance-home/trading-tab.svg"
+                  alt="trading"
+                />
+                <h1>Trading</h1>
+              </div>
+            </div>
+
+            <div class="trading-content">
+              <div
+                class="d-flex justify-content-between align-items-start gap-4 w-100 trading-header"
+              >
+                <div
+                  class="d-flex justify-content-start align-items-center gap-2"
+                >
+                  <h1>University</h1>
+                  <h2>Reprendre</h2>
+                </div>
+                <button class="btn-outline">
+                  <div class="text">Planning complet</div>
+                </button>
+              </div>
+
+              <div class="video-container">
+                <div class="video">
+                  <img src="./assets/home/video-icon.png" alt="video" />
+                  <div class="progress">
+                    <span class="progress-bar"></span>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <h1>Les valeurs refuges</h1>
+                  <h6>Module intermediaire 2</h6>
+                  <h6 class="video-time">8:25</h6>
+                  <button class="btn-outline">Retour au module</button>
+                  <button class="btn-primary">Reprendre</button>
+                </div>
+              </div>
+
+              <div class="tranding-tv">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 trading-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>TV</h1>
+                    <h2>Prochains lives</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Trading TV</div>
+                  </button>
+                </div>
+                <div class="content">
+                  <div class="content-item">
+                    <h6 class="title">Trading</h6>
+                    <h1>Morning Profile</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> Maintenant</span>
+                    </h2>
+                    <button class="btn-primary">
+                      <span> Rejoindre</span>
+                    </button>
+                    <img src="./assets/home/people-1.png" alt="people" />
+                  </div>
+                  <div class="content-item">
+                    <h6 class="title">Trading</h6>
+                    <h1>Live Scalping</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button class="btn-secondary">
+                      <span> Me le rappeler</span>
+
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.2427 0.930121C10.1054 0.792801 9.88285 0.792848 9.74553 0.930121C9.60826 1.06742 9.60826 1.29 9.74555 1.4273C10.746 2.42773 11.297 3.7579 11.297 5.17278C11.297 5.36693 11.4544 5.52434 11.6486 5.52434C11.8427 5.52434 12.0001 5.36693 12.0001 5.17278C12.0001 3.57007 11.376 2.06335 10.2427 0.930121Z"
+                          fill="url(#paint0_linear_729_457)"
+                        />
+                        <path
+                          d="M2.25452 0.930365C2.1172 0.793045 1.89464 0.793092 1.75732 0.930365C0.624117 2.06366 0 3.57037 0 5.173C0 5.36715 0.157406 5.52456 0.351563 5.52456C0.545719 5.52456 0.703125 5.36715 0.703125 5.173C0.703125 3.75819 1.25409 2.42802 2.25452 1.42755C2.39182 1.29025 2.39182 1.06766 2.25452 0.930365Z"
+                          fill="url(#paint1_linear_729_457)"
+                        />
+                        <path
+                          d="M8.6801 1.99506C8.54283 2.13235 8.54283 2.35494 8.68012 2.49226C9.39614 3.2082 9.79045 4.16014 9.79045 5.17274C9.79045 5.36689 9.94788 5.5243 10.142 5.5243C10.3362 5.5243 10.4936 5.36689 10.4936 5.17274C10.4936 3.97231 10.0261 2.8438 9.1773 1.99503C9.04001 1.85776 8.8174 1.85778 8.6801 1.99506Z"
+                          fill="url(#paint2_linear_729_457)"
+                        />
+                        <path
+                          d="M3.31917 1.99528C3.18188 1.858 2.95929 1.85803 2.82199 1.9953C1.97327 2.84411 1.50586 3.97256 1.50586 5.17279C1.50586 5.36695 1.66329 5.52436 1.85742 5.52436C2.0516 5.52436 2.20898 5.36695 2.20898 5.17279C2.20898 4.16036 2.60327 3.20845 3.3192 2.49248C3.45647 2.35516 3.45647 2.13255 3.31917 1.99528Z"
+                          fill="url(#paint3_linear_729_457)"
+                        />
+                        <path
+                          d="M8.98788 7.72576V5.92593C8.98788 5.26944 8.77886 4.6465 8.38345 4.12443C8.05293 3.68812 7.60221 3.34724 7.09582 3.14666C7.02529 2.60497 6.56095 2.1853 6.00037 2.1853C5.43979 2.1853 4.9754 2.60497 4.90493 3.14666C4.39853 3.34724 3.94781 3.68812 3.61732 4.12443C3.22188 4.6465 3.01286 5.26944 3.01286 5.92593V7.72576L2.29687 9.15777C2.2424 9.26673 2.24821 9.39618 2.31225 9.49982C2.3763 9.60348 2.48948 9.66655 2.61131 9.66655H9.38943C9.51128 9.66655 9.62444 9.60348 9.68849 9.49982C9.75255 9.39618 9.75839 9.26676 9.70389 9.15777L8.98788 7.72576Z"
+                          fill="url(#paint4_linear_729_457)"
+                        />
+                        <path
+                          d="M5.99992 11.1728C6.63285 11.1728 7.19256 10.8544 7.52814 10.3696H4.47168C4.80728 10.8544 5.36699 11.1728 5.99992 11.1728Z"
+                          fill="url(#paint5_linear_729_457)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_729_457"
+                            x1="9.64252"
+                            y1="3.17574"
+                            x2="12.0001"
+                            y2="3.17574"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_729_457"
+                            x1="-6.01095e-05"
+                            y1="3.17598"
+                            x2="2.35744"
+                            y2="3.17598"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_729_457"
+                            x1="8.5771"
+                            y1="3.70819"
+                            x2="10.4935"
+                            y2="3.70819"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_729_457"
+                            x1="1.50581"
+                            y1="3.70834"
+                            x2="3.4221"
+                            y2="3.70834"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint4_linear_729_457"
+                            x1="2.25957"
+                            y1="5.92593"
+                            x2="9.74081"
+                            y2="5.92593"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint5_linear_729_457"
+                            x1="4.4716"
+                            y1="10.7712"
+                            x2="7.52806"
+                            y2="10.7712"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </button>
+                    <img src="./assets/home/people-1.png" alt="people" />
+                  </div>
+                </div>
+              </div>
+              <div class="toutes-analyses">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 trading-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>AREA</h1>
+                    <h2>Dernières analyses</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Toutes les analyses</div>
+                  </button>
+                </div>
+
+                <div class="content">
+                  <div class="content-item">
+                    <div class="title">
+                      <div class="first-part">
+                        <h2>USDJPY</h2>
+                        <h3>/ FXONE</h3>
+                        <h4>Il y’a 15 minutes</h4>
+                      </div>
+                      <div class="bages">
+                        <div class="rounded">
+                          <div class="rounded"></div>
+                        </div>
+                        <span>En cours</span>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>
+                        Le marché évolue dans une tendance haussière avec une
+                        cassure du niveau <span>1.1050,</span> qui a
+                        précédemment...
+                      </p>
+                      <button class="btn-primary">Ouvrir dans l’app</button>
+                    </div>
+                  </div>
+                  <div class="content-item">
+                    <div class="title">
+                      <div class="first-part">
+                        <h2>SUIUSDT</h2>
+                        <h3>/ USDTAREA</h3>
+                        <h4>Il y’a 15 minutes</h4>
+                      </div>
+                      <div class="bages">
+                        <div class="rounded">
+                          <div class="rounded"></div>
+                        </div>
+                        <span>En cours</span>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>
+                        Le marché évolue dans une tendance haussière avec une
+                        cassure du niveau <span>1.1050,</span> qui a
+                        précédemment...
+                      </p>
+                      <button class="btn-primary">Ouvrir dans l’app</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="university-book">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 trading-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>Book</h1>
+                    <h2>University en E-Book</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Accéder</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- lock screen -->
+            <div
+              class="lockscreen d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="content d-flex justify-content-center align-items-center"
+              >
+                <img src="./assets/finance-home/lock.svg" alt="" />
+                <h1>Ce service n’est pas inclus dans votre pack actuel.</h1>
+                <button class="btn-primary">Upgrader mon pack !</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Crypto Tab -->
+          <div class="w-100 crypto active">
+            <div
+              class="d-flex justify-content-center align-items-start tab-btn"
+            >
+              <div
+                class="d-flex tab justify-content-center align-items-center crypto-tab"
+              >
+                <img src="./assets/finance-home/crypto-tab.svg" alt="crypto" />
+                <h1>Crypto</h1>
+              </div>
+            </div>
+
+            <div class="crypto-content">
+              <div
+                class="d-flex justify-content-between align-items-start gap-4 w-100 crypto-header"
+              >
+                <div
+                  class="d-flex justify-content-start align-items-center gap-2"
+                >
+                  <h1>University</h1>
+                  <h2>Reprendre</h2>
+                </div>
+                <button class="btn-outline">
+                  <div class="text">Planning complet</div>
+                </button>
+              </div>
+
+              <div class="video-container">
+                <div class="video">
+                  <img src="./assets/home/video-icon.png" alt="video" />
+                  <div class="progress">
+                    <span class="progress-bar"></span>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <h1>Les valeurs refuges</h1>
+                  <h6>Module intermediaire 2</h6>
+                  <h6 class="video-time">8:25</h6>
+                  <button class="btn-outline">Retour au module</button>
+                  <button class="btn-primary">Reprendre</button>
+                </div>
+              </div>
+
+              <div class="crypto-tv">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 crypto-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>TV</h1>
+                    <h2>Prochains lives</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Crypto TV</div>
+                  </button>
+                </div>
+                <div class="content">
+                  <div class="content-item">
+                    <h6 class="title">Crypto</h6>
+                    <h1>Morning Profile</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> Maintenant</span>
+                    </h2>
+                    <button class="btn-primary">
+                      <span> Rejoindre</span>
+                    </button>
+                    <img src="./assets/home/people-2.png" alt="people" />
+                  </div>
+                  <div class="content-item">
+                    <h6 class="title">Crypto</h6>
+                    <h1>Live Scalping</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button class="btn-secondary">
+                      <span> Me le rappeler</span>
+
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.2427 0.930121C10.1054 0.792801 9.88285 0.792848 9.74553 0.930121C9.60826 1.06742 9.60826 1.29 9.74555 1.4273C10.746 2.42773 11.297 3.7579 11.297 5.17278C11.297 5.36693 11.4544 5.52434 11.6486 5.52434C11.8427 5.52434 12.0001 5.36693 12.0001 5.17278C12.0001 3.57007 11.376 2.06335 10.2427 0.930121Z"
+                          fill="url(#paint0_linear_729_457)"
+                        />
+                        <path
+                          d="M2.25452 0.930365C2.1172 0.793045 1.89464 0.793092 1.75732 0.930365C0.624117 2.06366 0 3.57037 0 5.173C0 5.36715 0.157406 5.52456 0.351563 5.52456C0.545719 5.52456 0.703125 5.36715 0.703125 5.173C0.703125 3.75819 1.25409 2.42802 2.25452 1.42755C2.39182 1.29025 2.39182 1.06766 2.25452 0.930365Z"
+                          fill="url(#paint1_linear_729_457)"
+                        />
+                        <path
+                          d="M8.6801 1.99506C8.54283 2.13235 8.54283 2.35494 8.68012 2.49226C9.39614 3.2082 9.79045 4.16014 9.79045 5.17274C9.79045 5.36689 9.94788 5.5243 10.142 5.5243C10.3362 5.5243 10.4936 5.36689 10.4936 5.17274C10.4936 3.97231 10.0261 2.8438 9.1773 1.99503C9.04001 1.85776 8.8174 1.85778 8.6801 1.99506Z"
+                          fill="url(#paint2_linear_729_457)"
+                        />
+                        <path
+                          d="M3.31917 1.99528C3.18188 1.858 2.95929 1.85803 2.82199 1.9953C1.97327 2.84411 1.50586 3.97256 1.50586 5.17279C1.50586 5.36695 1.66329 5.52436 1.85742 5.52436C2.0516 5.52436 2.20898 5.36695 2.20898 5.17279C2.20898 4.16036 2.60327 3.20845 3.3192 2.49248C3.45647 2.35516 3.45647 2.13255 3.31917 1.99528Z"
+                          fill="url(#paint3_linear_729_457)"
+                        />
+                        <path
+                          d="M8.98788 7.72576V5.92593C8.98788 5.26944 8.77886 4.6465 8.38345 4.12443C8.05293 3.68812 7.60221 3.34724 7.09582 3.14666C7.02529 2.60497 6.56095 2.1853 6.00037 2.1853C5.43979 2.1853 4.9754 2.60497 4.90493 3.14666C4.39853 3.34724 3.94781 3.68812 3.61732 4.12443C3.22188 4.6465 3.01286 5.26944 3.01286 5.92593V7.72576L2.29687 9.15777C2.2424 9.26673 2.24821 9.39618 2.31225 9.49982C2.3763 9.60348 2.48948 9.66655 2.61131 9.66655H9.38943C9.51128 9.66655 9.62444 9.60348 9.68849 9.49982C9.75255 9.39618 9.75839 9.26676 9.70389 9.15777L8.98788 7.72576Z"
+                          fill="url(#paint4_linear_729_457)"
+                        />
+                        <path
+                          d="M5.99992 11.1728C6.63285 11.1728 7.19256 10.8544 7.52814 10.3696H4.47168C4.80728 10.8544 5.36699 11.1728 5.99992 11.1728Z"
+                          fill="url(#paint5_linear_729_457)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_729_457"
+                            x1="9.64252"
+                            y1="3.17574"
+                            x2="12.0001"
+                            y2="3.17574"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_729_457"
+                            x1="-6.01095e-05"
+                            y1="3.17598"
+                            x2="2.35744"
+                            y2="3.17598"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_729_457"
+                            x1="8.5771"
+                            y1="3.70819"
+                            x2="10.4935"
+                            y2="3.70819"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_729_457"
+                            x1="1.50581"
+                            y1="3.70834"
+                            x2="3.4221"
+                            y2="3.70834"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint4_linear_729_457"
+                            x1="2.25957"
+                            y1="5.92593"
+                            x2="9.74081"
+                            y2="5.92593"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint5_linear_729_457"
+                            x1="4.4716"
+                            y1="10.7712"
+                            x2="7.52806"
+                            y2="10.7712"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </button>
+                    <img src="./assets/home/people-2.png" alt="people" />
+                  </div>
+                </div>
+              </div>
+              <div class="toutes-analyses">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 crypto-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>AREA</h1>
+                    <h2>Dernières analyses</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Toutes les analyses</div>
+                  </button>
+                </div>
+
+                <div class="content">
+                  <div class="content-item">
+                    <div class="title">
+                      <div class="first-part">
+                        <h2>USDJPY</h2>
+                        <h3>/ FXONE</h3>
+                        <h4>Il y’a 15 minutes</h4>
+                      </div>
+                      <div class="bages">
+                        <div class="rounded">
+                          <div class="rounded"></div>
+                        </div>
+                        <span>En cours</span>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>
+                        Le marché évolue dans une tendance haussière avec une
+                        cassure du niveau <span>1.1050,</span> qui a
+                        précédemment...
+                      </p>
+                      <button class="btn-primary">Ouvrir dans l’app</button>
+                    </div>
+                  </div>
+                  <div class="content-item">
+                    <div class="title">
+                      <div class="first-part">
+                        <h2>SUIUSDT</h2>
+                        <h3>/ USDTAREA</h3>
+                        <h4>Il y’a 15 minutes</h4>
+                      </div>
+                      <div class="bages">
+                        <div class="rounded">
+                          <div class="rounded"></div>
+                        </div>
+                        <span>En cours</span>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>
+                        Le marché évolue dans une tendance haussière avec une
+                        cassure du niveau <span>1.1050,</span> qui a
+                        précédemment...
+                      </p>
+                      <button class="btn-primary">Ouvrir dans l’app</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="university-book">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 crypto-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>Book</h1>
+                    <h2>University en E-Book</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Accéder</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- lock screen -->
+            <div
+              class="lockscreen d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="content d-flex justify-content-center align-items-center"
+              >
+                <img src="./assets/finance-home/lock.svg" alt="" />
+                <h1>Ce service n’est pas inclus dans votre pack actuel.</h1>
+                <button class="btn-primary">Upgrader mon pack !</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bourse Tab -->
+          <div class="w-100 bourse locked">
+            <div
+              class="d-flex justify-content-center align-items-start tab-btn"
+            >
+              <div
+                class="d-flex tab justify-content-center align-items-center bourse-tab"
+              >
+                <img src="./assets/finance-home/bourse-tab.svg" alt="bourse" />
+                <h1>Bourse</h1>
+              </div>
+            </div>
+
+            <div class="bourse-content">
+              <div
+                class="d-flex justify-content-between align-items-start gap-4 w-100 bourse-header"
+              >
+                <div
+                  class="d-flex justify-content-start align-items-center gap-2"
+                >
+                  <h1>University</h1>
+                  <h2>Reprendre</h2>
+                </div>
+                <button class="btn-outline">
+                  <div class="text">Planning complet</div>
+                </button>
+              </div>
+
+              <div class="video-container">
+                <div class="video">
+                  <img src="./assets/home/video-icon.png" alt="video" />
+                  <div class="progress">
+                    <span class="progress-bar"></span>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <h1>Les valeurs refuges</h1>
+                  <h6>Module intermediaire 2</h6>
+                  <h6 class="video-time">8:25</h6>
+                  <button class="btn-outline">Retour au module</button>
+                  <button class="btn-primary">Reprendre</button>
+                </div>
+              </div>
+
+              <div class="bourse-tv">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 bourse-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>TV</h1>
+                    <h2>Prochains lives</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Crypto TV</div>
+                  </button>
+                </div>
+                <div class="content">
+                  <div class="content-item">
+                    <h6 class="title">Crypto</h6>
+                    <h1>Morning Profile</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> Maintenant</span>
+                    </h2>
+                    <button class="btn-primary">
+                      <span> Rejoindre</span>
+                    </button>
+                    <img src="./assets/home/people-2.png" alt="people" />
+                  </div>
+                  <div class="content-item">
+                    <h6 class="title">Crypto</h6>
+                    <h1>Live Scalping</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button class="btn-secondary">
+                      <span> Me le rappeler</span>
+
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.2427 0.930121C10.1054 0.792801 9.88285 0.792848 9.74553 0.930121C9.60826 1.06742 9.60826 1.29 9.74555 1.4273C10.746 2.42773 11.297 3.7579 11.297 5.17278C11.297 5.36693 11.4544 5.52434 11.6486 5.52434C11.8427 5.52434 12.0001 5.36693 12.0001 5.17278C12.0001 3.57007 11.376 2.06335 10.2427 0.930121Z"
+                          fill="url(#paint0_linear_729_457)"
+                        />
+                        <path
+                          d="M2.25452 0.930365C2.1172 0.793045 1.89464 0.793092 1.75732 0.930365C0.624117 2.06366 0 3.57037 0 5.173C0 5.36715 0.157406 5.52456 0.351563 5.52456C0.545719 5.52456 0.703125 5.36715 0.703125 5.173C0.703125 3.75819 1.25409 2.42802 2.25452 1.42755C2.39182 1.29025 2.39182 1.06766 2.25452 0.930365Z"
+                          fill="url(#paint1_linear_729_457)"
+                        />
+                        <path
+                          d="M8.6801 1.99506C8.54283 2.13235 8.54283 2.35494 8.68012 2.49226C9.39614 3.2082 9.79045 4.16014 9.79045 5.17274C9.79045 5.36689 9.94788 5.5243 10.142 5.5243C10.3362 5.5243 10.4936 5.36689 10.4936 5.17274C10.4936 3.97231 10.0261 2.8438 9.1773 1.99503C9.04001 1.85776 8.8174 1.85778 8.6801 1.99506Z"
+                          fill="url(#paint2_linear_729_457)"
+                        />
+                        <path
+                          d="M3.31917 1.99528C3.18188 1.858 2.95929 1.85803 2.82199 1.9953C1.97327 2.84411 1.50586 3.97256 1.50586 5.17279C1.50586 5.36695 1.66329 5.52436 1.85742 5.52436C2.0516 5.52436 2.20898 5.36695 2.20898 5.17279C2.20898 4.16036 2.60327 3.20845 3.3192 2.49248C3.45647 2.35516 3.45647 2.13255 3.31917 1.99528Z"
+                          fill="url(#paint3_linear_729_457)"
+                        />
+                        <path
+                          d="M8.98788 7.72576V5.92593C8.98788 5.26944 8.77886 4.6465 8.38345 4.12443C8.05293 3.68812 7.60221 3.34724 7.09582 3.14666C7.02529 2.60497 6.56095 2.1853 6.00037 2.1853C5.43979 2.1853 4.9754 2.60497 4.90493 3.14666C4.39853 3.34724 3.94781 3.68812 3.61732 4.12443C3.22188 4.6465 3.01286 5.26944 3.01286 5.92593V7.72576L2.29687 9.15777C2.2424 9.26673 2.24821 9.39618 2.31225 9.49982C2.3763 9.60348 2.48948 9.66655 2.61131 9.66655H9.38943C9.51128 9.66655 9.62444 9.60348 9.68849 9.49982C9.75255 9.39618 9.75839 9.26676 9.70389 9.15777L8.98788 7.72576Z"
+                          fill="url(#paint4_linear_729_457)"
+                        />
+                        <path
+                          d="M5.99992 11.1728C6.63285 11.1728 7.19256 10.8544 7.52814 10.3696H4.47168C4.80728 10.8544 5.36699 11.1728 5.99992 11.1728Z"
+                          fill="url(#paint5_linear_729_457)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_729_457"
+                            x1="9.64252"
+                            y1="3.17574"
+                            x2="12.0001"
+                            y2="3.17574"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_729_457"
+                            x1="-6.01095e-05"
+                            y1="3.17598"
+                            x2="2.35744"
+                            y2="3.17598"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_729_457"
+                            x1="8.5771"
+                            y1="3.70819"
+                            x2="10.4935"
+                            y2="3.70819"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_729_457"
+                            x1="1.50581"
+                            y1="3.70834"
+                            x2="3.4221"
+                            y2="3.70834"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint4_linear_729_457"
+                            x1="2.25957"
+                            y1="5.92593"
+                            x2="9.74081"
+                            y2="5.92593"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint5_linear_729_457"
+                            x1="4.4716"
+                            y1="10.7712"
+                            x2="7.52806"
+                            y2="10.7712"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </button>
+                    <img src="./assets/home/people-2.png" alt="people" />
+                  </div>
+                </div>
+              </div>
+              <div class="toutes-analyses">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 bourse-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>AREA</h1>
+                    <h2>Dernières analyses</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Toutes les analyses</div>
+                  </button>
+                </div>
+
+                <div class="content">
+                  <div class="content-item">
+                    <div class="title">
+                      <div class="first-part">
+                        <h2>USDJPY</h2>
+                        <h3>/ FXONE</h3>
+                        <h4>Il y’a 15 minutes</h4>
+                      </div>
+                      <div class="bages">
+                        <div class="rounded">
+                          <div class="rounded"></div>
+                        </div>
+                        <span>En cours</span>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>
+                        Le marché évolue dans une tendance haussière avec une
+                        cassure du niveau <span>1.1050,</span> qui a
+                        précédemment...
+                      </p>
+                      <button class="btn-primary">Ouvrir dans l’app</button>
+                    </div>
+                  </div>
+                  <div class="content-item">
+                    <div class="title">
+                      <div class="first-part">
+                        <h2>SUIUSDT</h2>
+                        <h3>/ USDTAREA</h3>
+                        <h4>Il y’a 15 minutes</h4>
+                      </div>
+                      <div class="bages">
+                        <div class="rounded">
+                          <div class="rounded"></div>
+                        </div>
+                        <span>En cours</span>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <p>
+                        Le marché évolue dans une tendance haussière avec une
+                        cassure du niveau <span>1.1050,</span> qui a
+                        précédemment...
+                      </p>
+                      <button class="btn-primary">Ouvrir dans l’app</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="university-book">
+                <div
+                  class="d-flex justify-content-between align-items-start gap-4 w-100 bourse-header"
+                >
+                  <div
+                    class="d-flex justify-content-start align-items-center gap-2"
+                  >
+                    <h1>Book</h1>
+                    <h2>University en E-Book</h2>
+                  </div>
+                  <button class="btn-outline">
+                    <div class="text">Accéder</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lock Screen   -->
+            <div
+              class="lockscreen d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="content d-flex justify-content-center align-items-center"
+              >
+                <img src="./assets/finance-home/lock.svg" alt="" />
+                <h1>Ce service n’est pas inclus dans votre pack actuel.</h1>
+                <button class="btn-primary">Upgrader mon pack !</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -170,3 +170,72 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Tab switching functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileTabButtons = document.querySelectorAll(".mobile-tab-btn .tab");
+  const tabContents = document.querySelectorAll(
+    '.finance-home > div[class*="w-100"]'
+  );
+
+  mobileTabButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove active class from all mobile tab buttons
+      mobileTabButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Add active class to clicked button
+      this.classList.add("active");
+
+      // Determine which tab was clicked
+      let targetTab;
+      if (this.classList.contains("trading-tab")) {
+        targetTab = "trading";
+      } else if (this.classList.contains("crypto-tab")) {
+        targetTab = "crypto";
+      } else if (this.classList.contains("bourse-tab")) {
+        targetTab = "bourse";
+      }
+
+      // Remove tab-active class from all tab contents
+      tabContents.forEach((content) => content.classList.remove("tab-active"));
+
+      // Add tab-active class to corresponding content
+      const targetContent = document.querySelector(`.${targetTab}.w-100`);
+      if (targetContent) {
+        targetContent.classList.add("tab-active");
+      }
+    });
+  });
+
+  // Also handle desktop tab buttons if they exist
+  const desktopTabButtons = document.querySelectorAll(".tab-btn .tab");
+
+  desktopTabButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove active class from all desktop tab buttons
+      desktopTabButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Add active class to clicked button
+      this.classList.add("active");
+
+      // Determine which tab was clicked
+      let targetTab;
+      if (this.classList.contains("trading-tab")) {
+        targetTab = "trading";
+      } else if (this.classList.contains("crypto-tab")) {
+        targetTab = "crypto";
+      } else if (this.classList.contains("bourse-tab")) {
+        targetTab = "bourse";
+      }
+
+      // Remove tab-active class from all tab contents
+      tabContents.forEach((content) => content.classList.remove("tab-active"));
+
+      // Add tab-active class to corresponding content
+      const targetContent = document.querySelector(`.${targetTab}.w-100`);
+      if (targetContent) {
+        targetContent.classList.add("tab-active");
+      }
+    });
+  });
+});

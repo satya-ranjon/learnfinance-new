@@ -430,6 +430,13 @@ a {
     display: none;
   }
 }
+.header ul {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.header ul li a.active {
+  color: #ffffff !important;
+}
 
 .search-box {
   background-color: #11101c;
@@ -514,6 +521,9 @@ a {
 .mobile-menu ul {
   font-size: 18px;
   margin-top: 10px;
+}
+.mobile-menu ul li a.active {
+  color: #ffffff !important;
 }
 .mobile-menu .copy-right {
   text-align: start;
@@ -4685,6 +4695,1925 @@ a {
           box-shadow: none !important;
   -webkit-transform: none;
           transform: none;
+}
+
+.main-content.finance {
+  padding: 16px;
+  background: #12101d;
+}
+@media (max-width: 1439px) {
+  .main-content.finance {
+    background: none;
+  }
+}
+.main-content .finance-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+}
+.main-content .finance-home .mobile-tab-btn {
+  display: none !important;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .mobile-tab-btn {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+.main-content .finance-home .mobile-tab-btn svg {
+  margin-right: 8px;
+}
+.main-content .finance-home .mobile-tab-btn .trading-tab {
+  background-color: #11101c;
+}
+.main-content .finance-home .mobile-tab-btn .trading-tab svg {
+  fill: #007de2;
+}
+.main-content .finance-home .mobile-tab-btn .trading-tab.active {
+  background-color: #007de2;
+}
+.main-content .finance-home .mobile-tab-btn .trading-tab.active svg {
+  fill: #070610;
+}
+.main-content .finance-home .mobile-tab-btn .crypto-tab {
+  background-color: #11101c;
+}
+.main-content .finance-home .mobile-tab-btn .crypto-tab svg {
+  fill: #27ceac;
+}
+.main-content .finance-home .mobile-tab-btn .crypto-tab.active {
+  background-color: #27ceac;
+}
+.main-content .finance-home .mobile-tab-btn .crypto-tab.active svg {
+  fill: #070610;
+}
+.main-content .finance-home .mobile-tab-btn .bourse-tab {
+  background-color: #11101c;
+}
+.main-content .finance-home .mobile-tab-btn .bourse-tab svg {
+  fill: #0191a1;
+}
+.main-content .finance-home .mobile-tab-btn .bourse-tab.active {
+  background-color: #0191a1;
+}
+.main-content .finance-home .mobile-tab-btn .bourse-tab.active svg {
+  fill: #070610;
+}
+.main-content .finance-home .tab {
+  padding: 4px 27px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #ffffff;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .tab {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .tab {
+    padding: 4px 23.6px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .main-content .finance-home .tab {
+    padding: 4px 15px;
+    padding-bottom: 10px;
+  }
+}
+.main-content .finance-home .tab img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.main-content .finance-home .trading,
+.main-content .finance-home .bourse,
+.main-content .finance-home .crypto {
+  border-radius: 10px;
+}
+.main-content .finance-home .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.3019607843);
+}
+.main-content .finance-home .btn-outline .text {
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.main-content .finance-home .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3019607843);
+  color: #111111;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .tab-btn {
+    display: none !important;
+  }
+}
+.main-content .finance-home .lockscreen {
+  min-height: 90vh;
+  height: 100%;
+}
+.main-content .finance-home .lockscreen .content {
+  width: 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main-content .finance-home .lockscreen .content h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 100%;
+  text-align: center;
+  margin-top: 62px;
+}
+.main-content .finance-home .lockscreen .content .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+  padding: 0 6px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin-top: 19px;
+}
+.main-content .finance-home .trading {
+  border: 1px solid #007de2;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .trading {
+    position: relative;
+    top: -10px;
+    display: none;
+  }
+}
+.main-content .finance-home .trading.tab-active {
+  display: block;
+}
+.main-content .finance-home .trading.locked {
+  background: linear-gradient(54.4deg, #191824 0%, #007de2 151.56%);
+}
+.main-content .finance-home .trading.locked .trading-content {
+  display: none;
+}
+.main-content .finance-home .trading.active {
+  background: linear-gradient(350.93deg, #191824 76.43%, #007de2 149.11%);
+}
+.main-content .finance-home .trading.active .lockscreen {
+  display: none !important;
+}
+.main-content .finance-home .trading .trading-content .trading-header {
+  padding: 17px;
+}
+.main-content .finance-home .trading .trading-content .trading-header h1 {
+  font-size: 9px;
+  font-weight: 400;
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#007de2), to(#00457c));
+  background: linear-gradient(180deg, #007de2 0%, #00457c 100%);
+  border-radius: 28px;
+  padding: 2px 3px;
+}
+.main-content .finance-home .trading .trading-content .trading-header h2 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-content .finance-home .trading .trading-content .trading-header .btn-outline {
+  min-width: 124px;
+}
+.main-content .finance-home .trading .trading-content .video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+  margin-top: 25px;
+  padding: 17px;
+  margin-top: 0;
+  padding-top: 0px;
+  padding-bottom: 25px;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .video-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-top: 0px;
+  }
+}
+.main-content .finance-home .trading .trading-content .video-container .video {
+  min-width: 233px;
+  height: 145px;
+  position: relative;
+  background-color: #2e2c3c;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .trading .trading-content .video-container .video {
+    min-width: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .main-content .finance-home .trading .trading-content .video-container .video {
+    min-width: 183px;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .video-container .video {
+    min-width: 100%;
+  }
+}
+.main-content .finance-home .trading .trading-content .video-container .video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.main-content .finance-home .trading .trading-content .video-container .video .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c6c6c;
+  overflow: hidden;
+}
+.main-content .finance-home .trading .trading-content .video-container .video .progress .progress-bar {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  width: 55%;
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .video-container .video-info {
+    min-width: 100%;
+  }
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info h6 {
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 114%;
+  text-transform: uppercase;
+  color: #6e6c88;
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info .title {
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info .video-time {
+  color: #ffffff;
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .video-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.main-content .finance-home .trading .trading-content .video-container .video {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .video-container .video {
+    min-width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .video-container .video-info {
+    min-width: 20%;
+  }
+}
+.main-content .finance-home .trading .trading-content .video-container .video-info .btn-outline {
+  font-size: 8px;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv {
+  border-top: 1px solid #282733;
+  padding-bottom: 25px;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  padding-top: 0px;
+  gap: 22px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .trading .trading-content .tranding-tv .content {
+    gap: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .main-content .finance-home .trading .trading-content .tranding-tv .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+  background: linear-gradient(258.12deg, #191824 20.19%, #044c87 100%);
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) h6 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+  text-transform: uppercase;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+  max-width: 100px;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) h2 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) h2 span {
+  text-transform: uppercase;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(1) h2 .time {
+  font-size: 12px;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+  background: linear-gradient(258.12deg, #191824 20.19%, #044c87 100%);
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) h6 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+  text-transform: uppercase;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+  max-width: 100px;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) h2 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) h2 span {
+  text-transform: uppercase;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) h2 .time {
+  font-size: 12px;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+.main-content .finance-home .trading .trading-content .tranding-tv .content .content-item:nth-child(2) .btn-secondary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: rgba(17, 16, 28, 0.6);
+  color: #ffffff;
+  border: none;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses {
+  border-top: 1px solid #282733;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  padding: 15px;
+  padding-top: 0px;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item {
+  border: 1px solid #353347;
+  padding: 10px 13px;
+  border-radius: 8px;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .first-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .first-part h2 {
+  line-height: 114%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .first-part h3 {
+  line-height: 114%;
+  font-size: 12px;
+  font-weight: 300;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .first-part h4 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #6e6c88;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .bages {
+  font-size: 8px;
+  color: #4c4767;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  border-radius: 20px;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .bages .rounded {
+  padding: 3px;
+  background: rgba(0, 168, 246, 0.3215686275);
+  border-radius: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .bages .rounded .rounded {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #00a8f6;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6px;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .description p {
+  font-size: 9px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 12px;
+  letter-spacing: 0%;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .description p span {
+  font-weight: 700;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .description .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+  padding: 0 6px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.main-content .finance-home .trading .trading-content .toutes-analyses .content .content-item .title .first-part h3 {
+  font-weight: 400;
+}
+.main-content .finance-home .trading .trading-content .university-book {
+  border-top: 1px solid #282733;
+}
+.main-content .finance-home .trading-tab {
+  background-color: #007de2;
+}
+.main-content .finance-home .crypto {
+  border: 1px solid #27ceac;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .crypto {
+    position: relative;
+    top: -10px;
+    display: none;
+  }
+}
+.main-content .finance-home .crypto.tab-active {
+  display: block;
+}
+.main-content .finance-home .crypto.locked {
+  background: linear-gradient(54.4deg, #191824 0%, #27ceac 151.56%);
+}
+.main-content .finance-home .crypto.locked .crypto-content {
+  display: none !important;
+}
+.main-content .finance-home .crypto.active {
+  background: linear-gradient(350.93deg, #191824 76.43%, #0ed29d 149.11%);
+}
+.main-content .finance-home .crypto.active .lockscreen {
+  display: none !important;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-header {
+  padding: 17px;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-header h1 {
+  font-size: 9px;
+  font-weight: 400;
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#27ceac), to(#147461));
+  background: linear-gradient(180deg, #27ceac 0%, #147461 100%);
+  border-radius: 28px;
+  padding: 2px 3px;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-header h2 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-header .btn-outline {
+  min-width: 124px;
+}
+.main-content .finance-home .crypto .crypto-content .video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+  margin-top: 25px;
+  padding: 17px;
+  margin-top: 0;
+  padding-top: 0px;
+  padding-bottom: 25px;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .video-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-top: 0px;
+  }
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video {
+  min-width: 233px;
+  height: 145px;
+  position: relative;
+  background-color: #2e2c3c;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .crypto .crypto-content .video-container .video {
+    min-width: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .main-content .finance-home .crypto .crypto-content .video-container .video {
+    min-width: 183px;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .video-container .video {
+    min-width: 100%;
+  }
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c6c6c;
+  overflow: hidden;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video .progress .progress-bar {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  width: 55%;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .video-container .video-info {
+    min-width: 100%;
+  }
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info h6 {
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 114%;
+  text-transform: uppercase;
+  color: #6e6c88;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info .title {
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info .video-time {
+  color: #ffffff;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .video-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .video-container .video {
+    min-width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .video-container .video-info {
+    min-width: 20%;
+  }
+}
+.main-content .finance-home .crypto .crypto-content .video-container .video-info .btn-outline {
+  font-size: 8px;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv {
+  border-top: 1px solid #282733;
+  padding-bottom: 25px;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  padding-top: 0px;
+  gap: 22px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .crypto .crypto-content .crypto-tv .content {
+    gap: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .main-content .finance-home .crypto .crypto-content .crypto-tv .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+  background: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) h6 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+  text-transform: uppercase;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+  max-width: 100px;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) h2 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) h2 span {
+  text-transform: uppercase;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(1) h2 .time {
+  font-size: 12px;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+  background: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) h6 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+  text-transform: uppercase;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+  max-width: 100px;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) h2 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) h2 span {
+  text-transform: uppercase;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) h2 .time {
+  font-size: 12px;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+.main-content .finance-home .crypto .crypto-content .crypto-tv .content .content-item:nth-child(2) .btn-secondary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: rgba(17, 16, 28, 0.6);
+  color: #ffffff;
+  border: none;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses {
+  border-top: 1px solid #282733;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  padding: 15px;
+  padding-top: 0px;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item {
+  border: 1px solid #353347;
+  padding: 10px 13px;
+  border-radius: 8px;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .first-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .first-part h2 {
+  line-height: 114%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .first-part h3 {
+  line-height: 114%;
+  font-size: 12px;
+  font-weight: 300;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .first-part h4 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #6e6c88;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .bages {
+  font-size: 8px;
+  color: #4c4767;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  border-radius: 20px;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .bages .rounded {
+  padding: 3px;
+  background: rgba(0, 168, 246, 0.3215686275);
+  border-radius: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .bages .rounded .rounded {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #00a8f6;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6px;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .description p {
+  font-size: 9px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 12px;
+  letter-spacing: 0%;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .description p span {
+  font-weight: 700;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .description .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+  padding: 0 6px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.main-content .finance-home .crypto .crypto-content .toutes-analyses .content .content-item .title .first-part h3 {
+  font-weight: 400;
+}
+.main-content .finance-home .crypto .crypto-content .university-book {
+  border-top: 1px solid #282733;
+}
+.main-content .finance-home .crypto-tab {
+  background-color: #27ceac;
+}
+.main-content .finance-home .bourse {
+  border: 1px solid #0191a1;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .bourse {
+    position: relative;
+    top: -10px;
+    display: none;
+  }
+}
+.main-content .finance-home .bourse.tab-active {
+  display: block;
+}
+.main-content .finance-home .bourse.locked {
+  background: linear-gradient(54.4deg, #191824 0%, #0191a1 151.56%);
+}
+.main-content .finance-home .bourse.locked .bourse-content {
+  display: none !important;
+}
+.main-content .finance-home .bourse.active {
+  background: linear-gradient(350.93deg, #191824 76.43%, #0191a1 149.11%);
+}
+.main-content .finance-home .bourse.active .lockscreen {
+  display: none !important;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-header {
+  padding: 17px;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-header h1 {
+  font-size: 9px;
+  font-weight: 400;
+  color: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0191a1), to(rgba(1, 145, 161, 0.6039215686)));
+  background: linear-gradient(180deg, #0191a1 0%, rgba(1, 145, 161, 0.6039215686) 100%);
+  border-radius: 28px;
+  padding: 2px 3px;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-header h2 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-header .btn-outline {
+  min-width: 124px;
+}
+.main-content .finance-home .bourse .bourse-content .video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+  margin-top: 25px;
+  padding: 17px;
+  margin-top: 0;
+  padding-top: 0px;
+  padding-bottom: 25px;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .video-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-top: 0px;
+  }
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video {
+  min-width: 233px;
+  height: 145px;
+  position: relative;
+  background-color: #2e2c3c;
+}
+@media (max-width: 1439px) {
+  .main-content .finance-home .bourse .bourse-content .video-container .video {
+    min-width: 90px;
+  }
+}
+@media (max-width: 1023px) {
+  .main-content .finance-home .bourse .bourse-content .video-container .video {
+    min-width: 183px;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .video-container .video {
+    min-width: 100%;
+  }
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #6c6c6c;
+  overflow: hidden;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video .progress .progress-bar {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  width: 55%;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .video-container .video-info {
+    min-width: 100%;
+  }
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info h6 {
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 114%;
+  text-transform: uppercase;
+  color: #6e6c88;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info .title {
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info .video-time {
+  color: #ffffff;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info .btn-outline {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  border: 1px solid #353347;
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .video-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .video-container .video {
+    min-width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .video-container .video-info {
+    min-width: 20%;
+  }
+}
+.main-content .finance-home .bourse .bourse-content .video-container .video-info .btn-outline {
+  font-size: 8px;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv {
+  border-top: 1px solid #282733;
+  padding-bottom: 25px;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  padding-top: 0px;
+  gap: 22px;
+}
+@media (max-width: 767px) {
+  .main-content .finance-home .bourse .bourse-content .bourse-tv .content {
+    gap: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .main-content .finance-home .bourse .bourse-content .bourse-tv .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+  background: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) h6 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+  text-transform: uppercase;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+  max-width: 100px;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) h2 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) h2 span {
+  text-transform: uppercase;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(1) h2 .time {
+  font-size: 12px;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  min-height: 142px;
+  width: 100%;
+  padding: 17px;
+  border-radius: 8px;
+  z-index: 99;
+  border: 1px solid #353347;
+  position: relative;
+  background: linear-gradient(258.12deg, #191824 20.19%, #0ed29d 100%);
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) h6 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+  text-transform: uppercase;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 114%;
+  max-width: 100px;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) h2 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #08071a;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) h2 span {
+  text-transform: uppercase;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) h2 .time {
+  font-size: 12px;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: capitalize;
+}
+.main-content .finance-home .bourse .bourse-content .bourse-tv .content .content-item:nth-child(2) .btn-secondary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: rgba(17, 16, 28, 0.6);
+  color: #ffffff;
+  border: none;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses {
+  border-top: 1px solid #282733;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  padding: 15px;
+  padding-top: 0px;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item {
+  border: 1px solid #353347;
+  padding: 10px 13px;
+  border-radius: 8px;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .first-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .first-part h2 {
+  line-height: 114%;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .first-part h3 {
+  line-height: 114%;
+  font-size: 12px;
+  font-weight: 300;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .first-part h4 {
+  font-size: 9px;
+  font-weight: 300;
+  color: #6e6c88;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .bages {
+  font-size: 8px;
+  color: #4c4767;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  border-radius: 20px;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .bages .rounded {
+  padding: 3px;
+  background: rgba(0, 168, 246, 0.3215686275);
+  border-radius: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .bages .rounded .rounded {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: #00a8f6;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6px;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .description p {
+  font-size: 9px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 12px;
+  letter-spacing: 0%;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .description p span {
+  font-weight: 700;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .description .btn-primary {
+  font-size: 10px;
+  color: #d0d0d0;
+  border: 1px solid #353347;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 23px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  color: #111111;
+  border: none;
+  padding: 0 6px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.main-content .finance-home .bourse .bourse-content .toutes-analyses .content .content-item .title .first-part h3 {
+  font-weight: 400;
+}
+.main-content .finance-home .bourse .bourse-content .university-book {
+  border-top: 1px solid #282733;
+}
+.main-content .finance-home .bourse-tab {
+  background-color: #0191a1;
 }
 
 body {

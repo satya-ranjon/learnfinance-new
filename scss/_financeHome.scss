@@ -1,0 +1,540 @@
+.main-content {
+  &.finance {
+    padding: 16px;
+    background: #12101d;
+    @include laptop {
+      background: none;
+    }
+  }
+  .finance-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    @include laptop {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+    }
+
+    .mobile-tab-btn {
+      display: none !important;
+      @include laptop {
+        display: flex !important;
+      }
+      svg {
+        margin-right: 8px;
+      }
+      .trading-tab {
+        background-color: #11101c;
+        svg {
+          fill: #007de2;
+        }
+        &.active {
+          background-color: #007de2;
+          svg {
+            fill: #070610;
+          }
+        }
+      }
+      .crypto-tab {
+        background-color: #11101c;
+        svg {
+          fill: #27ceac;
+        }
+        &.active {
+          background-color: #27ceac;
+          svg {
+            fill: #070610;
+          }
+        }
+      }
+      .bourse-tab {
+        background-color: #11101c;
+        svg {
+          fill: #0191a1;
+        }
+        &.active {
+          background-color: #0191a1;
+          svg {
+            fill: #070610;
+          }
+        }
+      }
+    }
+
+    .tab {
+      padding: 4px 27px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #ffffff;
+      @include laptop {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding-bottom: 10px;
+      }
+      @include mobile {
+        padding: 4px 23.6px;
+        padding-bottom: 10px;
+      }
+      @media (max-width: 390px) {
+        padding: 4px 15px;
+        padding-bottom: 10px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+    .trading,
+    .bourse,
+    .crypto {
+      border-radius: 10px;
+    }
+
+    .btn-outline {
+      @include btn-outline;
+      padding: 8px 16px;
+      background: #0000004d;
+      .text {
+        @include gradient-text(
+          linear-gradient(90deg, #007de2 0%, #3fffcb 100%)
+        );
+      }
+    }
+    .btn-primary {
+      @include btn-base;
+      background: #0000004d;
+      color: #111111;
+    }
+    .tab-btn {
+      @include laptop {
+        display: none !important;
+      }
+    }
+
+    .lockscreen {
+      min-height: 90vh;
+      height: 100%;
+      .content {
+        width: 250px;
+        flex-direction: column;
+        h1 {
+          color: #ffffff;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 100%;
+          text-align: center;
+          margin-top: 62px;
+        }
+        .btn-primary {
+          @include btn-base;
+          background: $finance-theme;
+          color: #111111;
+          border: none;
+          padding: 0 6px;
+          min-width: fit-content;
+          margin-top: 19px;
+        }
+      }
+    }
+
+    .trading {
+      border: 1px solid #007de2;
+
+      @include laptop {
+        position: relative;
+        top: -10px;
+        display: none;
+      }
+      &.tab-active {
+        display: block;
+      }
+      &.locked {
+        background: linear-gradient(54.4deg, #191824 0%, #007de2 151.56%);
+        .trading-content {
+          display: none;
+        }
+      }
+      &.active {
+        background: linear-gradient(350.93deg, #191824 76.43%, #007de2 149.11%);
+
+        .lockscreen {
+          display: none !important;
+        }
+      }
+
+      .trading-content {
+        .trading-header {
+          padding: 17px;
+          h1 {
+            font-size: 9px;
+            font-weight: 400;
+            color: #000000;
+            background: linear-gradient(180deg, #007de2 0%, #00457c 100%);
+            border-radius: 28px;
+            padding: 2px 3px;
+          }
+          h2 {
+            font-size: 13px;
+            font-weight: 400;
+            color: #ffffff;
+            text-transform: uppercase;
+          }
+          .btn-outline {
+            min-width: 124px;
+          }
+        }
+        .video-container {
+          @include video-container-base($finance-theme);
+          padding: 17px;
+          margin-top: 0;
+          padding-top: 0px;
+          padding-bottom: 25px;
+          gap: 15px;
+
+          @include mobile {
+            flex-direction: row;
+          }
+          .video {
+            width: 100%;
+            @include mobile {
+              min-width: 20%;
+            }
+          }
+          .video-info {
+            @include mobile {
+              min-width: 20%;
+            }
+            .btn-outline {
+              font-size: 8px;
+            }
+          }
+        }
+        .tranding-tv {
+          border-top: 1px solid #282733;
+          padding-bottom: 25px;
+          .content {
+            @include flex-start-center;
+            padding: 15px;
+            padding-top: 0px;
+            gap: 22px;
+            @include mobile {
+              gap: 15px;
+            }
+            @media (max-width: 375px) {
+              flex-direction: column;
+              align-items: start;
+            }
+
+            .content-item {
+              &:nth-child(1) {
+                @include finance-trading-item;
+              }
+              &:nth-child(2) {
+                @include finance-trading-item;
+                // @include finance-crypto-item;
+                .btn-secondary {
+                  @include btn-base;
+                  background: #11101c99;
+                  color: #ffffff;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+        .toutes-analyses {
+          border-top: 1px solid #282733;
+          .content {
+            @include flex-column;
+            gap: 14px;
+            padding: 15px;
+            padding-top: 0px;
+
+            .content-item {
+              @include finance-list-item;
+              .title {
+                .first-part h3 {
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        .university-book {
+          border-top: 1px solid #282733;
+        }
+      }
+    }
+    .trading-tab {
+      background-color: #007de2;
+    }
+    .crypto {
+      border: 1px solid #27ceac;
+      @include laptop {
+        position: relative;
+        top: -10px;
+        display: none;
+      }
+      &.tab-active {
+        display: block;
+      }
+      &.locked {
+        background: linear-gradient(54.4deg, #191824 0%, #27ceac 151.56%);
+        .crypto-content {
+          display: none !important;
+        }
+      }
+      &.active {
+        background: linear-gradient(350.93deg, #191824 76.43%, #0ed29d 149.11%);
+
+        .lockscreen {
+          display: none !important;
+        }
+      }
+      .crypto-content {
+        .crypto-header {
+          padding: 17px;
+          h1 {
+            font-size: 9px;
+            font-weight: 400;
+            color: #000000;
+            background: linear-gradient(180deg, #27ceac 0%, #147461 100%);
+
+            border-radius: 28px;
+            padding: 2px 3px;
+          }
+          h2 {
+            font-size: 13px;
+            font-weight: 400;
+            color: #ffffff;
+            text-transform: uppercase;
+          }
+          .btn-outline {
+            min-width: 124px;
+          }
+        }
+        .video-container {
+          @include video-container-base($finance-theme);
+          padding: 17px;
+          margin-top: 0;
+          padding-top: 0px;
+          padding-bottom: 25px;
+          gap: 15px;
+
+          @include mobile {
+            flex-direction: row;
+          }
+          .video {
+            width: 100%;
+            @include mobile {
+              min-width: 20%;
+            }
+          }
+          .video-info {
+            @include mobile {
+              min-width: 20%;
+            }
+            .btn-outline {
+              font-size: 8px;
+            }
+          }
+        }
+        .crypto-tv {
+          border-top: 1px solid #282733;
+          padding-bottom: 25px;
+          .content {
+            @include flex-start-center;
+            padding: 15px;
+            padding-top: 0px;
+            gap: 22px;
+            @include mobile {
+              gap: 15px;
+            }
+            @media (max-width: 375px) {
+              flex-direction: column;
+              align-items: start;
+            }
+
+            .content-item {
+              &:nth-child(1) {
+                @include finance-crypto-item;
+              }
+              &:nth-child(2) {
+                @include finance-crypto-item;
+                .btn-secondary {
+                  @include btn-base;
+                  background: #11101c99;
+                  color: #ffffff;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+        .toutes-analyses {
+          border-top: 1px solid #282733;
+          .content {
+            @include flex-column;
+            gap: 14px;
+            padding: 15px;
+            padding-top: 0px;
+
+            .content-item {
+              @include finance-list-item;
+              .title {
+                .first-part h3 {
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        .university-book {
+          border-top: 1px solid #282733;
+        }
+      }
+    }
+    .crypto-tab {
+      background-color: #27ceac;
+    }
+
+    .bourse {
+      border: 1px solid #0191a1;
+      @include laptop {
+        position: relative;
+        top: -10px;
+        display: none;
+      }
+      &.tab-active {
+        display: block;
+      }
+      &.locked {
+        background: linear-gradient(54.4deg, #191824 0%, #0191a1 151.56%);
+        .bourse-content {
+          display: none !important;
+        }
+      }
+      &.active {
+        background: linear-gradient(350.93deg, #191824 76.43%, #0191a1 149.11%);
+
+        .lockscreen {
+          display: none !important;
+        }
+      }
+
+      .bourse-content {
+        .bourse-header {
+          padding: 17px;
+          h1 {
+            font-size: 9px;
+            font-weight: 400;
+            color: #000000;
+            background: linear-gradient(180deg, #0191a1 0%, #0191a19a 100%);
+
+            border-radius: 28px;
+            padding: 2px 3px;
+          }
+          h2 {
+            font-size: 13px;
+            font-weight: 400;
+            color: #ffffff;
+            text-transform: uppercase;
+          }
+          .btn-outline {
+            min-width: 124px;
+          }
+        }
+        .video-container {
+          @include video-container-base($finance-theme);
+          padding: 17px;
+          margin-top: 0;
+          padding-top: 0px;
+          padding-bottom: 25px;
+          gap: 15px;
+
+          @include mobile {
+            flex-direction: row;
+          }
+          .video {
+            width: 100%;
+            @include mobile {
+              min-width: 20%;
+            }
+          }
+          .video-info {
+            @include mobile {
+              min-width: 20%;
+            }
+            .btn-outline {
+              font-size: 8px;
+            }
+          }
+        }
+        .bourse-tv {
+          border-top: 1px solid #282733;
+          padding-bottom: 25px;
+          .content {
+            @include flex-start-center;
+            padding: 15px;
+            padding-top: 0px;
+            gap: 22px;
+            @include mobile {
+              gap: 15px;
+            }
+            @media (max-width: 375px) {
+              flex-direction: column;
+              align-items: start;
+            }
+
+            .content-item {
+              &:nth-child(1) {
+                @include finance-crypto-item;
+              }
+              &:nth-child(2) {
+                @include finance-crypto-item;
+                .btn-secondary {
+                  @include btn-base;
+                  background: #11101c99;
+                  color: #ffffff;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+        .toutes-analyses {
+          border-top: 1px solid #282733;
+          .content {
+            @include flex-column;
+            gap: 14px;
+            padding: 15px;
+            padding-top: 0px;
+
+            .content-item {
+              @include finance-list-item;
+              .title {
+                .first-part h3 {
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        .university-book {
+          border-top: 1px solid #282733;
+        }
+      }
+    }
+
+    .bourse-tab {
+      background-color: #0191a1;
+    }
+  }
+}

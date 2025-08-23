@@ -7,6 +7,15 @@
   @include tablet {
     display: none;
   }
+  ul {
+    font-size: $font-md;
+    margin-top: 5px;
+    li {
+      a.active {
+        color: $white !important;
+      }
+    }
+  }
 }
 .search-box {
   background-color: $min-content-background-color;
@@ -66,6 +75,11 @@
   ul {
     font-size: $font-lg;
     margin-top: 10px;
+    li {
+      a.active {
+        color: $white !important;
+      }
+    }
   }
 
   .copy-right {
