@@ -33,124 +33,74 @@
         <img class="logo" src="./assets/futureslearn.png" alt="futureslearn" />
       </div>
       <div
-        class="content d-flex flex-column justify-content-center align-items-center"
+        class="d-flex flex-column justify-content-center align-items-center mt-5"
       >
-        <h1>Choisissez votre formation</h1>
         <div
-          class="d-flex cart-container justify-content-start align-items-start gap-4"
+          class="d-flex justify-content-between align-items-start w-100 inscription-container"
         >
           <div
-            class="d-flex ecom-cart-book justify-content-start align-items-center p-4 gap-4"
+            class="d-flex align-items-center justify-content-center image-container"
           >
-            <div class=" ">
-              <div
-                class="cart-logo d-flex justify-content-center align-items-center"
-              >
-                <img src="./assets/ecom-cart-logo.png" alt="ecom-cart-logo" />
-              </div>
-              <div class="price mt-3">700€</div>
-            </div>
-            <img
-              class="cart-book"
-              src="./assets/ecom-book.png"
-              alt="ecom-book"
-            />
+            <img src="./assets/inscription.png" alt="ecom-cart-logo" />
           </div>
-          <div
-            class="d-flex digital-cart-book justify-content-start align-items-center p-4 gap-4"
-          >
-            <div class="">
-              <div
-                class="cart-logo d-flex justify-content-center align-items-center"
-              >
-                <img
-                  src="./assets/digital-cart-logo.png"
-                  alt="ecom-cart-logo"
+          <div class="form-section w-100">
+            <h2>Vos informations</h2>
+            <div class="form-fields">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Adresse mail"
+              />
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Mot de passe"
+              />
+              <input
+                type="date"
+                class="form-control"
+                placeholder="Date de naissance"
+              />
+              <input type="tel" class="form-control" placeholder="Téléphone" />
+            </div>
+            <div class="checkbox-group">
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="termsCheckbox1"
                 />
+                <label class="form-check-label" for="termsCheckbox1">
+                  En cochant cette case, vous déclarez avoir lu et accepté nos
+                  conditions générales d'Utilisation du compte
+                </label>
               </div>
-              <div class="price mt-3">700€</div>
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="termsCheckbox2"
+                />
+                <label class="form-check-label" for="termsCheckbox2">
+                  En cochant cette case, vous déclarez avoir lu et accepté nos
+                  conditions d'achat et politique de remboursement
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="termsCheckbox3"
+                />
+                <label class="form-check-label" for="termsCheckbox3">
+                  Je souhaite être informé(e) des opportunités et offres de
+                  Futures Learn
+                </label>
+              </div>
             </div>
-            <img
-              class="cart-book"
-              src="./assets/digital-book.png"
-              alt="digital-book"
-            />
+            <button class="button w-100">Créer votre compte</button>
           </div>
         </div>
-        <h1>Vos informations</h1>
-        <div class="input-group gap-4">
-          <input
-            type="text"
-            class="form-control w-100"
-            placeholder="Adresse mail"
-          />
-          <input
-            type="text"
-            class="form-control w-100"
-            placeholder="Mot de passe"
-          />
-          <input
-            type="text"
-            class="form-control w-100"
-            placeholder="Téléphone"
-          />
-          <input
-            type="text"
-            class="form-control w-100"
-            placeholder="Date de naissance"
-          />
-        </div>
-        <div
-          class="d-flex flex-column gap-3 justify-content-start align-items-start w-100"
-        >
-          <div
-            class="custom-checkbox d-flex gap-2 justify-content-start align-items-center"
-          >
-            <input
-              type="checkbox"
-              class="form-check-input mt-0"
-              id="termsCheckbox1"
-            />
-            <label class="form-check-label" for="termsCheckbox1">
-              En cochant cette case, vous déclarez avoir lu et accepté nos
-              conditions générales d'Utilisation du compte
-            </label>
-          </div>
-          <div
-            class="custom-checkbox d-flex gap-2 justify-content-start align-items-center"
-          >
-            <input
-              type="checkbox"
-              class="form-check-input mt-0"
-              id="termsCheckbox2"
-            />
-            <label class="form-check-label" for="termsCheckbox2">
-              En cochant cette case, vous déclarez avoir lu et accepté nos
-              conditions d'achat et politique de remboursement
-            </label>
-          </div>
-          <div
-            class="custom-checkbox d-flex gap-2 justify-content-start align-items-center"
-          >
-            <input
-              type="checkbox"
-              class="form-check-input mt-0"
-              id="termsCheckbox3"
-            />
-            <label class="form-check-label" for="termsCheckbox3">
-              Je souhaite être informé(e) des opportunités et offres de Futures
-              Learn
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-center align-items-center">
-        <button
-          class="button mt-4 d-flex justify-content-center align-items-center text-center"
-        >
-          <span> Créer votre compte</span>
-        </button>
       </div>
     </div>
   </body>
