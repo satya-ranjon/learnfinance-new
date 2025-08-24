@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Digital - Learning Platform</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark-theme">
+    <div
+      class="sidebar d-flex flex-column align-items-center justify-content-start d-none d-lg-flex"
+    >
+      <div class="logo d-flex align-items-center justify-content-center">
+        <img src="./assets/logo-left.png" alt="logo" />
+      </div>
+      <ul
+        class="d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html"> <img src="./assets/home.png" alt="home" /> </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/Layer_1.png" alt="Layer_1" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/ecom.html">
+            <img src="./assets/Layer_2.png" alt="Layer_2" />
+            <div class="active-digital"></div>
+          </a>
+        </li>
+        <li
+          class="sidebar-item active d-flex align-items-center justify-content-center"
+        >
+          <a href="/digital.html">
+            <img src="./assets/Layer_3.png" alt="Layer_3" />
+            <div class="active-digital"></div>
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/bm.png" alt="Layer_3" />
+          </a>
+        </li>
+        <li
+          class="sidebar-item d-flex align-items-center justify-content-center"
+        >
+          <a href="/index.html">
+            <img src="./assets/ai.png" alt="Layer_3" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div
+        class="header d-flex justify-content-between align-items-center d-none d-lg-flex"
+      >
+        <div
+          class="navbar d-flex justify-content-start align-items-center gap-4 w-100"
+        >
+          <img src="./assets/logo.png" alt="logo" />
+          <ul class="d-flex justify-content-start align-items-center gap-3">
+            <li><a class="active" href="#">University</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Area</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">PredictAI</a></li>
+          </ul>
+        </div>
+        <div
+          class="header-right d-flex justify-content-end align-items-center gap-4"
+        >
+          <div
+            class="search-box d-flex justify-content-between align-items-center"
+          >
+            <input type="text" placeholder="Recherche" />
+            <img src="./assets/icon/search.png" alt="search" />
+          </div>
+          <div
+            class="avatars d-flex justify-content-start align-items-center gap-3"
+          >
+            <div class="avatar">
+              <img src="./assets/icon/notification.png" alt="notification" />
+              <span>5</span>
+            </div>
+            <div class="avatar">
+              <img src="./assets/icon/user.png" alt="user" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mobile-header d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <div class="left d-flex justify-content-start align-items-center gap-4">
+          <img src="./assets/logo-left.png" alt="logo" />
+          <img src="./assets/logo.png" alt="logo" />
+        </div>
+        <div class="avatar" id="mobile-menu-open">
+          <svg
+            width="18"
+            height="13"
+            viewBox="0 0 18 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.25 7.25012H0.75C0.335999 7.25012 0 6.91412 0 6.50012C0 6.08612 0.335999 5.75012 0.75 5.75012H17.25C17.664 5.75012 18 6.08612 18 6.50012C18 6.91412 17.664 7.25012 17.25 7.25012Z"
+              fill="#C4BFEF"
+            />
+            <path
+              d="M17.25 1.5H0.75C0.335999 1.5 0 1.164 0 0.75C0 0.335999 0.335999 0 0.75 0H17.25C17.664 0 18 0.335999 18 0.75C18 1.164 17.664 1.5 17.25 1.5Z"
+              fill="#C4BFEF"
+            />
+            <path
+              d="M17.25 13H0.75C0.335999 13 0 12.664 0 12.25C0 11.836 0.335999 11.5 0.75 11.5H17.25C17.664 11.5 18 11.836 18 12.25C18 12.664 17.664 13 17.25 13Z"
+              fill="#C4BFEF"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="mobile-menu d-lg-none">
+        <div class="close-icon" id="mobile-menu-close">
+          <img src="./assets/icon/cross.png" alt="cross" />
+        </div>
+        <ul class="d-flex flex-column gap-4">
+          <li><a href="#">University</a></li>
+          <li><a href="#">Mon compte</a></li>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="#">Se déconnecter</a></li>
+        </ul>
+
+        <div
+          class="search-box d-flex justify-content-between align-items-center"
+        >
+          <input type="text" placeholder="Recherche" />
+          <img src="./assets/icon/search.png" alt="search" />
+        </div>
+        <ul
+          class="sidebar-items d-flex justify-content-start align-items-center gap-4 flex-wrap"
+        >
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/home.png" alt="home" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/index.html">
+              <img src="./assets/Layer_1.png" alt="Layer_1" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/ecom.html">
+              <img src="./assets/Layer_2.png" alt="Layer_2" />
+            </a>
+          </li>
+          <li
+            class="sidebar-item d-flex align-items-center justify-content-center"
+          >
+            <a href="/digital.html">
+              <img src="./assets/Layer_3.png" alt="Layer_3" />
+            </a>
+          </li>
+        </ul>
+        <div class="finance-cart">
+          <div class="cart-content">
+            <div class="logo">
+              <img src="./assets/home/finase.png" alt="" />
+            </div>
+            <h1>Béneficiez de</h1>
+            <h3>-20%</h3>
+            <p>sur notre formation E-commerce !</p>
+          </div>
+        </div>
+        <div class="copy-right">© Futures 2025</div>
+      </div>
+
+      <div class="main-content finance">
+        <div class="finance-tv">
+          <div
+            class="finance-tv-top-content d-flex justify-content-start align-items-center gap-4"
+          >
+            <div class="top-content-item">
+              <h1 id="title">TV</h1>
+              <span class="line"></span>
+              <p>
+                Notre service TV, c’est du streaming en direct dédié au trading
+                et aux cryptos. Rejoignez nos traders en live pour suivre des
+                sessions de trading en temps réel, décrypter l’actualité
+                économique, découvrir de nouvelles cryptos et apprendre les
+                bases du trading. Chaque jour, des lives variés et accessibles à
+                tous, que vous soyez débutant ou passionné de marché.
+              </p>
+              <button class="btn-outline mt-2">
+                <div class="text">Ouvrir l’app</div>
+              </button>
+              <div
+                class="d-flex justify-content-start align-items-center gap-2 mt-2"
+              >
+                <button
+                  class="btn-primary d-flex justify-content-start align-items-center gap-2"
+                >
+                  <div class="dot mr-3">
+                    <div class="dot-inner"></div>
+                  </div>
+                  Rejoindre live en cours
+                </button>
+                <button class="btn-outline">Pas de live en cours</button>
+              </div>
+            </div>
+            <div class="top-content-item">
+              <div class="overflow-effect"></div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h1>Lives à venir</h1>
+                <button class="btn-outline">
+                  <span class="text">Planning complet</span>
+                </button>
+              </div>
+              <div class="scrolling-container">
+                <div class="content mt-3">
+                  <div class="content-item">
+                    <h6
+                      class="title d-flex justify-content-between align-items-center"
+                    >
+                      Trading
+                      <div
+                        class="d-flex align-items-center gap-1 justify-content-start live"
+                      >
+                        <div class="dot">
+                          <div class="dot-inner"></div>
+                        </div>
+                        Live
+                      </div>
+                    </h6>
+                    <h1>Morning Profile</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button class="btn-primary">
+                      <span> Me le rappeler</span>
+                    </button>
+                    <img src="./assets/home/people-1.png" alt="people" />
+                  </div>
+                  <div class="content-item">
+                    <h6 class="title">Trading</h6>
+                    <h1>Morning Profile</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button
+                      class="btn-outline border-0 d-flex justify-content-start align-items-center gap-2"
+                    >
+                      <span> Me le rappeler</span>
+
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.2427 0.930121C10.1054 0.792801 9.88285 0.792848 9.74553 0.930121C9.60826 1.06742 9.60826 1.29 9.74555 1.4273C10.746 2.42773 11.297 3.7579 11.297 5.17278C11.297 5.36693 11.4544 5.52434 11.6486 5.52434C11.8427 5.52434 12.0001 5.36693 12.0001 5.17278C12.0001 3.57007 11.376 2.06335 10.2427 0.930121Z"
+                          fill="url(#paint0_linear_732_549)"
+                        />
+                        <path
+                          d="M2.25452 0.930365C2.1172 0.793045 1.89464 0.793092 1.75732 0.930365C0.624117 2.06366 0 3.57037 0 5.173C0 5.36715 0.157406 5.52456 0.351563 5.52456C0.545719 5.52456 0.703125 5.36715 0.703125 5.173C0.703125 3.75819 1.25409 2.42802 2.25452 1.42755C2.39182 1.29025 2.39182 1.06766 2.25452 0.930365Z"
+                          fill="url(#paint1_linear_732_549)"
+                        />
+                        <path
+                          d="M8.6801 1.99518C8.54283 2.13248 8.54283 2.35506 8.68012 2.49238C9.39614 3.20833 9.79045 4.16026 9.79045 5.17286C9.79045 5.36701 9.94788 5.52442 10.142 5.52442C10.3362 5.52442 10.4936 5.36701 10.4936 5.17286C10.4936 3.97244 10.0261 2.84392 9.1773 1.99516C9.04001 1.85788 8.8174 1.85791 8.6801 1.99518Z"
+                          fill="url(#paint2_linear_732_549)"
+                        />
+                        <path
+                          d="M3.31917 1.99528C3.18188 1.858 2.95929 1.85803 2.82199 1.9953C1.97327 2.84411 1.50586 3.97256 1.50586 5.17279C1.50586 5.36695 1.66329 5.52436 1.85742 5.52436C2.0516 5.52436 2.20898 5.36695 2.20898 5.17279C2.20898 4.16036 2.60327 3.20845 3.3192 2.49248C3.45647 2.35516 3.45647 2.13255 3.31917 1.99528Z"
+                          fill="url(#paint3_linear_732_549)"
+                        />
+                        <path
+                          d="M8.98788 7.72576V5.92593C8.98788 5.26944 8.77886 4.6465 8.38345 4.12443C8.05293 3.68812 7.60221 3.34724 7.09582 3.14666C7.02529 2.60497 6.56095 2.1853 6.00037 2.1853C5.43979 2.1853 4.9754 2.60497 4.90493 3.14666C4.39853 3.34724 3.94781 3.68812 3.61732 4.12443C3.22188 4.6465 3.01286 5.26944 3.01286 5.92593V7.72576L2.29687 9.15777C2.2424 9.26673 2.24821 9.39618 2.31225 9.49982C2.3763 9.60348 2.48948 9.66655 2.61131 9.66655H9.38943C9.51128 9.66655 9.62444 9.60348 9.68849 9.49982C9.75255 9.39618 9.75839 9.26676 9.70389 9.15777L8.98788 7.72576Z"
+                          fill="url(#paint4_linear_732_549)"
+                        />
+                        <path
+                          d="M5.99992 11.1728C6.63285 11.1728 7.19256 10.8544 7.52814 10.3696H4.47168C4.80728 10.8544 5.36699 11.1728 5.99992 11.1728Z"
+                          fill="url(#paint5_linear_732_549)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_732_549"
+                            x1="9.64252"
+                            y1="3.17574"
+                            x2="12.0001"
+                            y2="3.17574"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_732_549"
+                            x1="-6.01095e-05"
+                            y1="3.17598"
+                            x2="2.35744"
+                            y2="3.17598"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_732_549"
+                            x1="8.5771"
+                            y1="3.70832"
+                            x2="10.4935"
+                            y2="3.70832"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_732_549"
+                            x1="1.50581"
+                            y1="3.70834"
+                            x2="3.4221"
+                            y2="3.70834"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint4_linear_732_549"
+                            x1="2.25957"
+                            y1="5.92593"
+                            x2="9.74081"
+                            y2="5.92593"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint5_linear_732_549"
+                            x1="4.4716"
+                            y1="10.7712"
+                            x2="7.52806"
+                            y2="10.7712"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </button>
+                    <img src="./assets/home/people-1.png" alt="people" />
+                  </div>
+                  <div class="content-item">
+                    <h6 class="title">Crypto</h6>
+                    <h1>Crypto 360</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button
+                      class="btn-outline border-0 d-flex justify-content-start align-items-center gap-2"
+                    >
+                      <span> Me le rappeler</span>
+
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.2427 0.930121C10.1054 0.792801 9.88285 0.792848 9.74553 0.930121C9.60826 1.06742 9.60826 1.29 9.74555 1.4273C10.746 2.42773 11.297 3.7579 11.297 5.17278C11.297 5.36693 11.4544 5.52434 11.6486 5.52434C11.8427 5.52434 12.0001 5.36693 12.0001 5.17278C12.0001 3.57007 11.376 2.06335 10.2427 0.930121Z"
+                          fill="url(#paint0_linear_732_549)"
+                        />
+                        <path
+                          d="M2.25452 0.930365C2.1172 0.793045 1.89464 0.793092 1.75732 0.930365C0.624117 2.06366 0 3.57037 0 5.173C0 5.36715 0.157406 5.52456 0.351563 5.52456C0.545719 5.52456 0.703125 5.36715 0.703125 5.173C0.703125 3.75819 1.25409 2.42802 2.25452 1.42755C2.39182 1.29025 2.39182 1.06766 2.25452 0.930365Z"
+                          fill="url(#paint1_linear_732_549)"
+                        />
+                        <path
+                          d="M8.6801 1.99518C8.54283 2.13248 8.54283 2.35506 8.68012 2.49238C9.39614 3.20833 9.79045 4.16026 9.79045 5.17286C9.79045 5.36701 9.94788 5.52442 10.142 5.52442C10.3362 5.52442 10.4936 5.36701 10.4936 5.17286C10.4936 3.97244 10.0261 2.84392 9.1773 1.99516C9.04001 1.85788 8.8174 1.85791 8.6801 1.99518Z"
+                          fill="url(#paint2_linear_732_549)"
+                        />
+                        <path
+                          d="M3.31917 1.99528C3.18188 1.858 2.95929 1.85803 2.82199 1.9953C1.97327 2.84411 1.50586 3.97256 1.50586 5.17279C1.50586 5.36695 1.66329 5.52436 1.85742 5.52436C2.0516 5.52436 2.20898 5.36695 2.20898 5.17279C2.20898 4.16036 2.60327 3.20845 3.3192 2.49248C3.45647 2.35516 3.45647 2.13255 3.31917 1.99528Z"
+                          fill="url(#paint3_linear_732_549)"
+                        />
+                        <path
+                          d="M8.98788 7.72576V5.92593C8.98788 5.26944 8.77886 4.6465 8.38345 4.12443C8.05293 3.68812 7.60221 3.34724 7.09582 3.14666C7.02529 2.60497 6.56095 2.1853 6.00037 2.1853C5.43979 2.1853 4.9754 2.60497 4.90493 3.14666C4.39853 3.34724 3.94781 3.68812 3.61732 4.12443C3.22188 4.6465 3.01286 5.26944 3.01286 5.92593V7.72576L2.29687 9.15777C2.2424 9.26673 2.24821 9.39618 2.31225 9.49982C2.3763 9.60348 2.48948 9.66655 2.61131 9.66655H9.38943C9.51128 9.66655 9.62444 9.60348 9.68849 9.49982C9.75255 9.39618 9.75839 9.26676 9.70389 9.15777L8.98788 7.72576Z"
+                          fill="url(#paint4_linear_732_549)"
+                        />
+                        <path
+                          d="M5.99992 11.1728C6.63285 11.1728 7.19256 10.8544 7.52814 10.3696H4.47168C4.80728 10.8544 5.36699 11.1728 5.99992 11.1728Z"
+                          fill="url(#paint5_linear_732_549)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_732_549"
+                            x1="9.64252"
+                            y1="3.17574"
+                            x2="12.0001"
+                            y2="3.17574"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_732_549"
+                            x1="-6.01095e-05"
+                            y1="3.17598"
+                            x2="2.35744"
+                            y2="3.17598"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_732_549"
+                            x1="8.5771"
+                            y1="3.70832"
+                            x2="10.4935"
+                            y2="3.70832"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_732_549"
+                            x1="1.50581"
+                            y1="3.70834"
+                            x2="3.4221"
+                            y2="3.70834"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint4_linear_732_549"
+                            x1="2.25957"
+                            y1="5.92593"
+                            x2="9.74081"
+                            y2="5.92593"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint5_linear_732_549"
+                            x1="4.4716"
+                            y1="10.7712"
+                            x2="7.52806"
+                            y2="10.7712"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </button>
+                    <img src="./assets/home/people-2.png" alt="people" />
+                  </div>
+                  <div class="content-item">
+                    <h6 class="title">Crypto</h6>
+                    <h1>Crypto 360</h1>
+                    <h2>
+                      <span>Dans</span>
+                      <span class="time"> 1h 34 min</span>
+                    </h2>
+                    <button
+                      class="btn-outline border-0 d-flex justify-content-start align-items-center gap-2"
+                    >
+                      <span> Me le rappeler</span>
+
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.2427 0.930121C10.1054 0.792801 9.88285 0.792848 9.74553 0.930121C9.60826 1.06742 9.60826 1.29 9.74555 1.4273C10.746 2.42773 11.297 3.7579 11.297 5.17278C11.297 5.36693 11.4544 5.52434 11.6486 5.52434C11.8427 5.52434 12.0001 5.36693 12.0001 5.17278C12.0001 3.57007 11.376 2.06335 10.2427 0.930121Z"
+                          fill="url(#paint0_linear_732_549)"
+                        />
+                        <path
+                          d="M2.25452 0.930365C2.1172 0.793045 1.89464 0.793092 1.75732 0.930365C0.624117 2.06366 0 3.57037 0 5.173C0 5.36715 0.157406 5.52456 0.351563 5.52456C0.545719 5.52456 0.703125 5.36715 0.703125 5.173C0.703125 3.75819 1.25409 2.42802 2.25452 1.42755C2.39182 1.29025 2.39182 1.06766 2.25452 0.930365Z"
+                          fill="url(#paint1_linear_732_549)"
+                        />
+                        <path
+                          d="M8.6801 1.99518C8.54283 2.13248 8.54283 2.35506 8.68012 2.49238C9.39614 3.20833 9.79045 4.16026 9.79045 5.17286C9.79045 5.36701 9.94788 5.52442 10.142 5.52442C10.3362 5.52442 10.4936 5.36701 10.4936 5.17286C10.4936 3.97244 10.0261 2.84392 9.1773 1.99516C9.04001 1.85788 8.8174 1.85791 8.6801 1.99518Z"
+                          fill="url(#paint2_linear_732_549)"
+                        />
+                        <path
+                          d="M3.31917 1.99528C3.18188 1.858 2.95929 1.85803 2.82199 1.9953C1.97327 2.84411 1.50586 3.97256 1.50586 5.17279C1.50586 5.36695 1.66329 5.52436 1.85742 5.52436C2.0516 5.52436 2.20898 5.36695 2.20898 5.17279C2.20898 4.16036 2.60327 3.20845 3.3192 2.49248C3.45647 2.35516 3.45647 2.13255 3.31917 1.99528Z"
+                          fill="url(#paint3_linear_732_549)"
+                        />
+                        <path
+                          d="M8.98788 7.72576V5.92593C8.98788 5.26944 8.77886 4.6465 8.38345 4.12443C8.05293 3.68812 7.60221 3.34724 7.09582 3.14666C7.02529 2.60497 6.56095 2.1853 6.00037 2.1853C5.43979 2.1853 4.9754 2.60497 4.90493 3.14666C4.39853 3.34724 3.94781 3.68812 3.61732 4.12443C3.22188 4.6465 3.01286 5.26944 3.01286 5.92593V7.72576L2.29687 9.15777C2.2424 9.26673 2.24821 9.39618 2.31225 9.49982C2.3763 9.60348 2.48948 9.66655 2.61131 9.66655H9.38943C9.51128 9.66655 9.62444 9.60348 9.68849 9.49982C9.75255 9.39618 9.75839 9.26676 9.70389 9.15777L8.98788 7.72576Z"
+                          fill="url(#paint4_linear_732_549)"
+                        />
+                        <path
+                          d="M5.99992 11.1728C6.63285 11.1728 7.19256 10.8544 7.52814 10.3696H4.47168C4.80728 10.8544 5.36699 11.1728 5.99992 11.1728Z"
+                          fill="url(#paint5_linear_732_549)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_732_549"
+                            x1="9.64252"
+                            y1="3.17574"
+                            x2="12.0001"
+                            y2="3.17574"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_732_549"
+                            x1="-6.01095e-05"
+                            y1="3.17598"
+                            x2="2.35744"
+                            y2="3.17598"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_732_549"
+                            x1="8.5771"
+                            y1="3.70832"
+                            x2="10.4935"
+                            y2="3.70832"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_732_549"
+                            x1="1.50581"
+                            y1="3.70834"
+                            x2="3.4221"
+                            y2="3.70834"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint4_linear_732_549"
+                            x1="2.25957"
+                            y1="5.92593"
+                            x2="9.74081"
+                            y2="5.92593"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint5_linear_732_549"
+                            x1="4.4716"
+                            y1="10.7712"
+                            x2="7.52806"
+                            y2="10.7712"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#007DE2" />
+                            <stop offset="1" stop-color="#3FFFCB" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </button>
+                    <img src="./assets/home/people-2.png" alt="people" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="middle-content">
+            <div class="content-box">
+              <h1>Trading</h1>
+              <h3 class="mt-1">Derniers replays</h3>
+              <h4 class="mt-2">5 <span>vidéos</span> - 1h14</h4>
+            </div>
+            <div class="video-box">
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="after"></div>
+            </div>
+          </div>
+          <div class="middle-content">
+            <div class="content-box">
+              <h1>Trading</h1>
+              <h3 class="mt-1">Derniers replays</h3>
+              <h4 class="mt-2">5 <span>vidéos</span> - 1h14</h4>
+            </div>
+            <div class="video-box">
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="video-item">
+                <img src="./assets/home/video-icon.png" alt="video" />
+              </div>
+              <div class="after"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
