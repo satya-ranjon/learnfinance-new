@@ -8651,6 +8651,33 @@ a {
   color: #0ed29d;
 }
 
+.finance-book {
+  padding: 20px;
+}
+.finance-book h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #007de2;
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  background: -webkit-linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
+  text-align: start;
+  padding: 0px 20px;
+}
+.finance-book img {
+  margin-top: 25px;
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Poppins", sa ns-serif;
   color: #c4bfef;
