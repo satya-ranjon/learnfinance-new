@@ -1,0 +1,115 @@
+.inscription-price {
+  @include mobile {
+    padding: 10px;
+  }
+  .main-content {
+    padding: 50px 100px;
+    background-color: #1a1825;
+    border-radius: 20px;
+    max-width: fit-content;
+    margin: 50px auto;
+    height: fit-content;
+    overflow: visible;
+
+    @include tablet {
+      padding: 30px 20px;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #c4bfef;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .tab-item {
+      background-color: #070610;
+      border-radius: 83px;
+      padding: 6px;
+      .item {
+        font-size: 15px;
+        font-weight: 400;
+        padding: 5px 20px;
+        border-radius: 83px;
+        color: #64617c;
+
+        @include mobile {
+          padding: 5px 10px;
+          font-size: 12px;
+        }
+        &.active {
+          background-color: #191824;
+          color: #ffffff;
+        }
+        span {
+          font-size: 10px;
+          font-weight: 700;
+          padding: 2px 10px;
+          background-color: #58eb89;
+          border-radius: 21px;
+          margin-left: 4px;
+          color: #070610;
+          @include mobile {
+            font-size: 8px;
+            padding: 2px 5px;
+          }
+        }
+      }
+    }
+
+    .tab-content-container {
+      margin-top: 40px;
+
+      .tab-content {
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        overflow: visible;
+
+        @include mobile {
+          grid-template-columns: 1fr;
+        }
+
+        &.active {
+          display: grid;
+        }
+
+        .price-cart {
+          padding: 17px 32px;
+          background-color: #0706107a;
+          border: 1px solid #353347;
+          border-radius: 5px;
+          h1 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: #ffffff;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #9c99b4;
+            max-width: 150px;
+            text-align: center;
+          }
+
+          .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #58eb89;
+            text-align: center;
+            span {
+              font-size: 14px;
+              font-weight: 400;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

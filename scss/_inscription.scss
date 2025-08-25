@@ -1,7 +1,6 @@
 .inscription {
   height: 100vh;
   width: 100%;
-  background-image: url("../assets/inscription-bg.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -23,112 +22,165 @@
   }
   .logo {
     margin-top: 75px;
-    margin-bottom: 40px;
     @include mobile {
       width: 200px;
     }
   }
-  .content {
+
+  .inscription-container {
     max-width: 850px;
-    margin: 0 auto;
+    background-color: #1a1825;
+    padding: 23px;
+    border-radius: 20px;
+
     @include tablet {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container {
+      padding: 10px;
+      @include tablet {
+        width: 100%;
+        display: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    background: #191824;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 32px;
+    max-width: 900px;
+    margin: 40px auto;
+    gap: 0;
+    @include tablet {
+      flex-direction: column;
+      padding: 16px;
       max-width: 100%;
-      padding: 24px 90px;
     }
-    @include mobile {
-      max-width: 100%;
-      padding: 24px 56px;
+  }
+
+  .course-selection {
+    flex: 1;
+    background: linear-gradient(120deg, #070610 40%, #315c12 100%);
+    border-radius: 16px 0 0 16px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 340px;
+    color: #fff;
+    @include tablet {
+      border-radius: 16px 16px 0 0;
+      min-width: unset;
+      padding: 32px 16px;
     }
-    @media (max-width: 375px) {
-      padding: 24px;
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 32px;
+      color: #fff;
     }
-    background-color: $section-background-color;
-    border-radius: $border-md;
-    padding: 24px 130px;
-    height: fit-content;
-    gap: 24px;
-    h1 {
-      font-size: 20px;
-      font-weight: $font-weight-regular;
-    }
-    .cart-container {
-      @include mobile {
-        flex-direction: column !important;
-      }
-      @media (max-width: 375px) {
-        width: 100%;
-      }
-    }
-    .ecom-cart-book {
-      background: linear-gradient(119.86deg, #070610 46.57%, #315c12 100%);
-      .price {
-        @include gradient-text($ecom-theme);
-      }
-      border-radius: 5px;
-      @media (max-width: 375px) {
-        width: 100%;
-      }
-      @media (max-width: 320px) {
-        width: 100%;
-        padding: 10px !important;
-        gap: 10px !important;
-      }
-    }
-    .digital-cart-book {
-      background: linear-gradient(119.86deg, #070610 46.57%, #6d3a15 100%);
-      .price {
-        @include gradient-text($digital-theme);
-      }
-      border-radius: 5px;
-      @media (max-width: 375px) {
-        width: 100%;
-      }
-      @media (max-width: 320px) {
-        width: 100%;
-        padding: 10px !important;
-        gap: 10px !important;
-      }
+    .learn-logo {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #58eb89;
     }
     .price {
       font-size: 40px;
-      font-weight: $font-weight-bold;
+      font-weight: 700;
+      color: #58eb89;
+      margin-bottom: 16px;
     }
-    .cart-logo {
-      background-color: #191824;
-      width: 111px;
-      height: 20px;
-      border-radius: 20px;
+    .course-title {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 24px;
+      color: #fff;
     }
+    .cart-book {
+      width: 160px;
+      margin-top: 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(49, 92, 18, 0.2);
+    }
+  }
 
+  .form-section {
+    flex: 1.2;
+    background: #191824;
+    border-radius: 0 16px 16px 0;
+    padding: 40px 32px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+      border-radius: 0 0 16px 16px;
+      padding: 32px 16px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 22px;
+      color: #c4bfef;
+      text-align: center;
+    }
+    .form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding-left: 20px;
+    }
     .form-control {
-      background-color: #11101c;
+      background: #11101c;
       border: 1px solid #353347;
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: $font-weight-light;
-      font-family: "Roboto", sans-serif;
-      border-radius: 5px !important;
-      overflow: hidden;
-
+      color: #fff;
+      font-size: 15px;
+      border-radius: 8px;
+      padding: 12px 18px;
+      height: 36px;
+      transition: border-color 0.2s;
       &:focus {
         border-color: #58eb89;
-        box-shadow: none;
+        outline: none;
       }
       &::placeholder {
-        color: #ffffff;
+        color: #bdb8d7;
+        opacity: 1;
       }
     }
-    label {
-      font-size: 11px;
-      font-weight: $font-weight-light;
-      color: #9c99b4;
-      font-family: "Roboto", sans-serif;
+    .checkbox-group {
+      margin-bottom: 24px;
+      .custom-checkbox {
+        margin-bottom: 10px;
+      }
     }
-    .input-group {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      @include mobile {
-        grid-template-columns: repeat(1, 1fr);
+    .button {
+      background: #58eb89;
+      color: #191824;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 12px 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(88, 235, 137, 0.15);
+      transition: background 0.2s;
+      &:hover {
+        background: #44c96c;
       }
     }
   }
@@ -136,19 +188,21 @@
 .custom-checkbox {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 15px;
 
   .form-check-input {
     width: 15px;
     height: 15px;
-    margin-top: 0;
+    margin-top: 2px;
+    margin-right: 8px;
     background-color: transparent;
     border: 1px solid $box-border;
     cursor: pointer;
     appearance: none;
     position: relative;
     border-radius: 3px;
-    padding: 5px;
+    flex-shrink: 0;
 
     &:checked {
       background-color: #353347;
@@ -165,7 +219,10 @@
   }
 
   .form-check-label {
-    margin-left: 5px;
     cursor: pointer;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #9c99b4;
+    margin-left: 15px;
   }
 }

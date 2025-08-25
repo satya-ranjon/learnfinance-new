@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "reset";
 @import "variables";
 @import "mixins";
-@import "reset";
 @import "utils";
 @import "sidebar";
 @import "header";
@@ -12,6 +12,16 @@
 @import "ecomVideoPlayer";
 @import "inscription";
 @import "login";
+@import "financeHome";
+@import "financeArea";
+@import "financeTv";
+@import "fianceUniversity";
+@import "financePlanning";
+@import "financeBook";
+@import "financeInformations";
+@import "inscriptionPrice";
+@import "inscriptionFormation";
+@import "futuresHome";
 // pages
 
 // @import "finance";
