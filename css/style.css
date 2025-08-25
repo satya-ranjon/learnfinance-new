@@ -8997,6 +8997,106 @@ a {
   color: #ffffff;
 }
 
+.inscription-formation {
+  padding: 10px;
+}
+.inscription-formation .main-content {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 50px auto;
+  padding: 50px 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .inscription-formation .main-content {
+    padding: 50px 50px;
+  }
+}
+.inscription-formation .main-content h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #c4bfef;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.inscription-formation .main-content .content-container {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.inscription-formation .main-content .content-container .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 25px;
+}
+@media (max-width: 767px) {
+  .inscription-formation .main-content .content-container .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.inscription-formation .main-content .content-container .content .price-cart .price {
+  font-size: 36px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+.inscription-formation .main-content .content-container .content .price-cart p {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.inscription-formation .main-content .content-container .content .price-cart:nth-child(1) {
+  border: 1px solid #353347;
+  padding: 31px 41px;
+  border-radius: 5px;
+  background: linear-gradient(119.86deg, #070610 46.57%, #315c12 100%);
+}
+.inscription-formation .main-content .content-container .content .price-cart:nth-child(1) .price {
+  background: -webkit-gradient(linear, left top, right top, from(#25893f), to(#94eb58));
+  background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.inscription-formation .main-content .content-container .content .price-cart:nth-child(2) {
+  border: 1px solid #353347;
+  padding: 31px 41px;
+  border-radius: 5px;
+  background: linear-gradient(119.86deg, #070610 46.57%, #123f5c 100%);
+}
+.inscription-formation .main-content .content-container .content .price-cart:nth-child(2) .price {
+  background: -webkit-gradient(linear, left top, right top, from(#007de2), to(#3fffcb));
+  background: linear-gradient(90deg, #007de2 0%, #3fffcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.inscription-formation .main-content .content-container .content .price-cart:nth-child(3) {
+  border: 1px solid #353347;
+  padding: 31px 41px;
+  border-radius: 5px;
+  background: linear-gradient(119.86deg, #070610 46.57%, #814227 100%);
+}
+.inscription-formation .main-content .content-container .content .price-cart:nth-child(3) .price {
+  background: -webkit-gradient(linear, right top, left top, from(#f60c3b), to(#ff8e39));
+  background: linear-gradient(270deg, #f60c3b 0%, #ff8e39 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 body {
   font-family: "Poppins", sa ns-serif;
   color: #c4bfef;
