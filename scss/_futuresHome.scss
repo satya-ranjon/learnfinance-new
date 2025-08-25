@@ -1,0 +1,540 @@
+.main-content {
+  &.futures-home {
+    @include laptop {
+      padding: 0px;
+      background-color: transparent;
+    }
+  }
+}
+.futures-home {
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include laptop {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .header-left {
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+      }
+      p {
+        font-size: 24px;
+        font-weight: 300;
+        color: #c4bfef;
+      }
+      @include laptop {
+        display: none !important;
+      }
+    }
+    .header-right {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .slide-changer {
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        gap: 10px;
+        z-index: 99999;
+        span {
+          background-color: #070610;
+          width: 65px;
+          height: 4px;
+          display: block;
+          border-radius: 18px;
+          &.active {
+            background-color: #58eb89;
+          }
+        }
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    background-color: #191824;
+    height: 1px;
+  }
+  .learnfinance {
+    padding: 0px 20px;
+    .bottom-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      @include laptop {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .item {
+        @include finance-bottom-item;
+        .content {
+          height: fit-content;
+        }
+
+        &:nth-child(1) {
+          .video-container {
+            @include video-container-base($finance-theme);
+            @include mobile {
+              flex-direction: row;
+            }
+            .video {
+              @include laptop {
+                min-width: 50%;
+              }
+              @include tablet {
+                min-width: 50%;
+              }
+              @include mobile {
+                min-width: 50%;
+              }
+            }
+
+            .video-info {
+              @include mobile {
+                min-width: 40%;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .content {
+            @include flex-start-center;
+            gap: 22px;
+            @include mobile {
+              gap: 15px;
+            }
+            @media (max-width: 375px) {
+              flex-direction: column;
+              align-items: start;
+            }
+
+            .content-item {
+              &:nth-child(1) {
+                @include finance-trading-item;
+              }
+              &:nth-child(2) {
+                @include finance-crypto-item;
+              }
+            }
+          }
+        }
+
+        // Third row: List items
+        &:nth-child(3) {
+          .content {
+            @include flex-column;
+            gap: 14px;
+
+            .content-item {
+              @include finance-list-item;
+            }
+          }
+        }
+      }
+    }
+  }
+  .learn-digital {
+    padding: 0px 20px;
+
+    .learn-digital-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      @include laptop {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .item {
+        border-radius: $border-md;
+        .item-title {
+          @include item-title($digital-theme);
+        }
+
+        &:nth-child(1) {
+          @include second-grid-item;
+          width: 100%;
+          grid-column: span 1;
+          @include laptop {
+            grid-column: span 12;
+          }
+          @include tablet {
+            grid-column: span 12;
+          }
+          @include mobile {
+            grid-column: span 1;
+          }
+
+          .video-container {
+            @include video-container-base($digital-theme);
+
+            @include mobile {
+              flex-direction: row;
+            }
+            .video {
+              @include laptop {
+                min-width: 50%;
+              }
+              @include tablet {
+                min-width: 50%;
+              }
+              @include mobile {
+                min-width: 50%;
+              }
+            }
+
+            .video-info {
+              @include mobile {
+                min-width: 40%;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          @include third-grid-item;
+          grid-column: span 1;
+          @include laptop {
+            grid-column: span 12;
+          }
+          @include mobile {
+            grid-column: span 1;
+          }
+          .content {
+            @include flex-start-center;
+            height: fit-content;
+            gap: 35px;
+            @include laptop {
+              gap: 15px;
+            }
+            @include tablet {
+              gap: 35px;
+            }
+            @include mobile {
+              gap: 15px;
+            }
+
+            @media (max-width: 380px) {
+              flex-direction: column;
+            }
+
+            .content-item {
+              border: 1px solid $box-border;
+              border-radius: $border-sm;
+              padding: 14px 12px;
+              width: 100%;
+
+              .box {
+                gap: 10px;
+                @include flex-column;
+                max-height: 119px;
+                overflow-y: auto;
+                padding-right: 10px;
+
+                .item {
+                  gap: 2px;
+                  padding: 0px;
+
+                  h1 {
+                    font-size: 8px;
+                    font-weight: $font-weight-regular;
+                    color: #9c99b4;
+                    text-transform: uppercase;
+                    line-height: 100%;
+                  }
+
+                  .description {
+                    @include flex-between;
+                    width: 100%;
+                    font-size: 11px;
+                    font-weight: $font-weight-regular;
+
+                    h2 {
+                      color: $white;
+                    }
+
+                    h3 {
+                      @include gradient-text($digital-theme);
+                    }
+                  }
+                }
+              }
+            }
+
+            .progress-box {
+              width: fit-content;
+
+              .progress-container {
+                position: relative;
+                width: fit-content;
+
+                .content {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 5px;
+
+                  h1 {
+                    font-weight: $font-weight-regular;
+                    @include gradient-text($digital-theme);
+                    font-size: 28px;
+                    margin-top: 20px;
+                  }
+
+                  p {
+                    font-size: $font-xs;
+                    font-weight: $font-weight-light;
+                    line-height: 115%;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          @include footer-item-base;
+          @include laptop {
+            grid-column: span 12;
+          }
+          @include tablet {
+            grid-column: span 12;
+          }
+          @include mobile {
+            grid-column: span 1;
+          }
+          .title {
+            @include item-title($digital-theme);
+
+            h1 {
+              @include gradient-text($digital-theme);
+            }
+          }
+          .tools {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @media (max-width: 320px) {
+              grid-template-columns: repeat(1, 1fr);
+            }
+            gap: 35px 27px;
+            @include desktop {
+              gap: 28px 17px;
+            }
+            @include mobile {
+              gap: 17px;
+            }
+
+            .tool-item {
+              @include flex-start-center;
+              justify-content: space-between;
+              border: 1px solid $box-border;
+              border-radius: $border-sm;
+              padding: 18px 25px;
+              gap: 6px;
+
+              h2 {
+                font-size: 15px;
+                @include desktop {
+                  font-size: 10px;
+                }
+                font-weight: $font-weight-regular;
+                color: $white;
+                max-width: 64px;
+              }
+
+              .download {
+                background: $digital-theme;
+                @include flex-column;
+                gap: 1px;
+                min-width: 23px;
+                min-height: 23px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .learn-ecom {
+    padding: 0px 20px;
+    .lock-overlay {
+      background: linear-gradient(90deg, #25894062 0%, #93eb58ad 100%);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 1px;
+    }
+    .lock-container {
+      display: flex;
+      background: linear-gradient(54.4deg, #191824 0%, #5e8444 151.56%);
+      border-radius: 10px;
+      gap: 112px;
+      padding: 42px 150px;
+
+      @include tablet {
+        padding: 42px 50px;
+      }
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 52px;
+        img {
+          max-width: 97px;
+          height: auto;
+        }
+      }
+
+      .lock-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include mobile {
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        h1 {
+          font-size: 24px;
+          font-weight: 600;
+          color: $white;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          color: $white;
+        }
+        button {
+          background: linear-gradient(90deg, #25893f 0%, #94eb58 100%);
+          color: #111111;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 15px;
+          cursor: pointer;
+          width: fit-content;
+        }
+      }
+    }
+
+    .bottom-content {
+      @include finance-bottom-grid;
+
+      padding: 20px 0px;
+
+      .item {
+        @include finance-bottom-item;
+
+        // Fourth row: Metrics grid
+        &:nth-child(1) {
+          grid-column: span 3;
+          @include laptop {
+            grid-column: span 12;
+          }
+          @include mobile {
+            grid-column: span 12;
+          }
+
+          .content {
+            @include finance-metrics-grid;
+            height: fit-content;
+            .content-item {
+              h1 {
+                @include gradient-text(#58eb89);
+                font-size: 28px;
+              }
+            }
+          }
+        }
+
+        // Fifth row: Chart container
+        &:nth-child(2) {
+          grid-column: span 3;
+          @include laptop {
+            grid-column: span 4;
+          }
+          @include tablet {
+            grid-column: span 6;
+          }
+          @include mobile {
+            grid-column: span 12;
+          }
+
+          .content {
+            @include finance-chart-container;
+            .chart-bars {
+              @include finance-chart-bars;
+              .bar-container {
+                .bar-background {
+                  .bar {
+                    background: #58eb89;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // Sixth row: Statistics
+        &:nth-child(3) {
+          grid-column: span 3;
+          @include laptop {
+            grid-column: span 4;
+          }
+          @include tablet {
+            grid-column: span 6;
+          }
+          @include mobile {
+            grid-column: span 12;
+          }
+          padding-top: 15px;
+
+          .item-title {
+            h1 {
+              @include gradient-text(#58eb89);
+              font-weight: $font-weight-regular;
+              font-size: 28px;
+              line-height: 100%;
+            }
+          }
+
+          .content {
+            @include finance-stats-grid;
+          }
+
+          .content-footer {
+            @include finance-stats-footer;
+          }
+        }
+
+        // Seventh row: Empty placeholder
+        &:nth-child(4) {
+          grid-column: span 3;
+          @include laptop {
+            grid-column: span 4;
+          }
+          @include tablet {
+            grid-column: span 12;
+          }
+          padding: 0;
+        }
+      }
+    }
+  }
+}
