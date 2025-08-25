@@ -8880,6 +8880,123 @@ a {
   height: 151px;
 }
 
+@media (max-width: 767px) {
+  .inscription-price {
+    padding: 10px;
+  }
+}
+.inscription-price .main-content {
+  padding: 50px 100px;
+  background-color: #1a1825;
+  border-radius: 20px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 50px auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: visible;
+}
+@media (max-width: 1023px) {
+  .inscription-price .main-content {
+    padding: 30px 20px;
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+.inscription-price .main-content h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #c4bfef;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.inscription-price .main-content .tab-item {
+  background-color: #070610;
+  border-radius: 83px;
+  padding: 6px;
+}
+.inscription-price .main-content .tab-item .item {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px 20px;
+  border-radius: 83px;
+  color: #64617c;
+}
+@media (max-width: 767px) {
+  .inscription-price .main-content .tab-item .item {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+.inscription-price .main-content .tab-item .item.active {
+  background-color: #191824;
+  color: #ffffff;
+}
+.inscription-price .main-content .tab-item .item span {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 10px;
+  background-color: #58eb89;
+  border-radius: 21px;
+  margin-left: 4px;
+  color: #070610;
+}
+@media (max-width: 767px) {
+  .inscription-price .main-content .tab-item .item span {
+    font-size: 8px;
+    padding: 2px 5px;
+  }
+}
+.inscription-price .main-content .tab-content-container {
+  margin-top: 40px;
+}
+.inscription-price .main-content .tab-content-container .tab-content {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  overflow: visible;
+}
+@media (max-width: 767px) {
+  .inscription-price .main-content .tab-content-container .tab-content {
+    grid-template-columns: 1fr;
+  }
+}
+.inscription-price .main-content .tab-content-container .tab-content.active {
+  display: grid;
+}
+.inscription-price .main-content .tab-content-container .tab-content .price-cart {
+  padding: 17px 32px;
+  background-color: rgba(7, 6, 16, 0.4784313725);
+  border: 1px solid #353347;
+  border-radius: 5px;
+}
+.inscription-price .main-content .tab-content-container .tab-content .price-cart h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.inscription-price .main-content .tab-content-container .tab-content .price-cart p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #9c99b4;
+  max-width: 150px;
+  text-align: center;
+}
+.inscription-price .main-content .tab-content-container .tab-content .price-cart .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #58eb89;
+  text-align: center;
+}
+.inscription-price .main-content .tab-content-container .tab-content .price-cart .price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
 body {
   font-family: "Poppins", sa ns-serif;
   color: #c4bfef;
